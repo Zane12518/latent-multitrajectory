@@ -4,13 +4,13 @@
 
 `configs/maze10_gram.json`绑定当前0.1辅助配方。6个起点文件已含续训流RNG，不再传`--stream`重复重置。
 `resume/source1301_flow2026111511.pt`等文件包含9000步模型、Adam一/二阶矩与步号、Python/NumPy/Torch CPU/CUDA RNG、独立先验RNG、题序与游标、reference_visits及ACT carry。
-这是完整状态导出，未将EMA权重冒充恢复。推理权重不含优化器，不能传给`--resume`。
+这是历史 v1 完整状态导出，未将EMA权重冒充恢复；它缺少 v2 内容身份元数据，当前入口须显式 legacy 读取并记录警示，不能追溯称为 v2 已验证精确恢复。推理权重不含优化器，不能传给`--resume`。新检查点的严格恢复与合法分叉见[恢复说明](resume.md)。
 
 在与记录一致的GPU环境、下载完整资产后运行（本次仅小批验证，未重新跑1000步）：
 
 ```bash
-python training/train.py --config configs/maze10_gram.json --data release_assets/data/train.json --resume release_assets/resume/source1301_flow2026111511.pt --arm multi --device cuda --out outputs/flow1511_multi
-python training/train.py --config configs/maze10_gram.json --data release_assets/data/train.json --resume release_assets/resume/source1301_flow2026111511.pt --arm set --device cuda --out outputs/flow1511_set
+python training/train.py --config configs/maze10_gram.json --data release_assets/data/train.json --resume release_assets/resume/source1301_flow2026111511.pt --resume-mode legacy --arm multi --device cuda --out outputs/flow1511_multi
+python training/train.py --config configs/maze10_gram.json --data release_assets/data/train.json --resume release_assets/resume/source1301_flow2026111511.pt --resume-mode legacy --arm set --device cuda --out outputs/flow1511_set
 python evaluation/evaluate.py --config configs/maze10_gram.json --data release_assets/data/test.json --checkpoint release_assets/weights/c1301_1511_multi.pt --device cuda --out outputs/eval_multi
 python evaluation/evaluate.py --config configs/maze10_gram.json --data release_assets/data/test.json --checkpoint release_assets/weights/c1301_1511_set.pt --device cuda --out outputs/eval_set
 python evaluation/paired.py --multi outputs/eval_multi/per_map.json --set outputs/eval_set/per_map.json --out outputs/paired.json
@@ -31,7 +31,9 @@ python evaluation/paired.py --multi outputs/eval_multi/per_map.json --set output
 逻辑键绑定数据版本、地图序号、评价重复、生成流和32个高斯节点；相同端点对共享底噪。唯一键检查不证明严格IID。
 K=1/4/8/16/32为同K32候选前缀，不是为每个K独立重新生成，更不是等墙钟比较。
 
-## 4. 已测与未测
+## 4. v0.1 包装时已测与未测（历史回执）
+
+以下对应历史 [validation.json](validation.json)，不是本次重新执行。v0.2 实际执行另见[当前验证](validation_v0.2.md)。
 
 - 干净CPU安装、15项测试、2步真实训练、下一步恢复与推理：通过。
 - 12个公开候选权重，每个固定首2图×K32×第1评价重复：H100输出与历史logits/argmax逐值相同。

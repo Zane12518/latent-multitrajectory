@@ -10,7 +10,7 @@ os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG",":4096:8")
 import torch as t
 from .vendor.gram.recursive_reasoning.gram import GenerativeRecursiveReasoningModel
 from .vendor.gram.losses import ACTLossHead
-from . import maze, objective
+from . import maze, objective, checkpoint
 
 def configure():
     t.set_num_threads(4);t.use_deterministic_algorithms(True)
@@ -37,8 +37,13 @@ def move(x,device):
 
 def carry_restore(template,saved,device):
     if dataclasses.is_dataclass(template):
+        if not isinstance(saved,dict) or set(saved)!={f.name for f in dataclasses.fields(template)}:raise ValueError('ACT carry fields differ')
         return type(template)(**{f.name:carry_restore(getattr(template,f.name),saved[f.name],device) for f in dataclasses.fields(template)})
-    return move(saved,device)
+    if isinstance(template,dict):
+        if not isinstance(saved,dict) or set(saved)!=set(template):raise ValueError('ACT carry data fields differ')
+        return {k:carry_restore(v,saved[k],device) for k,v in template.items()}
+    if t.is_tensor(template) and (not t.is_tensor(saved) or saved.shape!=template.shape or saved.dtype!=template.dtype or not t.isfinite(saved).all()):raise ValueError('ACT carry tensor mismatch/nonfinite')
+    return move(copy.deepcopy(saved),device)
 
 def save_new(path,value):
     path=Path(path)
@@ -51,14 +56,16 @@ def save_new(path,value):
 class Session:
     def __init__(self,config,train,device='cpu'):
         configure();self.config=copy.deepcopy(config);self.device=t.device(device)
-        self.train=train;self.seed=config['training']['initial_seed'];seed(self.seed)
+        if config['training']['schedule'] not in ('prefix','post-linear'):raise ValueError('unknown training schedule')
+        if config['model']['batch_size']!=2:raise ValueError('native microbatch is exactly two maps')
+        self.train=copy.deepcopy(train);self.seed=config['training']['initial_seed'];seed(self.seed)
         with t.device(self.device):self.m=GenerativeRecursiveReasoningModel(config['model'])
         self.opt=t.optim.AdamW(self.m.parameters(),lr=.0003,weight_decay=.01)
         self.head=ACTLossHead(self.m,'stablemax_cross_entropy',kl_coef=.1,kl_balance_alpha=.8,free_bits=None,value_coef=1)
         self.step=0;self.rr=random.Random(self.seed+100);self.order=[];self.cur=0;self.visits={}
         self.carry=None;self.actual_ids=[];self.calls=dict(native_outer_lanes=0,prior_outer_lanes=0)
         self.prior_rng=t.Generator(device=self.device);self.prior_rng.manual_seed(self.seed+100000)
-        self.stream=None;self.m.train()
+        self.stream=None;self.arm=None;self.lineage=[];self.m.train()
 
     def batch(self,items,visits=None,K=1,labels=False):
         b=dict(inputs=t.tensor([r['x'] for r in items],device=self.device,dtype=t.int32).repeat_interleave(K,0),
@@ -87,7 +94,7 @@ class Session:
 
     def state(self):
         ns=np.random.get_state()
-        return dict(format='latent-multitrajectory-resume-v1',numpy_state_as_list=True,
+        return dict(format=checkpoint.FORMAT,numpy_state_as_list=True,
             model=plain(self.m.state_dict()),optimizer=plain(self.opt.state_dict()),
             rng=dict(py=random.getstate(),np=(ns[0],ns[1].tolist(),ns[2],ns[3],ns[4]),cpu=t.get_rng_state(),
                      cuda=t.cuda.get_rng_state_all() if self.device.type=='cuda' else []),
@@ -95,25 +102,33 @@ class Session:
             cursor=self.cur,reference_visits=self.visits.copy(),carry=plain(self.carry),actual_ids=self.actual_ids[:],
             calls=self.calls.copy(),host='gram',deterministic=False,model_training=self.m.training,
             scheduler=None,scaler=None,initial_seed=self.seed,quality_mode='canonical',replay_index=0,stream=self.stream,
-            release_config=self.config,train_ids=[r['id'] for r in self.train],device_type=self.device.type)
+            release_config=copy.deepcopy(self.config),train_ids=[r['id'] for r in self.train],device_type=self.device.type,
+            arm=self.arm,lineage=copy.deepcopy(self.lineage),
+            identity=dict(data=checkpoint.content_identity(self.train),protocol=copy.deepcopy(checkpoint.PROTOCOL),
+                          environment=checkpoint.environment(self.device),optimizer_slots=sorted(self.opt.state_dict()['state']),
+                          resolved_model_config=self.m.config.model_dump(),implementation=checkpoint.implementation_identity()))
 
-    def restore(self,c):
-        if c.get('format')!='latent-multitrajectory-resume-v1':raise ValueError('not a full training checkpoint')
-        if c.get('device_type', 'cuda')!=self.device.type:raise ValueError('exact resume requires matching CPU/CUDA RNG backend; use weights-only for inference')
-        if c.get('train_ids',[r['id'] for r in self.train])!=[r['id'] for r in self.train]:raise ValueError('training population/order mismatch')
-        self.m.load_state_dict(c['model']);self.opt.load_state_dict(c['optimizer'])
+    def restore(self,c,mode='exact',arm=None,allow_changes=()):
+        event=checkpoint.validate(self,c,mode,arm,allow_changes)
+        carry=carry_restore(self.m.initial_carry(self.batch(self.train[:2],[0,0],labels=True)),c['carry'],self.device) if c['carry'] is not None else None
+        self.m.load_state_dict(c['model']);self.opt.load_state_dict(copy.deepcopy(c['optimizer']))
         r=c['rng'];random.setstate(r['py']);ns=r['np'];np.random.set_state((ns[0],np.asarray(ns[1],dtype=np.uint32),ns[2],ns[3],ns[4]));t.set_rng_state(r['cpu'])
         if self.device.type=='cuda':t.cuda.set_rng_state_all(r['cuda'])
         self.prior_rng.set_state(c['prior_rng']);self.step=c['step'];self.rr.setstate(c['order_rng'])
         self.order=c['order'][:];self.cur=c['cursor'];self.visits=c['reference_visits'].copy();self.actual_ids=c['actual_ids'][:]
         self.calls=c['calls'].copy();self.m.train(c['model_training']);self.seed=c['initial_seed'];self.stream=c.get('stream')
-        self.carry=carry_restore(self.m.initial_carry(self.batch(self.train[:2],[0,0],labels=True)),c['carry'],self.device) if c['carry'] is not None else None
+        self.carry=carry;self.arm=arm if arm is not None else c.get('arm');self.lineage=copy.deepcopy(c.get('lineage',[]))
+        if event is not None:self.lineage.append(event)
 
-    def new_stream(self,n):
+    def new_stream(self,n,*,fork=False):
+        if self.step and not fork:raise ValueError('reseeding a trained session requires an explicit fork')
+        self.lineage.append(dict(mode='new-stream',parent_step=self.step,before=self.stream,after=n))
         seed(n);self.prior_rng.manual_seed(n+100000);self.rr.seed(n+100);self.stream=n
 
     def update(self,arm):
         if arm not in ('mass','multi','set'):raise ValueError(arm)
+        if self.arm is not None and arm!=self.arm:raise ValueError('changing the training arm requires explicit restore/fork')
+        self.arm=arm
         self.opt.zero_grad(set_to_none=True);start=self.step+1;train=self.config['training']
         if train['schedule']=='prefix':lr=.0003*min(1,start/200)*(1-(2/3)*max(0,min(1,(start-200)/2800)))
         else:lr=.0001*(1-.75*min(1,max(0,(start-9001)/999)))

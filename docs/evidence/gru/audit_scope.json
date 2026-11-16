@@ -1,0 +1,19 @@
+{
+  "primary_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
+  "followup_contract": "GRAM-ASSIGN-FOLLOWUP-20261112-r1",
+  "primary_report": "REPORT_ZH.txt",
+  "primary_readback": "FINAL_INDEPENDENT_READBACK.json",
+  "primary_readback_status": "PASS_WITH_EXPLICIT_MISSING_CONTROLS",
+  "followup_report": "FINAL_REPORT_ZH.txt",
+  "followup_readback": "FINAL_INDEPENDENT_AUDIT.json",
+  "followup_readback_status": "PASS",
+  "export": "allowlisted numeric summaries and CSVs; private paths, Job routing and internal indexes excluded",
+  "current_check": "export compared to archived report fields; no new GRU model calls or training",
+  "original_check": "saved metric/statistic readback plus sampled independent validity checks; not a second full model evaluation",
+  "limitations": [
+    "GRU implementation/config/checkpoint redistribution and clean training reproduction pending",
+    "Published aggregated tables cannot independently reconstruct question-level confidence intervals",
+    "Test-informed development; intervals do not cover training-start or method-selection uncertainty"
+  ],
+  "actual_bill": "unknown"
+}

@@ -1,0 +1,629 @@
+{
+  "sat": {
+    "task": "sat",
+    "questions": 1000,
+    "models": {
+      "source_sat74": {
+        "U": 0.9116666666666666,
+        "U_all": 0.9116666666666666,
+        "validity": 0.19635416666666666,
+        "first": 0.194,
+        "first_valid": 0.194,
+        "selected": 0.2773333333333333,
+        "selected_valid": 0.2773333333333333,
+        "atleastone": 0.434,
+        "atleastone_target": 0.434,
+        "V": 6.283333333333333,
+        "D": 5.371666666666667,
+        "V_target": 6.283333333333333,
+        "D_target": 5.371666666666667,
+        "D_per_K": 0.16786458333333334
+      },
+      "main_sat74_a_mass": {
+        "U": 1.4676666666666667,
+        "U_all": 1.4676666666666667,
+        "validity": 0.33129166666666665,
+        "first": 0.32233333333333336,
+        "first_valid": 0.32233333333333336,
+        "selected": 0.4146666666666667,
+        "selected_valid": 0.4146666666666667,
+        "atleastone": 0.5446666666666666,
+        "atleastone_target": 0.5446666666666666,
+        "V": 10.601333333333333,
+        "D": 9.133666666666667,
+        "V_target": 10.601333333333333,
+        "D_target": 9.133666666666667,
+        "D_per_K": 0.28542708333333333
+      },
+      "main_sat74_a_multi": {
+        "U": 1.943,
+        "U_all": 1.943,
+        "validity": 0.37332291666666667,
+        "first": 0.36633333333333334,
+        "first_valid": 0.36633333333333334,
+        "selected": 0.478,
+        "selected_valid": 0.478,
+        "atleastone": 0.5973333333333334,
+        "atleastone_target": 0.5973333333333334,
+        "V": 11.946333333333333,
+        "D": 10.003333333333334,
+        "V_target": 11.946333333333333,
+        "D_target": 10.003333333333334,
+        "D_per_K": 0.3126041666666667
+      },
+      "main_sat74_a_set": {
+        "U": 2.4596666666666667,
+        "U_all": 2.4596666666666667,
+        "validity": 0.39110416666666664,
+        "first": 0.38433333333333336,
+        "first_valid": 0.38433333333333336,
+        "selected": 0.521,
+        "selected_valid": 0.521,
+        "atleastone": 0.6513333333333333,
+        "atleastone_target": 0.6513333333333333,
+        "V": 12.515333333333333,
+        "D": 10.055666666666667,
+        "V_target": 12.515333333333333,
+        "D_target": 10.055666666666667,
+        "D_per_K": 0.31423958333333335
+      },
+      "finite_nested8_mass": {
+        "U": 0.0033333333333333335,
+        "U_all": 0.0033333333333333335,
+        "validity": 0.000125,
+        "first": 0.0,
+        "first_valid": 0.0,
+        "selected": 0.0003333333333333333,
+        "selected_valid": 0.0003333333333333333,
+        "atleastone": 0.0033333333333333335,
+        "atleastone_target": 0.0033333333333333335,
+        "V": 0.004,
+        "D": 0.0006666666666666666,
+        "V_target": 0.004,
+        "D_target": 0.0006666666666666666,
+        "D_per_K": 2.0833333333333333e-05
+      },
+      "finite_nested8_multi": {
+        "U": 0.004,
+        "U_all": 0.004,
+        "validity": 0.00021875,
+        "first": 0.0003333333333333333,
+        "first_valid": 0.0003333333333333333,
+        "selected": 0.0,
+        "selected_valid": 0.0,
+        "atleastone": 0.004,
+        "atleastone_target": 0.004,
+        "V": 0.007,
+        "D": 0.003,
+        "V_target": 0.007,
+        "D_target": 0.003,
+        "D_per_K": 9.375e-05
+      },
+      "finite_nested8_set": {
+        "U": 0.004,
+        "U_all": 0.004,
+        "validity": 0.00022916666666666666,
+        "first": 0.0003333333333333333,
+        "first_valid": 0.0003333333333333333,
+        "selected": 0.0,
+        "selected_valid": 0.0,
+        "atleastone": 0.004,
+        "atleastone_target": 0.004,
+        "V": 0.007333333333333333,
+        "D": 0.0033333333333333335,
+        "V_target": 0.007333333333333333,
+        "D_target": 0.0033333333333333335,
+        "D_per_K": 0.00010416666666666667
+      },
+      "finite_nested32_mass": {
+        "U": 0.003,
+        "U_all": 0.003,
+        "validity": 0.00059375,
+        "first": 0.0006666666666666666,
+        "first_valid": 0.0006666666666666666,
+        "selected": 0.0,
+        "selected_valid": 0.0,
+        "atleastone": 0.003,
+        "atleastone_target": 0.003,
+        "V": 0.019,
+        "D": 0.016,
+        "V_target": 0.019,
+        "D_target": 0.016,
+        "D_per_K": 0.0005
+      },
+      "finite_nested32_multi": {
+        "U": 0.007,
+        "U_all": 0.007,
+        "validity": 0.0014270833333333334,
+        "first": 0.0013333333333333333,
+        "first_valid": 0.0013333333333333333,
+        "selected": 0.0023333333333333335,
+        "selected_valid": 0.0023333333333333335,
+        "atleastone": 0.005666666666666667,
+        "atleastone_target": 0.005666666666666667,
+        "V": 0.04566666666666667,
+        "D": 0.03866666666666667,
+        "V_target": 0.04566666666666667,
+        "D_target": 0.03866666666666667,
+        "D_per_K": 0.0012083333333333334
+      },
+      "finite_nested32_set": {
+        "U": 0.007666666666666666,
+        "U_all": 0.007666666666666666,
+        "validity": 0.0016145833333333333,
+        "first": 0.0016666666666666668,
+        "first_valid": 0.0016666666666666668,
+        "selected": 0.0023333333333333335,
+        "selected_valid": 0.0023333333333333335,
+        "atleastone": 0.006333333333333333,
+        "atleastone_target": 0.006333333333333333,
+        "V": 0.051666666666666666,
+        "D": 0.044,
+        "V_target": 0.051666666666666666,
+        "D_target": 0.044,
+        "D_per_K": 0.001375
+      },
+      "finite_acquired8_mass": {
+        "U": 0.0016666666666666668,
+        "U_all": 0.0016666666666666668,
+        "validity": 0.00011458333333333333,
+        "first": 0.0,
+        "first_valid": 0.0,
+        "selected": 0.0,
+        "selected_valid": 0.0,
+        "atleastone": 0.0016666666666666668,
+        "atleastone_target": 0.0016666666666666668,
+        "V": 0.0036666666666666666,
+        "D": 0.002,
+        "V_target": 0.0036666666666666666,
+        "D_target": 0.002,
+        "D_per_K": 6.25e-05
+      },
+      "finite_acquired8_multi": {
+        "U": 0.006333333333333333,
+        "U_all": 0.006333333333333333,
+        "validity": 0.00103125,
+        "first": 0.0006666666666666666,
+        "first_valid": 0.0006666666666666666,
+        "selected": 0.0013333333333333333,
+        "selected_valid": 0.0013333333333333333,
+        "atleastone": 0.005,
+        "atleastone_target": 0.005,
+        "V": 0.033,
+        "D": 0.02666666666666667,
+        "V_target": 0.033,
+        "D_target": 0.02666666666666667,
+        "D_per_K": 0.0008333333333333334
+      },
+      "finite_acquired8_set": {
+        "U": 0.007,
+        "U_all": 0.007,
+        "validity": 0.001125,
+        "first": 0.0006666666666666666,
+        "first_valid": 0.0006666666666666666,
+        "selected": 0.0016666666666666668,
+        "selected_valid": 0.0016666666666666668,
+        "atleastone": 0.005333333333333333,
+        "atleastone_target": 0.005333333333333333,
+        "V": 0.036,
+        "D": 0.029,
+        "V_target": 0.036,
+        "D_target": 0.029,
+        "D_per_K": 0.00090625
+      },
+      "aux8_sat74_multi": {
+        "U": 1.9296666666666666,
+        "U_all": 1.9296666666666666,
+        "validity": 0.372375,
+        "first": 0.367,
+        "first_valid": 0.367,
+        "selected": 0.4786666666666667,
+        "selected_valid": 0.4786666666666667,
+        "atleastone": 0.6023333333333334,
+        "atleastone_target": 0.6023333333333334,
+        "V": 11.916,
+        "D": 9.986333333333333,
+        "V_target": 11.916,
+        "D_target": 9.986333333333333,
+        "D_per_K": 0.31207291666666664
+      },
+      "aux8_sat74_set": {
+        "U": 2.362,
+        "U_all": 2.362,
+        "validity": 0.38644791666666667,
+        "first": 0.375,
+        "first_valid": 0.375,
+        "selected": 0.5166666666666667,
+        "selected_valid": 0.5166666666666667,
+        "atleastone": 0.643,
+        "atleastone_target": 0.643,
+        "V": 12.366333333333333,
+        "D": 10.004333333333333,
+        "V_target": 12.366333333333333,
+        "D_target": 10.004333333333333,
+        "D_per_K": 0.31263541666666667
+      }
+    },
+    "primary": {
+      "finite_nested8_set minus finite_nested8_multi": {
+        "U": {
+          "delta": 0.0,
+          "sim95": [
+            -0.0015514760871106917,
+            0.0015514760871106917
+          ],
+          "point95": [
+            -0.001,
+            0.001
+          ]
+        },
+        "validity": {
+          "delta": 1.0416666666666666e-05,
+          "sim95": [
+            -4.8447317966548015e-05,
+            6.928065129988135e-05
+          ],
+          "point95": [
+            -2.0833333333333336e-05,
+            5.208333333333333e-05
+          ],
+          "protection": "protected"
+        },
+        "first": {
+          "delta": 0.0,
+          "sim95": [
+            0.0,
+            0.0
+          ],
+          "point95": [
+            0.0,
+            0.0
+          ],
+          "protection": "protected"
+        },
+        "selected": {
+          "delta": 0.0,
+          "sim95": [
+            0.0,
+            0.0
+          ],
+          "point95": [
+            0.0,
+            0.0
+          ],
+          "protection": "protected"
+        },
+        "pool_and_answer_gain": false,
+        "also_first_protected": false
+      },
+      "finite_nested32_set minus finite_nested32_multi": {
+        "U": {
+          "delta": 0.0006666666666666666,
+          "sim95": [
+            -0.0015442258127238953,
+            0.0028775591460572284
+          ],
+          "point95": [
+            0.0,
+            0.002
+          ]
+        },
+        "validity": {
+          "delta": 0.0001875,
+          "sim95": [
+            -9.413910660824651e-05,
+            0.0004691391066082465
+          ],
+          "point95": [
+            4.1666666666666665e-05,
+            0.0003854166666666666
+          ],
+          "protection": "protected"
+        },
+        "first": {
+          "delta": 0.0003333333333333333,
+          "sim95": [
+            -0.000739181673275451,
+            0.0014058483399421175
+          ],
+          "point95": [
+            0.0,
+            0.001
+          ],
+          "protection": "protected"
+        },
+        "selected": {
+          "delta": 0.0,
+          "sim95": [
+            0.0,
+            0.0
+          ],
+          "point95": [
+            0.0,
+            0.0
+          ],
+          "protection": "protected"
+        },
+        "pool_and_answer_gain": false,
+        "also_first_protected": false
+      },
+      "finite_acquired8_set minus finite_acquired8_multi": {
+        "U": {
+          "delta": 0.0006666666666666666,
+          "sim95": [
+            -0.0015177309275114233,
+            0.0028510642608447563
+          ],
+          "point95": [
+            0.0,
+            0.002
+          ]
+        },
+        "validity": {
+          "delta": 9.375e-05,
+          "sim95": [
+            -9.773993043436552e-05,
+            0.0002852399304343655
+          ],
+          "point95": [
+            0.0,
+            0.00021875
+          ],
+          "protection": "protected"
+        },
+        "first": {
+          "delta": 0.0,
+          "sim95": [
+            0.0,
+            0.0
+          ],
+          "point95": [
+            0.0,
+            0.0
+          ],
+          "protection": "protected"
+        },
+        "selected": {
+          "delta": 0.0003333333333333333,
+          "sim95": [
+            -0.0007789026056446891,
+            0.0014455692723113556
+          ],
+          "point95": [
+            0.0,
+            0.001
+          ],
+          "protection": "protected"
+        },
+        "pool_and_answer_gain": false,
+        "also_first_protected": false
+      },
+      "aux8_sat74_set minus aux8_sat74_multi": {
+        "U": {
+          "delta": 0.43233333333333374,
+          "sim95": [
+            0.35626359640870137,
+            0.508403070257966
+          ],
+          "point95": [
+            0.38733333333333336,
+            0.4800083333333333
+          ]
+        },
+        "validity": {
+          "delta": 0.01407291666666668,
+          "sim95": [
+            0.008767762596728514,
+            0.019378070736604844
+          ],
+          "point95": [
+            0.010874739583333333,
+            0.017229427083333335
+          ],
+          "protection": "protected"
+        },
+        "first": {
+          "delta": 0.007999999999999998,
+          "sim95": [
+            -0.004955043096009538,
+            0.020955043096009533
+          ],
+          "point95": [
+            0.00033333333333333105,
+            0.016
+          ],
+          "protection": "protected"
+        },
+        "selected": {
+          "delta": 0.038,
+          "sim95": [
+            0.020085656491831454,
+            0.05591434350816854
+          ],
+          "point95": [
+            0.027666666666666673,
+            0.04834166666666663
+          ],
+          "protection": "protected"
+        },
+        "pool_and_answer_gain": true,
+        "also_first_protected": true
+      }
+    },
+    "missing": []
+  },
+  "maze": {
+    "task": "maze",
+    "questions": 1200,
+    "models": {
+      "source_maze77": {
+        "U": 3.687222222222222,
+        "U_all": 3.763611111111111,
+        "validity": 0.9997829861111112,
+        "first": 0.9883333333333333,
+        "first_valid": 0.9997222222222222,
+        "selected": 0.9908333333333333,
+        "selected_valid": 1.0,
+        "atleastone": 1.0,
+        "atleastone_target": 0.9966666666666667,
+        "V": 31.993055555555557,
+        "D": 28.229444444444443,
+        "V_target": 31.634166666666665,
+        "D_target": 27.946944444444444,
+        "D_per_K": 0.8821701388888888
+      },
+      "main_maze77_a_mass": {
+        "U": 3.888888888888889,
+        "U_all": 3.9158333333333335,
+        "validity": 0.9998177083333334,
+        "first": 0.9983333333333333,
+        "first_valid": 1.0,
+        "selected": 0.9972222222222222,
+        "selected_valid": 1.0,
+        "atleastone": 1.0,
+        "atleastone_target": 1.0,
+        "V": 31.99416666666667,
+        "D": 28.078333333333333,
+        "V_target": 31.91,
+        "D_target": 28.02111111111111,
+        "D_per_K": 0.8774479166666667
+      },
+      "main_maze77_a_multi": {
+        "U": 5.894166666666667,
+        "U_all": 5.939444444444445,
+        "validity": 0.9995399305555556,
+        "first": 0.9966666666666667,
+        "first_valid": 0.9997222222222222,
+        "selected": 0.9969444444444444,
+        "selected_valid": 0.9994444444444445,
+        "atleastone": 1.0,
+        "atleastone_target": 0.9991666666666666,
+        "V": 31.985277777777778,
+        "D": 26.045833333333334,
+        "V_target": 31.878333333333334,
+        "D_target": 25.984166666666667,
+        "D_per_K": 0.8139322916666667
+      },
+      "main_maze77_a_set": {
+        "U": 6.785833333333334,
+        "U_all": 6.833888888888889,
+        "validity": 0.9996354166666667,
+        "first": 0.9969444444444444,
+        "first_valid": 0.9997222222222222,
+        "selected": 0.9963888888888889,
+        "selected_valid": 0.9994444444444445,
+        "atleastone": 1.0,
+        "atleastone_target": 0.9991666666666666,
+        "V": 31.988333333333333,
+        "D": 25.154444444444444,
+        "V_target": 31.886944444444445,
+        "D_target": 25.101111111111113,
+        "D_per_K": 0.7860763888888889
+      },
+      "aux8_maze77_multi": {
+        "U": 5.910277777777778,
+        "U_all": 5.954166666666667,
+        "validity": 0.9995399305555556,
+        "first": 0.9966666666666667,
+        "first_valid": 0.9994444444444445,
+        "selected": 0.9969444444444444,
+        "selected_valid": 0.9994444444444445,
+        "atleastone": 1.0,
+        "atleastone_target": 0.9991666666666666,
+        "V": 31.985277777777778,
+        "D": 26.031111111111112,
+        "V_target": 31.8875,
+        "D_target": 25.977222222222224,
+        "D_per_K": 0.8134722222222223
+      },
+      "aux8_maze77_set": {
+        "U": 6.598055555555556,
+        "U_all": 6.639722222222222,
+        "validity": 0.9996354166666667,
+        "first": 0.9966666666666667,
+        "first_valid": 0.9997222222222222,
+        "selected": 0.9969444444444444,
+        "selected_valid": 0.9994444444444445,
+        "atleastone": 1.0,
+        "atleastone_target": 0.9991666666666666,
+        "V": 31.988333333333333,
+        "D": 25.34861111111111,
+        "V_target": 31.898888888888887,
+        "D_target": 25.300833333333333,
+        "D_per_K": 0.7921440972222222
+      }
+    },
+    "primary": {
+      "aux8_maze77_set minus aux8_maze77_multi": {
+        "U": {
+          "delta": 0.6877777777777785,
+          "sim95": [
+            0.6040141825845802,
+            0.7715413729709768
+          ],
+          "point95": [
+            0.6338888888888888,
+            0.7430555555555555
+          ]
+        },
+        "validity": {
+          "delta": 9.548611111111112e-05,
+          "sim95": [
+            -0.00016746965699129102,
+            0.0003584418792135133
+          ],
+          "point95": [
+            0.0,
+            0.0002777777777777778
+          ],
+          "protection": "protected"
+        },
+        "first": {
+          "delta": 0.0,
+          "sim95": [
+            -0.001179954415436513,
+            0.001179954415436513
+          ],
+          "point95": [
+            -0.0008333333333333334,
+            0.0008333333333333334
+          ],
+          "protection": "protected"
+        },
+        "selected": {
+          "delta": 0.0,
+          "sim95": [
+            0.0,
+            0.0
+          ],
+          "point95": [
+            0.0,
+            0.0
+          ],
+          "protection": "protected"
+        },
+        "pool_and_answer_gain": true,
+        "also_first_protected": true
+      }
+    },
+    "missing": []
+  },
+  "finite_source_metrics": {
+    "U": 0.0,
+    "U_all": 0.0,
+    "validity": 0.0,
+    "first": 0.0,
+    "first_valid": 0.0,
+    "selected": 0.0,
+    "selected_valid": 0.0,
+    "atleastone": 0.0,
+    "atleastone_target": 0.0,
+    "V": 0.0,
+    "D": 0.0,
+    "V_target": 0.0,
+    "D_target": 0.0,
+    "D_per_K": 0.0
+  },
+  "source_contract": "GRAM-ASSIGN-FOLLOWUP-20261112-r1",
+  "interpretation": "Full quality + limited auxiliary references is not limited total supervision. Finite-only source has zero observed test legality; its nine continuations do not establish useful capability."
+}

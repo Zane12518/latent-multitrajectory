@@ -1,0 +1,57 @@
+[
+  {
+    "line": "SATLIB/Maze parent50",
+    "state": "accepted_reused",
+    "detail": "25 endpoints per task plus existing three starts; all accepted predictions reused"
+  },
+  {
+    "line": "historical SAT nativeA",
+    "state": "accepted_reused",
+    "detail": "three full model/Adam/RNG/order bindings and full predictions; new train-side selection scores only"
+  },
+  {
+    "line": "historical Maze nativeA",
+    "state": "identity_missing_or_budget_mismatch",
+    "detail": "77 lacks same-budget saved prediction;96 endpoint not located;1117 starts from different historical state. Complete-reference Qnative equals DAG Qmass, alias not a second experiment"
+  },
+  {
+    "line": "SAT training-side control selection",
+    "state": "closed",
+    "detail": "main_sat74_a_multi"
+  },
+  {
+    "line": "Maze training-side control selection",
+    "state": "no_eligible_control",
+    "detail": "Original registered 64-question selection gate admits no ordinary candidate; no test-selected winner"
+  },
+  {
+    "line": "limited auxiliary reference",
+    "state": "completed",
+    "detail": "four endpoints, full common quality supervision remains"
+  },
+  {
+    "line": "limited total supervision",
+    "state": "completed_no_ability",
+    "detail": "nine endpoints, same finite-only weak start; no established Set advantage"
+  },
+  {
+    "line": "official NQ10",
+    "state": "completed",
+    "detail": "two new matched endpoints, source/quality/mass predictions reused; complete18466 tests"
+  },
+  {
+    "line": "conditional Sudoku4",
+    "state": "completed_inconclusive",
+    "detail": "two endpoints on256 inputs; no established Set-Multi gain"
+  },
+  {
+    "line": "Graph10",
+    "state": "scientific_stop_preserved",
+    "detail": "four old raw-quality stops; no new training or scoring"
+  },
+  {
+    "line": "new confirmation population",
+    "state": "registered_not_generated_not_scored",
+    "detail": "SAT20 seed2026120901/Maze seed2026120902, exact and stated symmetry/isomorphism isolation; release after method lock"
+  }
+]

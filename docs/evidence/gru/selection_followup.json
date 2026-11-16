@@ -1,0 +1,1610 @@
+{
+  "sat": {
+    "status": "SELECTION_CLOSED",
+    "task": "sat",
+    "test_read_for_selection": false,
+    "selection_questions": 128,
+    "selection_only": true,
+    "rule": "original primary: simultaneous lower validity and actual selected >-1pp vs source, then maximum U; first is registered secondary; ties mainLR then native/mass/multi; no test-selected winner",
+    "ordinary": "main_sat74_a_multi",
+    "set": "main_sat74_a_set",
+    "ranking_ordinary": [
+      "main_sat74_a_multi",
+      "main_sat74_a_native",
+      "main_sat74_a_mass",
+      "dev_sat74_multi"
+    ],
+    "ranking_set": [
+      "main_sat74_a_set",
+      "dev_sat74_set"
+    ],
+    "diagnostics": {
+      "main_sat74_a_mass": {
+        "mean": {
+          "U": 1.510416666666667,
+          "validity": 0.31396484375000006,
+          "first": 0.32031250000000006,
+          "selected": 0.4244791666666667
+        },
+        "delta": {
+          "U": 0.5182291666666669,
+          "validity": 0.09383138020833333,
+          "first": 0.09895833333333333,
+          "selected": 0.10677083333333333
+        },
+        "lower": {
+          "U": 0.17925542026886765,
+          "validity": 0.02099114804447083,
+          "first": 0.00622192031773787,
+          "selected": -0.00039117202422221664
+        },
+        "upper": {
+          "U": 0.857202913064466,
+          "validity": 0.16667161237219583,
+          "first": 0.1916947463489288,
+          "selected": 0.21393283869088886
+        },
+        "primary_eligible": true,
+        "first_secondary": true
+      },
+      "main_sat74_a_multi": {
+        "mean": {
+          "U": 1.927083333333334,
+          "validity": 0.3537597656250001,
+          "first": 0.3645833333333334,
+          "selected": 0.47135416666666663
+        },
+        "delta": {
+          "U": 0.9348958333333333,
+          "validity": 0.13362630208333337,
+          "first": 0.1432291666666667,
+          "selected": 0.15364583333333337
+        },
+        "lower": {
+          "U": 0.4428978008028654,
+          "validity": 0.05550852087997579,
+          "first": 0.04440228317241196,
+          "selected": 0.047820513605397214
+        },
+        "upper": {
+          "U": 1.426893865863801,
+          "validity": 0.21174408328669095,
+          "first": 0.24205605016092147,
+          "selected": 0.25947115306126955
+        },
+        "primary_eligible": true,
+        "first_secondary": true
+      },
+      "main_sat74_a_set": {
+        "mean": {
+          "U": 2.416666666666668,
+          "validity": 0.3627929687500002,
+          "first": 0.36979166666666674,
+          "selected": 0.4947916666666666
+        },
+        "delta": {
+          "U": 1.4244791666666663,
+          "validity": 0.14265950520833331,
+          "first": 0.14843750000000003,
+          "selected": 0.1770833333333334
+        },
+        "lower": {
+          "U": 0.7651371315918212,
+          "validity": 0.0639209101045968,
+          "first": 0.051670785627615484,
+          "selected": 0.06606444164878705
+        },
+        "upper": {
+          "U": 2.0838212017415114,
+          "validity": 0.22139810031206983,
+          "first": 0.24520421437238457,
+          "selected": 0.28810222501787974
+        },
+        "primary_eligible": true,
+        "first_secondary": true
+      },
+      "main_sat74_b_mass": {
+        "mean": {
+          "U": 1.4921874999999998,
+          "validity": 0.32031250000000006,
+          "first": 0.3255208333333333,
+          "selected": 0.4375
+        },
+        "delta": {
+          "U": 0.49999999999999983,
+          "validity": 0.10017903645833336,
+          "first": 0.10416666666666669,
+          "selected": 0.11979166666666664
+        },
+        "lower": {
+          "U": 0.1581049167315034,
+          "validity": 0.02796760887455242,
+          "first": 0.0134235345376688,
+          "selected": 0.020222450041724918
+        },
+        "upper": {
+          "U": 0.8418950832684963,
+          "validity": 0.17239046404211428,
+          "first": 0.19490979879566456,
+          "selected": 0.21936088329160836
+        },
+        "primary_eligible": true,
+        "first_secondary": true
+      },
+      "main_sat74_b_multi": {
+        "mean": {
+          "U": 1.9166666666666667,
+          "validity": 0.3589680989583333,
+          "first": 0.35677083333333337,
+          "selected": 0.46354166666666674
+        },
+        "delta": {
+          "U": 0.9244791666666666,
+          "validity": 0.13883463541666666,
+          "first": 0.13541666666666669,
+          "selected": 0.14583333333333337
+        },
+        "lower": {
+          "U": 0.4642512747267211,
+          "validity": 0.062333285501327135,
+          "first": 0.0426212347352673,
+          "selected": 0.04211655406803225
+        },
+        "upper": {
+          "U": 1.3847070586066121,
+          "validity": 0.21533598533200618,
+          "first": 0.22821209859806607,
+          "selected": 0.2495501125986345
+        },
+        "primary_eligible": true,
+        "first_secondary": true
+      },
+      "main_sat74_b_native": {
+        "mean": {
+          "U": 1.4296875000000002,
+          "validity": 0.30721028645833337,
+          "first": 0.30468750000000006,
+          "selected": 0.41927083333333326
+        },
+        "delta": {
+          "U": 0.4374999999999999,
+          "validity": 0.08707682291666666,
+          "first": 0.08333333333333333,
+          "selected": 0.10156249999999997
+        },
+        "lower": {
+          "U": 0.12365858214872916,
+          "validity": 0.018999632308434836,
+          "first": -0.004465991199709599,
+          "selected": 0.005705320837181935
+        },
+        "upper": {
+          "U": 0.7513414178512706,
+          "validity": 0.1551540135248985,
+          "first": 0.17113265786637627,
+          "selected": 0.197419679162818
+        },
+        "primary_eligible": true,
+        "first_secondary": true
+      },
+      "main_sat74_b_set": {
+        "mean": {
+          "U": 2.192708333333333,
+          "validity": 0.36319986979166663,
+          "first": 0.3802083333333334,
+          "selected": 0.48958333333333326
+        },
+        "delta": {
+          "U": 1.2005208333333333,
+          "validity": 0.14306640625000006,
+          "first": 0.15885416666666669,
+          "selected": 0.17187500000000006
+        },
+        "lower": {
+          "U": 0.6172434695506016,
+          "validity": 0.0649342806843635,
+          "first": 0.055669265041517965,
+          "selected": 0.05957147652337416
+        },
+        "upper": {
+          "U": 1.7837981971160648,
+          "validity": 0.22119853181563662,
+          "first": 0.2620390682918154,
+          "selected": 0.284178523476626
+        },
+        "primary_eligible": true,
+        "first_secondary": true
+      },
+      "main_sat912_a_mass": {
+        "mean": {
+          "U": 3.049479166666666,
+          "validity": 0.4524739583333332,
+          "first": 0.4479166666666666,
+          "selected": 0.6406250000000001
+        },
+        "delta": {
+          "U": 0.21093749999999997,
+          "validity": 0.1319173177083333,
+          "first": 0.140625,
+          "selected": 0.039062500000000014
+        },
+        "lower": {
+          "U": -0.16862137996867085,
+          "validity": 0.07588600663551187,
+          "first": 0.04328008043113188,
+          "selected": -0.05756832985476501
+        },
+        "upper": {
+          "U": 0.5904963799686708,
+          "validity": 0.1879486287811547,
+          "first": 0.23796991956886812,
+          "selected": 0.13569332985476504
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat912_a_multi": {
+        "mean": {
+          "U": 2.997395833333334,
+          "validity": 0.45027669270833337,
+          "first": 0.4427083333333333,
+          "selected": 0.6510416666666666
+        },
+        "delta": {
+          "U": 0.15885416666666666,
+          "validity": 0.12972005208333334,
+          "first": 0.13541666666666666,
+          "selected": 0.04947916666666668
+        },
+        "lower": {
+          "U": -0.21905674359232782,
+          "validity": 0.07395738273967156,
+          "first": 0.03891907581160327,
+          "selected": -0.05033992414883221
+        },
+        "upper": {
+          "U": 0.5367650769256611,
+          "validity": 0.18548272142699512,
+          "first": 0.23191425752173006,
+          "selected": 0.14929825748216558
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat912_a_set": {
+        "mean": {
+          "U": 3.1015624999999996,
+          "validity": 0.45320638020833337,
+          "first": 0.44791666666666663,
+          "selected": 0.6588541666666665
+        },
+        "delta": {
+          "U": 0.2630208333333333,
+          "validity": 0.1326497395833333,
+          "first": 0.140625,
+          "selected": 0.057291666666666685
+        },
+        "lower": {
+          "U": -0.1239943925614635,
+          "validity": 0.07709656278834486,
+          "first": 0.041850759900326745,
+          "selected": -0.04254113537412939
+        },
+        "upper": {
+          "U": 0.6500360592281301,
+          "validity": 0.1882029163783217,
+          "first": 0.23939924009967326,
+          "selected": 0.15712446870746277
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat912_b_mass": {
+        "mean": {
+          "U": 2.822916666666666,
+          "validity": 0.4053548177083333,
+          "first": 0.40104166666666663,
+          "selected": 0.6354166666666667
+        },
+        "delta": {
+          "U": -0.015625000000000024,
+          "validity": 0.08479817708333336,
+          "first": 0.09375000000000001,
+          "selected": 0.03385416666666667
+        },
+        "lower": {
+          "U": -0.39849071425554405,
+          "validity": 0.033208731684217084,
+          "first": 0.005205547613138822,
+          "selected": -0.05999434255411969
+        },
+        "upper": {
+          "U": 0.36724071425554405,
+          "validity": 0.13638762248244962,
+          "first": 0.1822944523868612,
+          "selected": 0.12770267588745304
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat912_b_multi": {
+        "mean": {
+          "U": 2.973958333333333,
+          "validity": 0.41634114583333326,
+          "first": 0.4140625,
+          "selected": 0.6510416666666667
+        },
+        "delta": {
+          "U": 0.13541666666666663,
+          "validity": 0.09578450520833334,
+          "first": 0.10677083333333333,
+          "selected": 0.049479166666666685
+        },
+        "lower": {
+          "U": -0.24810342412153602,
+          "validity": 0.04233514705719653,
+          "first": 0.0166604027746525,
+          "selected": -0.04892578112476462
+        },
+        "upper": {
+          "U": 0.5189367574548693,
+          "validity": 0.14923386335947014,
+          "first": 0.19688126389201416,
+          "selected": 0.147884114458098
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat912_b_native": {
+        "mean": {
+          "U": 2.8984374999999987,
+          "validity": 0.40974934895833326,
+          "first": 0.41406249999999994,
+          "selected": 0.6380208333333334
+        },
+        "delta": {
+          "U": 0.059895833333333315,
+          "validity": 0.08919270833333334,
+          "first": 0.10677083333333336,
+          "selected": 0.036458333333333336
+        },
+        "lower": {
+          "U": -0.3287062157134435,
+          "validity": 0.03707925674830337,
+          "first": 0.014356735882951999,
+          "selected": -0.0554240039625935
+        },
+        "upper": {
+          "U": 0.4484978823801101,
+          "validity": 0.14130615991836332,
+          "first": 0.19918493078371471,
+          "selected": 0.12834067062926016
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat912_b_set": {
+        "mean": {
+          "U": 3.072916666666666,
+          "validity": 0.4177246093750002,
+          "first": 0.41145833333333337,
+          "selected": 0.6536458333333331
+        },
+        "delta": {
+          "U": 0.23437500000000006,
+          "validity": 0.09716796875000004,
+          "first": 0.10416666666666667,
+          "selected": 0.05208333333333335
+        },
+        "lower": {
+          "U": -0.16716295062295067,
+          "validity": 0.045201333479025066,
+          "first": 0.01038527026323409,
+          "selected": -0.0458559447027524
+        },
+        "upper": {
+          "U": 0.6359129506229508,
+          "validity": 0.149134604020975,
+          "first": 0.19794806307009927,
+          "selected": 0.1500226113694191
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat98_a_mass": {
+        "mean": {
+          "U": 2.205729166666667,
+          "validity": 0.38460286458333326,
+          "first": 0.39062500000000006,
+          "selected": 0.5052083333333333
+        },
+        "delta": {
+          "U": -0.5520833333333335,
+          "validity": 0.04191080729166665,
+          "first": 0.07291666666666669,
+          "selected": -0.026041666666666664
+        },
+        "lower": {
+          "U": -0.8855605678474512,
+          "validity": 0.002354950652828494,
+          "first": -2.917643055516672e-06,
+          "selected": -0.10599505815499555
+        },
+        "upper": {
+          "U": -0.21860609881921578,
+          "validity": 0.0814666639305048,
+          "first": 0.1458362509763889,
+          "selected": 0.05391172482166221
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat98_a_multi": {
+        "mean": {
+          "U": 2.4557291666666665,
+          "validity": 0.4070638020833333,
+          "first": 0.4088541666666667,
+          "selected": 0.5442708333333334
+        },
+        "delta": {
+          "U": -0.30208333333333326,
+          "validity": 0.06437174479166667,
+          "first": 0.09114583333333331,
+          "selected": 0.013020833333333339
+        },
+        "lower": {
+          "U": -0.6370283675316006,
+          "validity": 0.0113822697606097,
+          "first": 0.009367814886210774,
+          "selected": -0.07822470133102905
+        },
+        "upper": {
+          "U": 0.03286170086493412,
+          "validity": 0.11736121982272364,
+          "first": 0.17292385178045586,
+          "selected": 0.10426636799769573
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat98_a_set": {
+        "mean": {
+          "U": 2.809895833333333,
+          "validity": 0.41251627604166674,
+          "first": 0.40885416666666663,
+          "selected": 0.5546875
+        },
+        "delta": {
+          "U": 0.05208333333333335,
+          "validity": 0.06982421874999997,
+          "first": 0.09114583333333331,
+          "selected": 0.023437500000000014
+        },
+        "lower": {
+          "U": -0.27438539886947466,
+          "validity": 0.02200375770772673,
+          "first": 0.01287061363807522,
+          "selected": -0.06530151169579895
+        },
+        "upper": {
+          "U": 0.3785520655361414,
+          "validity": 0.11764467979227322,
+          "first": 0.1694210530285914,
+          "selected": 0.11217651169579898
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat98_b_mass": {
+        "mean": {
+          "U": 2.114583333333334,
+          "validity": 0.38444010416666663,
+          "first": 0.37499999999999983,
+          "selected": 0.5182291666666667
+        },
+        "delta": {
+          "U": -0.6432291666666666,
+          "validity": 0.041748046875,
+          "first": 0.05729166666666667,
+          "selected": -0.013020833333333325
+        },
+        "lower": {
+          "U": -1.0226610898699156,
+          "validity": -0.0035019271288013465,
+          "first": -0.015792911256734002,
+          "selected": -0.10193242922547566
+        },
+        "upper": {
+          "U": -0.26379724346341765,
+          "validity": 0.08699802087880135,
+          "first": 0.13037624459006736,
+          "selected": 0.075890762558809
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_sat98_b_multi": {
+        "mean": {
+          "U": 2.2213541666666656,
+          "validity": 0.39965820312499994,
+          "first": 0.38541666666666663,
+          "selected": 0.5234375
+        },
+        "delta": {
+          "U": -0.5364583333333334,
+          "validity": 0.05696614583333334,
+          "first": 0.06770833333333334,
+          "selected": -0.007812499999999997
+        },
+        "lower": {
+          "U": -0.904651472230814,
+          "validity": 0.005828111776322857,
+          "first": -0.010247987939624836,
+          "selected": -0.10062857968586345
+        },
+        "upper": {
+          "U": -0.16826519443585275,
+          "validity": 0.10810417989034382,
+          "first": 0.14566465460629152,
+          "selected": 0.08500357968586345
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_sat98_b_native": {
+        "mean": {
+          "U": 2.166666666666666,
+          "validity": 0.3876953124999999,
+          "first": 0.3671875,
+          "selected": 0.5286458333333333
+        },
+        "delta": {
+          "U": -0.5911458333333334,
+          "validity": 0.045003255208333336,
+          "first": 0.04947916666666667,
+          "selected": -0.00260416666666666
+        },
+        "lower": {
+          "U": -0.985081932157737,
+          "validity": 0.0004798757280663757,
+          "first": -0.020650301790322942,
+          "selected": -0.08673180972110618
+        },
+        "upper": {
+          "U": -0.19720973450892976,
+          "validity": 0.0895266346886003,
+          "first": 0.11960863512365628,
+          "selected": 0.08152347638777287
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_sat98_b_set": {
+        "mean": {
+          "U": 2.8619791666666683,
+          "validity": 0.4195963541666669,
+          "first": 0.4270833333333333,
+          "selected": 0.5677083333333334
+        },
+        "delta": {
+          "U": 0.10416666666666673,
+          "validity": 0.07690429687500001,
+          "first": 0.109375,
+          "selected": 0.03645833333333333
+        },
+        "lower": {
+          "U": -0.22236913942426145,
+          "validity": 0.02420142575266139,
+          "first": 0.023914040960032065,
+          "selected": -0.05842579700340664
+        },
+        "upper": {
+          "U": 0.43070247275759493,
+          "validity": 0.12960716799733862,
+          "first": 0.19483595903996792,
+          "selected": 0.1313424636700733
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "dev_sat74_mass": {
+        "mean": {
+          "U": 1.4947916666666667,
+          "validity": 0.29549153645833326,
+          "first": 0.30729166666666674,
+          "selected": 0.4010416666666667
+        },
+        "delta": {
+          "U": 0.5026041666666665,
+          "validity": 0.07535807291666664,
+          "first": 0.08593749999999999,
+          "selected": 0.08333333333333333
+        },
+        "lower": {
+          "U": 0.13809109758893134,
+          "validity": 0.0071606059900109625,
+          "first": -0.00045055701784313396,
+          "selected": -0.015717663375166793
+        },
+        "upper": {
+          "U": 0.8671172357444017,
+          "validity": 0.1435555398433223,
+          "first": 0.1723255570178431,
+          "selected": 0.18238433004183346
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "dev_sat74_multi": {
+        "mean": {
+          "U": 1.5078124999999996,
+          "validity": 0.32161458333333326,
+          "first": 0.32031250000000006,
+          "selected": 0.4166666666666667
+        },
+        "delta": {
+          "U": 0.5156249999999999,
+          "validity": 0.10148111979166667,
+          "first": 0.09895833333333331,
+          "selected": 0.09895833333333334
+        },
+        "lower": {
+          "U": 0.18692673683130745,
+          "validity": 0.030712208104676328,
+          "first": 0.009295587355964793,
+          "selected": 0.0025174957566338335
+        },
+        "upper": {
+          "U": 0.8443232631686923,
+          "validity": 0.17225003147865703,
+          "first": 0.18862107931070182,
+          "selected": 0.19539917091003284
+        },
+        "primary_eligible": true,
+        "first_secondary": true
+      },
+      "dev_sat74_native": {
+        "mean": {
+          "U": 1.4062500000000004,
+          "validity": 0.29451497395833326,
+          "first": 0.30468750000000006,
+          "selected": 0.38802083333333337
+        },
+        "delta": {
+          "U": 0.41406249999999983,
+          "validity": 0.07438151041666667,
+          "first": 0.08333333333333331,
+          "selected": 0.0703125
+        },
+        "lower": {
+          "U": 0.09578736826887624,
+          "validity": 0.0063938488129913484,
+          "first": -0.0012130273551173992,
+          "selected": -0.029900723115770148
+        },
+        "upper": {
+          "U": 0.7323376317311234,
+          "validity": 0.142369172020342,
+          "first": 0.16787969402178404,
+          "selected": 0.17052572311577013
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "dev_sat74_set": {
+        "mean": {
+          "U": 1.6979166666666665,
+          "validity": 0.3330078124999999,
+          "first": 0.3359375000000001,
+          "selected": 0.44791666666666674
+        },
+        "delta": {
+          "U": 0.7057291666666667,
+          "validity": 0.11287434895833337,
+          "first": 0.11458333333333333,
+          "selected": 0.13020833333333334
+        },
+        "lower": {
+          "U": 0.3060697320992936,
+          "validity": 0.03988180522086163,
+          "first": 0.02028959372813209,
+          "selected": 0.03458847786147695
+        },
+        "upper": {
+          "U": 1.10538860123404,
+          "validity": 0.1858668926958051,
+          "first": 0.20887707293853458,
+          "selected": 0.22582818880518973
+        },
+        "primary_eligible": true,
+        "first_secondary": true
+      },
+      "main_sat74_a_native": {
+        "mean": {
+          "U": 1.5859375000000004,
+          "validity": 0.318603515625,
+          "first": 0.33593750000000006,
+          "selected": 0.4192708333333333
+        },
+        "delta": {
+          "U": 0.5937499999999999,
+          "validity": 0.09847005208333336,
+          "first": 0.11458333333333334,
+          "selected": 0.1015625
+        },
+        "lower": {
+          "U": 0.20795258921043575,
+          "validity": 0.02519295985898322,
+          "first": 0.01881472433157333,
+          "selected": -0.0026991978829884605
+        },
+        "upper": {
+          "U": 0.9795474107895641,
+          "validity": 0.1717471443076835,
+          "first": 0.21035194233509336,
+          "selected": 0.20582419788298845
+        },
+        "primary_eligible": true,
+        "first_secondary": true
+      },
+      "main_sat912_a_native": {
+        "mean": {
+          "U": 3.1093750000000004,
+          "validity": 0.45369466145833326,
+          "first": 0.45572916666666663,
+          "selected": 0.6354166666666666
+        },
+        "delta": {
+          "U": 0.27083333333333326,
+          "validity": 0.13313802083333331,
+          "first": 0.14843749999999994,
+          "selected": 0.03385416666666666
+        },
+        "lower": {
+          "U": -0.11782577124433352,
+          "validity": 0.07748459115638329,
+          "first": 0.05167078562761539,
+          "selected": -0.06578925383141739
+        },
+        "upper": {
+          "U": 0.6594924379110001,
+          "validity": 0.18879145051028334,
+          "first": 0.2452042143723845,
+          "selected": 0.1334975871647507
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      },
+      "main_sat98_a_native": {
+        "mean": {
+          "U": 2.1927083333333335,
+          "validity": 0.38452148437499994,
+          "first": 0.3880208333333333,
+          "selected": 0.49218749999999994
+        },
+        "delta": {
+          "U": -0.5651041666666666,
+          "validity": 0.041829427083333336,
+          "first": 0.07031250000000001,
+          "selected": -0.03906250000000001
+        },
+        "lower": {
+          "U": -0.9119965784625366,
+          "validity": 0.0020742089474731842,
+          "first": -0.00037683117577383407,
+          "selected": -0.11635228963381009
+        },
+        "upper": {
+          "U": -0.21821175487079675,
+          "validity": 0.08158464521919348,
+          "first": 0.14100183117577386,
+          "selected": 0.038227289633810065
+        },
+        "primary_eligible": false,
+        "first_secondary": true
+      }
+    },
+    "critical": 3.202011830676352,
+    "maze_native_alias": null
+  },
+  "maze": {
+    "status": "SELECTION_CLOSED",
+    "task": "maze",
+    "test_read_for_selection": false,
+    "selection_questions": 64,
+    "selection_only": true,
+    "rule": "original primary: simultaneous lower validity and actual selected >-1pp vs source, then maximum U; first is registered secondary; ties mainLR then native/mass/multi; no test-selected winner",
+    "ordinary": null,
+    "set": null,
+    "ranking_ordinary": [],
+    "ranking_set": [],
+    "diagnostics": {
+      "main_maze1117_a_mass": {
+        "mean": {
+          "U": 3.583333333333333,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 0.11458333333333331,
+          "validity": 0.0,
+          "first": 0.015625,
+          "selected": 0.010416666666666668
+        },
+        "lower": {
+          "U": -0.7200046358904131,
+          "validity": 0.0,
+          "first": -0.03125000000000004,
+          "selected": -0.011504345033714662
+        },
+        "upper": {
+          "U": 0.9491713025570796,
+          "validity": 0.0,
+          "first": 0.06250000000000004,
+          "selected": 0.032337678367048
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze1117_a_multi": {
+        "mean": {
+          "U": 6.750000000000001,
+          "validity": 1.0,
+          "first": 0.9947916666666667,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 3.2812500000000004,
+          "validity": 0.0,
+          "first": 0.010416666666666666,
+          "selected": 0.015625
+        },
+        "lower": {
+          "U": 2.0522157557207317,
+          "validity": 0.0,
+          "first": -0.039228652730988946,
+          "selected": -0.01909102127169112
+        },
+        "upper": {
+          "U": 4.510284244279269,
+          "validity": 0.0,
+          "first": 0.060061986064322274,
+          "selected": 0.05034102127169112
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze1117_a_set": {
+        "mean": {
+          "U": 9.036458333333334,
+          "validity": 1.0,
+          "first": 0.9947916666666667,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 5.567708333333333,
+          "validity": 0.0,
+          "first": 0.010416666666666666,
+          "selected": 0.010416666666666668
+        },
+        "lower": {
+          "U": 3.8420155107238285,
+          "validity": 0.0,
+          "first": -0.039228652730988946,
+          "selected": -0.027957729042344132
+        },
+        "upper": {
+          "U": 7.2934011559428376,
+          "validity": 0.0,
+          "first": 0.060061986064322274,
+          "selected": 0.04879106237567747
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze1117_b_mass": {
+        "mean": {
+          "U": 3.6250000000000004,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 0.15625000000000006,
+          "validity": 0.0,
+          "first": 0.015625,
+          "selected": 0.015625
+        },
+        "lower": {
+          "U": -0.615899375275339,
+          "validity": 0.0,
+          "first": -0.03125000000000004,
+          "selected": -0.01909102127169112
+        },
+        "upper": {
+          "U": 0.9283993752753392,
+          "validity": 0.0,
+          "first": 0.06250000000000004,
+          "selected": 0.05034102127169112
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze1117_b_multi": {
+        "mean": {
+          "U": 6.630208333333334,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 3.161458333333334,
+          "validity": 0.0,
+          "first": 0.015625,
+          "selected": 0.015625
+        },
+        "lower": {
+          "U": 2.019068010999715,
+          "validity": 0.0,
+          "first": -0.03125000000000004,
+          "selected": -0.01909102127169112
+        },
+        "upper": {
+          "U": 4.303848655666953,
+          "validity": 0.0,
+          "first": 0.06250000000000004,
+          "selected": 0.05034102127169112
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze1117_b_native": {
+        "mean": {
+          "U": 3.6250000000000004,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 0.15625000000000006,
+          "validity": 0.0,
+          "first": 0.015625,
+          "selected": 0.015625
+        },
+        "lower": {
+          "U": -0.615899375275339,
+          "validity": 0.0,
+          "first": -0.03125000000000004,
+          "selected": -0.01909102127169112
+        },
+        "upper": {
+          "U": 0.9283993752753392,
+          "validity": 0.0,
+          "first": 0.06250000000000004,
+          "selected": 0.05034102127169112
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze1117_b_set": {
+        "mean": {
+          "U": 8.901041666666668,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 5.432291666666665,
+          "validity": 0.0,
+          "first": 0.015625,
+          "selected": 0.015625
+        },
+        "lower": {
+          "U": 3.6382484356291984,
+          "validity": 0.0,
+          "first": -0.03125000000000004,
+          "selected": -0.01909102127169112
+        },
+        "upper": {
+          "U": 7.226334897704132,
+          "validity": 0.0,
+          "first": 0.06250000000000004,
+          "selected": 0.05034102127169112
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze77_a_mass": {
+        "mean": {
+          "U": 3.479166666666667,
+          "validity": 1.0,
+          "first": 0.9895833333333333,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 0.2656249999999999,
+          "validity": 0.0,
+          "first": 0.020833333333333332,
+          "selected": 0.026041666666666664
+        },
+        "lower": {
+          "U": -0.2965683412328787,
+          "validity": 0.0,
+          "first": -0.02300869006742932,
+          "selected": -0.029880825667004653
+        },
+        "upper": {
+          "U": 0.8278183412328785,
+          "validity": 0.0,
+          "first": 0.06467535673409598,
+          "selected": 0.08196415900033799
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze77_a_multi": {
+        "mean": {
+          "U": 5.338541666666666,
+          "validity": 1.0,
+          "first": 0.9947916666666666,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 2.1250000000000004,
+          "validity": 0.0,
+          "first": 0.026041666666666664,
+          "selected": 0.026041666666666664
+        },
+        "lower": {
+          "U": 1.0135293240521077,
+          "validity": 0.0,
+          "first": -0.029880825667004653,
+          "selected": -0.029880825667004653
+        },
+        "upper": {
+          "U": 3.236470675947893,
+          "validity": 0.0,
+          "first": 0.08196415900033799,
+          "selected": 0.08196415900033799
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze77_a_set": {
+        "mean": {
+          "U": 6.171875000000001,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 2.958333333333333,
+          "validity": 0.0,
+          "first": 0.03125,
+          "selected": 0.026041666666666664
+        },
+        "lower": {
+          "U": 1.7495895606765677,
+          "validity": 0.0,
+          "first": -0.034513035101143966,
+          "selected": -0.029880825667004653
+        },
+        "upper": {
+          "U": 4.167077105990098,
+          "validity": 0.0,
+          "first": 0.09701303510114397,
+          "selected": 0.08196415900033799
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze77_b_mass": {
+        "mean": {
+          "U": 3.588541666666668,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 0.37499999999999994,
+          "validity": 0.0,
+          "first": 0.03125,
+          "selected": 0.03125
+        },
+        "lower": {
+          "U": -0.4635254915624218,
+          "validity": 0.0,
+          "first": -0.034513035101143966,
+          "selected": -0.034513035101143966
+        },
+        "upper": {
+          "U": 1.2135254915624216,
+          "validity": 0.0,
+          "first": 0.09701303510114397,
+          "selected": 0.09701303510114397
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze77_b_multi": {
+        "mean": {
+          "U": 5.682291666666668,
+          "validity": 1.0,
+          "first": 0.9895833333333334,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 2.468749999999999,
+          "validity": 0.0,
+          "first": 0.020833333333333332,
+          "selected": 0.026041666666666664
+        },
+        "lower": {
+          "U": 1.1252768834543216,
+          "validity": 0.0,
+          "first": -0.028341403696006875,
+          "selected": -0.029880825667004653
+        },
+        "upper": {
+          "U": 3.8122231165456766,
+          "validity": 0.0,
+          "first": 0.07000807036267354,
+          "selected": 0.08196415900033799
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze77_b_native": {
+        "mean": {
+          "U": 3.588541666666668,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 0.37499999999999994,
+          "validity": 0.0,
+          "first": 0.03125,
+          "selected": 0.03125
+        },
+        "lower": {
+          "U": -0.4635254915624218,
+          "validity": 0.0,
+          "first": -0.034513035101143966,
+          "selected": -0.034513035101143966
+        },
+        "upper": {
+          "U": 1.2135254915624216,
+          "validity": 0.0,
+          "first": 0.09701303510114397,
+          "selected": 0.09701303510114397
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze77_b_set": {
+        "mean": {
+          "U": 6.421875000000001,
+          "validity": 1.0,
+          "first": 0.9895833333333334,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 3.2083333333333344,
+          "validity": 0.0,
+          "first": 0.020833333333333332,
+          "selected": 0.026041666666666664
+        },
+        "lower": {
+          "U": 1.6043792657884888,
+          "validity": 0.0,
+          "first": -0.028341403696006875,
+          "selected": -0.029880825667004653
+        },
+        "upper": {
+          "U": 4.81228740087818,
+          "validity": 0.0,
+          "first": 0.07000807036267354,
+          "selected": 0.08196415900033799
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze96_a_mass": {
+        "mean": {
+          "U": 3.182291666666666,
+          "validity": 1.0,
+          "first": 0.9947916666666666,
+          "selected": 0.984375
+        },
+        "delta": {
+          "U": 0.2812499999999999,
+          "validity": 0.0,
+          "first": 0.0,
+          "selected": -0.015625
+        },
+        "lower": {
+          "U": -0.3472002977847295,
+          "validity": 0.0,
+          "first": -0.022271770159368723,
+          "selected": -0.06250000000000004
+        },
+        "upper": {
+          "U": 0.9097002977847293,
+          "validity": 0.0,
+          "first": 0.022271770159368723,
+          "selected": 0.03125000000000004
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze96_a_multi": {
+        "mean": {
+          "U": 5.781250000000001,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 2.8802083333333326,
+          "validity": 0.0,
+          "first": 0.005208333333333334,
+          "selected": 0.0
+        },
+        "lower": {
+          "U": 1.7581073093228736,
+          "validity": 0.0,
+          "first": -0.01041666666666667,
+          "selected": 0.0
+        },
+        "upper": {
+          "U": 4.002309357343791,
+          "validity": 0.0,
+          "first": 0.020833333333333336,
+          "selected": 0.0
+        },
+        "primary_eligible": true,
+        "first_secondary": false
+      },
+      "main_maze96_a_set": {
+        "mean": {
+          "U": 7.005208333333332,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 4.104166666666667,
+          "validity": 0.0,
+          "first": 0.005208333333333334,
+          "selected": 0.0
+        },
+        "lower": {
+          "U": 2.860756457438553,
+          "validity": 0.0,
+          "first": -0.01041666666666667,
+          "selected": 0.0
+        },
+        "upper": {
+          "U": 5.347576875894781,
+          "validity": 0.0,
+          "first": 0.020833333333333336,
+          "selected": 0.0
+        },
+        "primary_eligible": true,
+        "first_secondary": false
+      },
+      "main_maze96_b_mass": {
+        "mean": {
+          "U": 3.432291666666667,
+          "validity": 1.0,
+          "first": 0.9895833333333334,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 0.5312500000000001,
+          "validity": 0.0,
+          "first": -0.005208333333333334,
+          "selected": 0.0
+        },
+        "lower": {
+          "U": -0.32316162283185257,
+          "validity": 0.0,
+          "first": -0.0403680278294961,
+          "selected": 0.0
+        },
+        "upper": {
+          "U": 1.3856616228318528,
+          "validity": 0.0,
+          "first": 0.029951361162829426,
+          "selected": 0.0
+        },
+        "primary_eligible": true,
+        "first_secondary": false
+      },
+      "main_maze96_b_multi": {
+        "mean": {
+          "U": 5.328125000000001,
+          "validity": 1.0,
+          "first": 0.9895833333333333,
+          "selected": 0.9947916666666667
+        },
+        "delta": {
+          "U": 2.427083333333334,
+          "validity": 0.0,
+          "first": -0.005208333333333333,
+          "selected": -0.005208333333333334
+        },
+        "lower": {
+          "U": 1.5272187188469304,
+          "validity": 0.0,
+          "first": -0.020833333333333332,
+          "selected": -0.020833333333333336
+        },
+        "upper": {
+          "U": 3.3269479478197375,
+          "validity": 0.0,
+          "first": 0.010416666666666668,
+          "selected": 0.01041666666666667
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze96_b_native": {
+        "mean": {
+          "U": 3.432291666666667,
+          "validity": 1.0,
+          "first": 0.9895833333333334,
+          "selected": 1.0
+        },
+        "delta": {
+          "U": 0.5312500000000001,
+          "validity": 0.0,
+          "first": -0.005208333333333334,
+          "selected": 0.0
+        },
+        "lower": {
+          "U": -0.32316162283185257,
+          "validity": 0.0,
+          "first": -0.0403680278294961,
+          "selected": 0.0
+        },
+        "upper": {
+          "U": 1.3856616228318528,
+          "validity": 0.0,
+          "first": 0.029951361162829426,
+          "selected": 0.0
+        },
+        "primary_eligible": true,
+        "first_secondary": false
+      },
+      "main_maze96_b_set": {
+        "mean": {
+          "U": 6.614583333333333,
+          "validity": 1.0,
+          "first": 0.9843749999999999,
+          "selected": 0.9947916666666667
+        },
+        "delta": {
+          "U": 3.7135416666666665,
+          "validity": 0.0,
+          "first": -0.010416666666666668,
+          "selected": -0.005208333333333334
+        },
+        "lower": {
+          "U": 2.513164083151398,
+          "validity": 0.0,
+          "first": -0.032337678367048,
+          "selected": -0.020833333333333336
+        },
+        "upper": {
+          "U": 4.9139192501819355,
+          "validity": 0.0,
+          "first": 0.011504345033714659,
+          "selected": 0.01041666666666667
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "dev_maze77_mass": {
+        "mean": {
+          "U": 3.729166666666666,
+          "validity": 1.0,
+          "first": 0.984375,
+          "selected": 0.984375
+        },
+        "delta": {
+          "U": 0.515625,
+          "validity": 0.0,
+          "first": 0.015625,
+          "selected": 0.015625
+        },
+        "lower": {
+          "U": -0.19460693991973077,
+          "validity": 0.0,
+          "first": -0.03125000000000004,
+          "selected": -0.03125000000000004
+        },
+        "upper": {
+          "U": 1.2258569399197308,
+          "validity": 0.0,
+          "first": 0.06250000000000004,
+          "selected": 0.06250000000000004
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "dev_maze77_multi": {
+        "mean": {
+          "U": 5.223958333333331,
+          "validity": 1.0,
+          "first": 0.9895833333333334,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 2.010416666666667,
+          "validity": 0.0,
+          "first": 0.020833333333333332,
+          "selected": 0.026041666666666664
+        },
+        "lower": {
+          "U": 0.9107303951176695,
+          "validity": 0.0,
+          "first": -0.028341403696006875,
+          "selected": -0.029880825667004653
+        },
+        "upper": {
+          "U": 3.1101029382156646,
+          "validity": 0.0,
+          "first": 0.07000807036267354,
+          "selected": 0.08196415900033799
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "dev_maze77_native": {
+        "mean": {
+          "U": 3.729166666666666,
+          "validity": 1.0,
+          "first": 0.984375,
+          "selected": 0.984375
+        },
+        "delta": {
+          "U": 0.515625,
+          "validity": 0.0,
+          "first": 0.015625,
+          "selected": 0.015625
+        },
+        "lower": {
+          "U": -0.19460693991973077,
+          "validity": 0.0,
+          "first": -0.03125000000000004,
+          "selected": -0.03125000000000004
+        },
+        "upper": {
+          "U": 1.2258569399197308,
+          "validity": 0.0,
+          "first": 0.06250000000000004,
+          "selected": 0.06250000000000004
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "dev_maze77_set": {
+        "mean": {
+          "U": 5.979166666666666,
+          "validity": 1.0,
+          "first": 0.9947916666666666,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 2.765624999999999,
+          "validity": 0.0,
+          "first": 0.026041666666666664,
+          "selected": 0.026041666666666664
+        },
+        "lower": {
+          "U": 1.5671471940564397,
+          "validity": 0.0,
+          "first": -0.029880825667004653,
+          "selected": -0.029880825667004653
+        },
+        "upper": {
+          "U": 3.9641028059435586,
+          "validity": 0.0,
+          "first": 0.08196415900033799,
+          "selected": 0.08196415900033799
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze1117_a_native": {
+        "mean": {
+          "U": 3.583333333333333,
+          "validity": 1.0,
+          "first": 1.0,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 0.11458333333333331,
+          "validity": 0.0,
+          "first": 0.015625,
+          "selected": 0.010416666666666668
+        },
+        "lower": {
+          "U": -0.7200046358904131,
+          "validity": 0.0,
+          "first": -0.03125000000000004,
+          "selected": -0.011504345033714662
+        },
+        "upper": {
+          "U": 0.9491713025570796,
+          "validity": 0.0,
+          "first": 0.06250000000000004,
+          "selected": 0.032337678367048
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze77_a_native": {
+        "mean": {
+          "U": 3.479166666666667,
+          "validity": 1.0,
+          "first": 0.9895833333333333,
+          "selected": 0.9947916666666666
+        },
+        "delta": {
+          "U": 0.2656249999999999,
+          "validity": 0.0,
+          "first": 0.020833333333333332,
+          "selected": 0.026041666666666664
+        },
+        "lower": {
+          "U": -0.2965683412328787,
+          "validity": 0.0,
+          "first": -0.02300869006742932,
+          "selected": -0.029880825667004653
+        },
+        "upper": {
+          "U": 0.8278183412328785,
+          "validity": 0.0,
+          "first": 0.06467535673409598,
+          "selected": 0.08196415900033799
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      },
+      "main_maze96_a_native": {
+        "mean": {
+          "U": 3.182291666666666,
+          "validity": 1.0,
+          "first": 0.9947916666666666,
+          "selected": 0.984375
+        },
+        "delta": {
+          "U": 0.2812499999999999,
+          "validity": 0.0,
+          "first": 0.0,
+          "selected": -0.015625
+        },
+        "lower": {
+          "U": -0.3472002977847295,
+          "validity": 0.0,
+          "first": -0.022271770159368723,
+          "selected": -0.06250000000000004
+        },
+        "upper": {
+          "U": 0.9097002977847293,
+          "validity": 0.0,
+          "first": 0.022271770159368723,
+          "selected": 0.03125000000000004
+        },
+        "primary_eligible": false,
+        "first_secondary": false
+      }
+    },
+    "critical": 3.0000000000000027,
+    "maze_native_alias": "full reference path logsumexp equals exact DAG mass; not a second independent target or historical checkpoint identity"
+  }
+}

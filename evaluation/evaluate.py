@@ -20,8 +20,10 @@ def main():
     for row in rows:validate_input(row)
     out=Path(a.out);out.mkdir(parents=True,exist_ok=False);s=Session(cfg,rows,a.device)
     c=torch.load(a.checkpoint,map_location='cpu',weights_only=True)
-    if 'model_config' in c:
-        for key,value in c['model_config'].items():
+    model_config=c.get('model_config',c.get('release_config',{}).get('model'))
+    if model_config is None:raise ValueError('checkpoint has no model configuration identity')
+    if model_config:
+        for key,value in model_config.items():
             if key!='forward_dtype' and cfg['model'].get(key)!=value:raise ValueError('checkpoint/config mismatch: '+key)
     s.m.load_state_dict(c['model']);s.m.eval()
     records=[];begin=time.monotonic()
