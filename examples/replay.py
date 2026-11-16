@@ -56,6 +56,8 @@ def main():
     a=p.parse_args();payload=build_payload(json.loads(Path(a.data).read_text()))
     if a.map_index not in range(len(payload['maps'])):p.error('map-index is outside the saved map range')
     template=Path(__file__).with_name('replay.html').read_text()
+    overview=json.loads((Path(__file__).parents[1]/'docs/results.json').read_text())
+    template=template.replace('__OVERVIEW_DATA__',json.dumps(overview,ensure_ascii=False,separators=(',',':'),allow_nan=False).replace('<','\\u003c'))
     body=template.replace('__REPLAY_DATA__',json.dumps(payload,ensure_ascii=False,separators=(',',':'),allow_nan=False).replace('<','\\u003c')).replace('__INITIAL_MAP__',str(a.map_index))
     dest=Path(a.out);dest.parent.mkdir(parents=True,exist_ok=True)
     with dest.open('x') as f:f.write(body)
