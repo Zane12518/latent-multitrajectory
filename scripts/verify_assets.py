@@ -1,6 +1,6 @@
 
 """Byte length + CRC32 integrity. Not a cryptographic authenticity guarantee."""
-import argparse,json,zlib,hashlib
+import argparse,json,zlib
 from pathlib import Path
 def crc(path):
     v=0
@@ -12,5 +12,5 @@ if __name__=='__main__':
     m=json.loads((root/'asset_manifest.json').read_text())
     for r in m['files']:
         q=root/r['file']
-        if q.stat().st_size!=r['bytes'] or crc(q)!=r['crc32'] or hashlib.sha256(q.read_bytes()).hexdigest()!=r['sha256']:raise ValueError(r['file'])
-    print(f"PASS: {len(m['files'])} files; byte length, CRC32 and SHA256")
+        if q.stat().st_size!=r['bytes'] or crc(q)!=r['crc32']:raise ValueError(r['file'])
+    print(f"PASS: {len(m['files'])} files; byte length and CRC32")

@@ -112,7 +112,7 @@ python training/train.py --config configs/cpu_smoke.json --data data/toy.json --
 ## 检查点与完整复现
 
 发布资产：12个推理权重（每个约2.1MiB）、6个完整配对续训起点（每个约6.7MiB）、完整数据和紧凑逐题指标。权重不是第三方预训练基座；Maze参数来自项目新初始化训练。
-[下载资产包](https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.1.0/latent-multitrajectory-assets.tar.gz)，解压到仓库根目录。二进制资产不进入Git历史；清单、SHA256、CRC32与字节数见[checkpoint清单](docs/checkpoints.json)、[asset manifest](docs/asset_manifest.json)。SHA256用于内容完整性核验，校验值本身不构成独立来源认证。
+[下载资产包](https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.1.0/latent-multitrajectory-assets.tar.gz)，解压到仓库根目录。二进制资产不进入Git历史；文件清单、CRC32与字节数见[checkpoint清单](docs/checkpoints.json)、[asset manifest](docs/asset_manifest.json)。当前资产检查仅使用文件大小与 CRC32。
 
 资产包解压到`release_assets/`后：
 
@@ -155,4 +155,4 @@ third_party/      上游版权与修改说明
 
 [动态实验回放](https://zane12518.github.io/latent-multitrajectory/demo/)提供地图切换与逐候选动画，无需后端或模型下载。当前源码可生成相同的离线交互页面；[v0.1.0 离线 Demo](https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.1.0/demo-replay.html)保留原静态版，不覆盖历史发布资产。两者都是保存结果展示，不是在线实时推理。
 
-[Release 文件与 SHA256 校验](https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.1.0)。
+[Release 下载](https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.1.0)。
