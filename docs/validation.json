@@ -1,0 +1,144 @@
+{
+  "status": "CANDIDATE_VALIDATED_NOT_PUBLISHED",
+  "cpu": {
+    "python": "3.12.3",
+    "packages": {
+      "torch": "2.7.1+cpu",
+      "numpy": "2.5.5",
+      "pydantic": "2.14.3",
+      "einops": "0.8.2",
+      "pytest": "8.4.2",
+      "setuptools": "78.1.0"
+    },
+    "tests_passed": 15,
+    "training_updates": 2,
+    "resume_updates": 1,
+    "toy_eval_maps": 2,
+    "toy_U32": 0
+  },
+  "gpu": {
+    "device": "NVIDIA H100 80GB HBM3",
+    "torch": "2.9.0+cu128",
+    "checkpoint_loads": 12,
+    "first_batch_parity": [
+      {
+        "model": "c1301_1511_multi",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "c1301_1511_set",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "c1501_1512_multi",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "c1501_1512_set",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "legacy1502_multi",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "legacy1502_set",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "legacy1503_multi",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "legacy1503_set",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "linear1404_multi",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "linear1404_set",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "linear1405_multi",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      },
+      {
+        "model": "linear1405_set",
+        "actions_equal": true,
+        "logits_equal": true,
+        "logits_max_abs": 0.0,
+        "candidate_count": 64,
+        "outer_steps": 16
+      }
+    ],
+    "scope": "12 models x first 2 maps x K32 x first repeat; not full benchmark regeneration",
+    "update_replay_equal": true,
+    "full_checkpoint_readback_equal": true,
+    "prior_gradient_nonzero": true,
+    "temporary_updates": 2,
+    "formal_new_training_updates": 0,
+    "seconds": 29.925739563070238,
+    "peak_bytes": 474253312
+  },
+  "statistics": {
+    "models": 12,
+    "maps": 1200,
+    "repeats": 3,
+    "comparisons": 6,
+    "draws": 20000,
+    "tolerance": 1e-10
+  },
+  "not_run": [
+    "new 9000/1000 step scientific training",
+    "full regeneration of historical evaluation",
+    "anonymous public download"
+  ],
+  "bill": "unknown"
+}

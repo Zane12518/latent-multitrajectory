@@ -1,0 +1,6 @@
+torch==2.7.1+cpu
+numpy==2.5.5
+pydantic==2.14.3
+einops==0.8.2
+pytest==8.4.2
+setuptools==78.1.0

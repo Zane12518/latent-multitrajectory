@@ -1,0 +1,5 @@
+Project-owned source code: MIT; see LICENSE.
+Vendored GRAM core copyright 2025 Samsung Electronics Co., Ltd., MIT.
+See third_party/GRAM-LICENSE.txt and third_party/README.md.
+Data and checkpoints: see ASSET_TERMS.md.
+No cq-pretrain code, weights, or architecture is included.
