@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="GRAM Maze10 多轨迹实验的动态回放：比较强 Multi 与 Set 的已保存候选路径。不是实时模型推理。">
+<title>多轨迹实验室 · 动态实验回放</title>
+<style>
+:root{color-scheme:light;--ink:#182d35;--muted:#60717a;--line:#dbe3e5;--paper:#f3f6f5;--multi:#087e8b;--set:#ad592c;--bad:#ba4455}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}button,select,input{font:inherit}button,select{border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);padding:9px 12px}button{cursor:pointer}button:hover{background:#eaf2f0}button:disabled{opacity:.45;cursor:default}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #e4a94a;outline-offset:3px}a{color:var(--multi);text-underline-offset:3px}.wrap{max-width:1240px;margin:auto;padding:26px 30px 36px}
+header{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:22px}.eyebrow{font-size:11px;letter-spacing:.17em;font-weight:750;color:var(--multi)}h1{font-size:clamp(26px,4vw,38px);letter-spacing:-.04em;line-height:1.2;margin:9px 0 10px}header p{margin:0;color:var(--muted);max-width:760px;font-size:14px}.top-links{display:flex;gap:15px;white-space:nowrap;font-size:13px;padding-top:8px}.badge{display:inline-block;font-size:11px;font-weight:700;background:#e5eeea;padding:4px 8px;border-radius:5px;letter-spacing:.03em;margin-left:8px;vertical-align:middle}
+.controls{background:white;border:1px solid var(--line);border-radius:13px;padding:17px 19px;margin-bottom:18px}.selectors{display:flex;gap:16px;align-items:end;flex-wrap:wrap}.field{display:grid;gap:5px;min-width:140px}.field label,.label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.06em}.field.wide{flex:1;min-width:230px}.buttons{display:flex;gap:7px;align-items:center}.primary{background:var(--ink);color:white;border-color:var(--ink);min-width:92px}.primary:hover{background:#314b53}.timeline{display:flex;gap:15px;align-items:center;margin-top:15px}.timeline input{flex:1;min-width:80px;accent-color:var(--multi)}#progress{font:600 12px ui-monospace,monospace;min-width:114px}#phase{font-size:12px;color:var(--muted);min-width:180px}.legend{display:flex;flex-wrap:wrap;gap:16px;align-items:center;font-size:12px;color:var(--muted);margin:13px 0 0}.dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px}.toggle{margin-left:auto;display:flex;align-items:center;gap:6px}.toggle input{accent-color:var(--multi)}
+.boards{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}.panel-head{padding:16px 20px 0;display:flex;align-items:center;justify-content:space-between}.method{font-size:20px;font-weight:750;letter-spacing:-.04em}.method small{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:0}.arm-tag{font-size:11px;padding:4px 8px;border-radius:5px;background:#e7f3f3;color:var(--multi)}.set .arm-tag{background:#fbede2;color:var(--set)}.canvas{padding:12px 20px 8px;display:flex;justify-content:center}.canvas svg{width:100%;max-width:365px;aspect-ratio:1;display:block;border-radius:9px;background:#f8faf9}.candidate{padding:0 20px 11px;display:flex;justify-content:space-between;font-size:12px;color:var(--muted);min-height:30px}.candidate strong{color:var(--ink)}
+.metrics{border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);padding:14px 20px;gap:14px 10px}.metric .value{display:block;font-size:22px;font-weight:720;letter-spacing:-.03em;font-variant-numeric:tabular-nums}.metric .label{font-size:10px;letter-spacing:.01em}.metric.major .value{color:var(--multi)}.set .metric.major .value{color:var(--set)}.details{border-top:1px solid var(--line);padding:11px 20px;display:flex;justify-content:space-between;font-size:12px;color:var(--muted);gap:8px;flex-wrap:wrap}.selected{font-weight:600}.selected.ok{color:var(--multi)}.selected.no{color:var(--bad)}.delta{margin:15px 0 0;background:#e9efec;border-radius:9px;padding:11px 16px;display:flex;gap:16px;justify-content:space-between;font-size:13px}.delta strong{font-variant-numeric:tabular-nums}.notes{font-size:12px;color:var(--muted);margin-top:22px}.notes p{margin:6px 0}.notes summary{cursor:pointer;font-weight:650;color:var(--ink)}.notes ul{padding-left:20px}.caption{font-size:11px;color:var(--muted);padding-top:8px}footer{border-top:1px solid var(--line);margin-top:18px;padding-top:13px;display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--muted)}
+@media(max-width:760px){.wrap{padding:18px 15px}.boards{grid-template-columns:1fr}.top-links{padding:0}header{display:block}.top-links{margin-top:12px}.buttons{flex-wrap:wrap}.field{min-width:100px}.timeline{flex-wrap:wrap;gap:8px}#phase{min-width:0;width:100%}.toggle{margin-left:0}.delta{flex-wrap:wrap}.canvas svg{max-width:340px}.controls{padding:14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div><div class="eyebrow">LATENT MULTI-TRAJECTORY <span class="badge">已保存结果 · 动态回放</span></div><h1>同一迷宫，不同的有效尝试。</h1><p>逐条播放强 Multi 与 Set 的候选路径，观察有效解供给、重复与覆盖如何随候选累积。<strong>不是实时模型推理。</strong></p></div><nav class="top-links"><a href="https://github.com/Zane12518/latent-multitrajectory">源码 ↗</a><a href="https://github.com/Zane12518/latent-multitrajectory/blob/main/docs/results.md">完整结果 ↗</a></nav></header>
+<section class="controls" aria-label="回放控制">
+<div class="selectors">
+<div class="field"><label for="map">地图 / MAP</label><select id="map"></select></div>
+<div class="field wide"><label for="pair">质量起点 / 续训流 · 匹配端点</label><select id="pair"></select></div>
+<div class="field"><label for="budget">候选预算 / K</label><select id="budget"><option>1</option><option>4</option><option>8</option><option>16</option><option selected>32</option></select></div>
+<div class="buttons"><button id="play" class="primary">播放</button><button id="next" title="完成下一条候选">下一条</button><button id="restart">重播</button><label for="speed" class="label">速度</label><select id="speed" aria-label="播放速度"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select></div>
+</div>
+<div class="timeline"><span id="progress" aria-live="polite">已完成 0 / 32</span><input id="scrub" type="range" min="0" max="32" value="0" step="1" aria-label="已完成候选数量"><span id="phase">准备播放</span></div>
+<div class="legend"><span><i class="dot" style="background:#52b788"></i>起点 S</span><span><i class="dot" style="background:#f0c56b"></i>终点 G</span><span><i class="dot" style="background:#31434a"></i>障碍</span><span>实线：合法路径 · 虚线：非法前缀</span><label class="toggle"><input id="invalid" type="checkbox" checked>显示非法候选</label></div>
+</section>
+<main class="boards" id="boards"></main>
+<div class="delta" aria-live="polite"><span id="difference">Set − Multi · 当前已完成候选</span><span id="map-info"></span></div>
+<div class="caption">两侧同步播放相同候选槽位。指标只统计已完成的候选；浅色轨迹为已完成回放，粗线为当前候选。更大的 K 表示更多候选，不表示相同计算。</div>
+<section class="notes"><details><summary>如何读图，以及这个 Demo 不代表什么</summary><ul>
+<li>这里只展示固定前 4 张地图（6800–6803）、第一评价随机流与全部 6 组 Multi / Set 配对。不是完整 1,200 图成绩，也没有挑选 Set 必胜样例。</li>
+<li>U 是不同合法最短路径数；V<sub>target</sub> 是最短合法候选数；D<sub>target</sub> = V<sub>target</sub> − U。U<sub>all</sub> 包括合法但非最短路径。合法率分母包含全部已完成候选。</li>
+<li>“路径选答”复用固定无工具路径置信，平分选较早槽位。选择不读取合法性、最短距离或参考答案；合法性标记与指标由离线 checker 计算。非法轨迹动画在首次错误处停止，不改变原选答分数。</li>
+<li>动画顺序是保存候选的展示顺序，不是模型生成时间线、递归轮次或推理期通信。Set 的轨迹—参考分配仅发生在训练期。</li>
+<li>完整六组结果中，4/6 的覆盖同时区间为正，2/6 通过全部三项 −1 pp 质量保护；其余未确认。测试参与方法开发，不是独立确认。</li>
+</ul></details></section>
+<footer><span>GRAM 递归核心 · 项目 Maze10 适配 · 16 次外层递归</span><a href="https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.1.0">检查点、数据与 v0.1.0 ↗</a></footer>
+</div>
+<script id="replay-data" type="application/json">__REPLAY_DATA__</script>
+<script>
+"use strict";
+const data=JSON.parse(document.getElementById('replay-data').textContent);
+const $=id=>document.getElementById(id);
+const labels={linear1404:'1301 / 1404',linear1405:'1301 / 1405',c1301_1511:'1301 / 1511',legacy1502:'1501 / 1502',legacy1503:'1501 / 1503',c1501_1512:'1501 / 1512'};
+const statusNames={shortest:'合法 · 最短',longer:'合法 · 非最短',loop:'非法 · 环路',stop:'非法 · 提前终止',boundary:'非法 · 越界',wall:'非法 · 撞墙'};
+const ns='http://www.w3.org/2000/svg', colors={multi:'#087e8b',set:'#ad592c'};
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let mapIndex=__INITIAL_MAP__,pairIndex=0,budget=32,done=0,progress=0,playing=false,last=0;
+const option=(value,text)=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o};
+data.maps.forEach((m,i)=>$('map').append(option(i,`地图 ${m.id}`)));
+data.pairs.forEach((p,i)=>$('pair').append(option(i,labels[p.id]||p.id)));
+$('map').value=mapIndex;
+function svg(tag,attributes){const e=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attributes))e.setAttribute(k,v);return e}
+function panel(arm){const section=document.createElement('article');section.className=`panel ${arm}`;section.id=arm;section.innerHTML=`<div class="panel-head"><div class="method">${arm==='multi'?'Multi':'Set'}<small id="${arm}-model"></small></div><span class="arm-tag">${arm==='multi'?'均匀多参考监督':'训练期集合分配'}</span></div><div class="canvas"><svg id="${arm}-maze" viewBox="0 0 320 320" role="img" aria-label="${arm} 候选路径"><g class="grid"></g><g class="history"></g><g class="active"></g></svg></div><div class="candidate"><span id="${arm}-candidate"></span><strong id="${arm}-status"></strong></div><div class="metrics">${[['U','不同最短路径 U'],['validity','候选合法率'],['selected','固定路径选答'],['V_target','最短合法供给 V'],['D_target','最短合法重复 D'],['U_all','全部不同合法路径']].map(([key,label])=>`<div class="metric ${key==='U'?'major':''}"><span class="value" id="${arm}-${key}">—</span><span class="label">${label}</span></div>`).join('')}</div><div class="details"><span id="${arm}-H"></span><span id="${arm}-first"></span><span id="${arm}-pick" class="selected"></span></div>`;$('boards').append(section)}
+panel('multi');panel('set');
+function current(arm){return data.models[data.pairs[pairIndex][arm]][mapIndex]}
+function point(cell){return [16+(cell%10)*32,16+Math.floor(cell/10)*32]}
+function grid(arm){const group=$(`${arm}-maze`).querySelector('.grid');group.replaceChildren();data.maps[mapIndex].x.forEach((cell,i)=>{const x=(i%10)*32,y=Math.floor(i/10)*32;group.append(svg('rect',{x:x+1,y:y+1,width:30,height:30,rx:3,fill:({1:'#edf2f1',2:'#31434a',3:'#52b788',4:'#f0c56b'})[cell]}));if(cell===3||cell===4){const t=svg('text',{x:x+16,y:y+20,'text-anchor':'middle','font-size':12,'font-weight':700,fill:'#15352d'});t.textContent=cell===3?'S':'G';group.append(t)}})}
+function line(route,color,opacity,width,dashed=false){return svg('polyline',{points:route.map(i=>point(i).join(',')).join(' '),fill:'none',stroke:color,'stroke-width':width,'stroke-linecap':'round','stroke-linejoin':'round',opacity,'stroke-dasharray':dashed?'4 5':'none'})}
+function history(arm){const group=$(`${arm}-maze`).querySelector('.history');group.replaceChildren();const seen=new Set();for(const candidate of current(arm).traces.slice(0,done)){const legal=['shortest','longer'].includes(candidate.status);if(!legal&&!$('invalid').checked)continue;const key=candidate.route.join(',');if(seen.has(key))continue;seen.add(key);group.append(line(candidate.route,legal?colors[arm]:'#ba4455',legal?.31:.23,legal?2.6:1.8,!legal))}}
+function active(arm){const group=$(`${arm}-maze`).querySelector('.active');group.replaceChildren();const index=done<budget?done:budget-1,trace=current(arm).traces[index];const fraction=done<budget?progress:1;const legal=['shortest','longer'].includes(trace.status);$(`${arm}-candidate`).textContent=done<budget?`回放候选 #${index+1}`:`最后候选 #${index+1}`;$(`${arm}-status`).textContent=fraction>=1?statusNames[trace.status]:'沿保存路径播放';if(!legal&&!$('invalid').checked){$(`${arm}-status`).textContent='非法候选 · 仅隐藏图形';return}const position=(trace.route.length-1)*Math.min(fraction,1),step=Math.floor(position),route=trace.route.slice(0,step+1);let [x,y]=point(trace.route[step]);if(step+1<trace.route.length){const [nx,ny]=point(trace.route[step+1]);x+=(nx-x)*(position-step);y+=(ny-y)*(position-step)}const path=line(route,legal?colors[arm]:'#ba4455',.95,3.2,!legal);path.setAttribute('points',route.map(i=>point(i).join(',')).join(' ')+` ${x},${y}`);group.append(path,svg('circle',{cx:x,cy:y,r:5,fill:legal?colors[arm]:'#ba4455',stroke:'white','stroke-width':2}))}
+function stats(arm){const m=done?current(arm).metrics[done-1]:null;for(const key of ['U','validity','selected','V_target','D_target','U_all']){$(`${arm}-${key}`).textContent=!m?(key==='validity'||key==='selected'?'—':'0'):key==='validity'?`${(m[key]*100).toFixed(1)}%`:key==='selected'?(m[key]?'最短 ✓':'未选中'):m[key]}$(`${arm}-H`).textContent=`至少一条最短解 H：${m?m.H:'—'}`;$(`${arm}-first`).textContent=`首条最短：${m?(m.first?'是':'否'):'—'}`;const pick=$(`${arm}-pick`);pick.textContent=m?`无工具选答 #${m.selected_index+1}`:'等待候选';pick.className=`selected ${m?(m.selected?'ok':'no'):''}`}
+function render(){for(const arm of ['multi','set']){history(arm);stats(arm);active(arm)}$('scrub').value=done;$('progress').textContent=`已完成 ${done} / ${budget}`;$('next').disabled=done>=budget;$('play').textContent=playing?'暂停':done>=budget?'重新播放':'播放';$('play').setAttribute('aria-pressed',String(playing));$('phase').textContent=done>=budget?'本预算回放完成':'指标按已完成候选累积';const m=done?current('multi').metrics[done-1]:null,s=done?current('set').metrics[done-1]:null;const d=m?s.U-m.U:0;$('difference').textContent=`Set − Multi · 当前 ΔU ${d>0?'+':''}${d}`;const row=data.maps[mapIndex];$('map-info').textContent=`地图 ${row.id} · 最短长度 ${row.optimal} · 第一评价流`}
+function reset(){done=0;progress=0;last=0;$('scrub').max=budget;for(const arm of ['multi','set']){$(`${arm}-model`).textContent=data.pairs[pairIndex][arm];grid(arm)}render()}
+$('map').onchange=()=>{mapIndex=Number($('map').value);reset()};$('pair').onchange=()=>{pairIndex=Number($('pair').value);reset()};$('budget').onchange=()=>{budget=Number($('budget').value);reset()};$('invalid').onchange=()=>render();
+$('play').onclick=()=>{if(done>=budget)reset();playing=!playing;last=0;render()};$('restart').onclick=()=>{playing=true;reset()};$('next').onclick=()=>{playing=false;done=Math.min(budget,done+1);progress=0;render()};$('scrub').oninput=()=>{playing=false;done=Number($('scrub').value);progress=0;render()};
+document.addEventListener('visibilitychange',()=>{last=0});
+function tick(now){if(playing&&!document.hidden){const elapsed=last?Math.min(now-last,100):0;const length=Math.max(...['multi','set'].map(a=>current(a).traces[done].route.length));progress+=elapsed*Number($('speed').value)/Math.max(700,length*90);if(progress>=1.2){done++;progress=0;if(done>=budget)playing=false;render()}else{active('multi');active('set')}}last=now;requestAnimationFrame(tick)}
+reset();if(reduced){done=budget;render()}else{playing=true;render()}requestAnimationFrame(tick);
+</script>
+</body>
+</html>

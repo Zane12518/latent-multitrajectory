@@ -1,34 +1,64 @@
 
-"""Offline experimental-result replay; does not run a model."""
-import argparse,json,html
+"""Interactive, offline replay of saved candidates; does not run a model."""
+import argparse,json
 from pathlib import Path
-from latent_multi.maze import metrics,check
+from latent_multi.maze import metrics,check,validate_input
+from latent_multi.objective import nextcell
 from latent_multi.selection import scores
 
-def draw(row,candidates):
-    palette=['#1677ff','#d64f84','#04a777','#eb9e36','#815cc7','#565c70']
-    parts=['<svg viewBox="0 0 200 200" width="300" role="img" aria-label="saved candidate paths">']
-    for i,v in enumerate(row['x']):
-        r,c=divmod(i,10);fill={1:'#ffffff',2:'#253746',3:'#52b788',4:'#e9c46a'}[v]
-        parts.append(f'<rect x="{c*20}" y="{r*20}" width="20" height="20" fill="{fill}" stroke="#ddd"/>')
-    seen=set()
-    for y in candidates:
-        legal,short,route,L=check(row,y)
-        if not legal or route in seen:continue
-        seen.add(route);points=' '.join(f'{(v%10)*20+10},{(v//10)*20+10}' for v in route)
-        parts.append(f'<polyline points="{points}" fill="none" stroke="{palette[(len(seen)-1)%len(palette)]}" stroke-width="2.5" opacity=".6"/>')
-    return ''.join(parts)+'</svg>'
+def trace(row,actions):
+    """Display a candidate up to its first error, without changing its selection score."""
+    cells=row['x'];loc=cells.index(3);goal=cells.index(4);seen=set();route=[loc]
+    while loc!=goal:
+        if loc in seen:return route,'loop'
+        seen.add(loc);action=int(actions[loc])
+        if action not in range(4):return route,'stop'
+        dest=nextcell(loc,action)
+        if dest<0:return route,'boundary'
+        route.append(dest)
+        if cells[dest]==2:return route,'wall'
+        loc=dest
+    return route,'shortest' if len(route)-1==row['optimal'] else 'longer'
+
+def build_payload(data):
+    maps=data['maps'];ids=[row['id'] for row in maps];models={}
+    for row in maps:validate_input(row)
+    for name,value in data['models'].items():
+        if value['map_ids']!=ids or len(value['candidates'])!=len(maps):
+            raise ValueError('map/candidate identity mismatch')
+        panels=[]
+        for row,pool in zip(maps,value['candidates']):
+            actions=pool['actions'];lp=pool['chosen_logprobs']
+            if len(actions)!=32 or len(lp)!=32 or any(len(y)!=100 for y in actions+lp):
+                raise ValueError('expected K32, 100-cell outputs and scores')
+            confidence=scores(row['x'],actions,lp)
+            mm=metrics(row,actions,confidence,ks=range(1,33))
+            curves=[{key:value for key,value in mm[k].items() if not key.endswith('_set')} for k in range(1,33)]
+            traces=[]
+            for y,score in zip(actions,confidence):
+                route,status=trace(row,y);legal,short,identity,length=check(row,y)
+                assert legal==(status in ('shortest','longer')) and short==(status=='shortest')
+                if legal:assert tuple(route)==identity
+                traces.append(dict(route=route,status=status,length=length,confidence=score))
+            panels.append(dict(traces=traces,metrics=curves))
+        models[name]=panels
+    pairs=[]
+    for name in models:
+        if name.endswith('_multi'):
+            prefix=name[:-6];other=prefix+'_set'
+            if other not in models:raise ValueError('missing matched Set endpoint')
+            pairs.append(dict(id=prefix,multi=name,set=other))
+    if len(pairs)*2!=len(models):raise ValueError('unpaired endpoints')
+    return dict(mode=data['mode'],selection=data['selection'],maps=maps,models=models,pairs=pairs)
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--data',default='data/demo_replay.json');p.add_argument('--out',default='outputs/replay.html');p.add_argument('--map-index',type=int,default=0)
-    a=p.parse_args();data=json.loads(Path(a.data).read_text());row=data['maps'][a.map_index];output=[];cards=[]
-    for name,v in data['models'].items():
-        pool=v['candidates'][a.map_index];y=pool['actions'];lp=pool['chosen_logprobs'];mm=metrics(row,y,scores(row['x'],y,lp))[32]
-        output.append(dict(model=name,map_id=row['id'],**{k:mm[k] for k in ('U','U_all','V_target','D_target','validity','first','H','selected')}))
-        cards.append('<section><h2>'+html.escape(name)+'</h2>'+draw(row,y)+'<pre>'+html.escape(json.dumps(output[-1],indent=2))+'</pre></section>')
-    title='实验结果回放 / Saved experiment replay'
-    body='<!doctype html><meta charset="utf-8"><title>'+title+'</title><style>body{font:16px system-ui;margin:32px;color:#203446}main{display:flex;flex-wrap:wrap;gap:18px}section{border:1px solid #ccc;padding:16px;max-width:340px}h2{font-size:18px}pre{font-size:13px}</style><h1>'+title+'</h1><p>非实时模型推理。同一地图、K32、第一评价随机流，展示全部12个固定端点。当前为固定前4张地图之一，不代表完整1200图测试。路径与指标由离线checker核验，不参与模型选答。</p><p>绿色：起点；黄色：终点；深色：墙。彩色线仅显示不同合法路径，未画出非法候选；数值仍统计全部32条候选。U为不同最短路径数，validity为全部候选合法率，selected为固定无工具路径读出是否选中最短路径。</p><main>'+''.join(cards)+'</main>'
+    a=p.parse_args();payload=build_payload(json.loads(Path(a.data).read_text()))
+    if a.map_index not in range(len(payload['maps'])):p.error('map-index is outside the saved map range')
+    template=Path(__file__).with_name('replay.html').read_text()
+    body=template.replace('__REPLAY_DATA__',json.dumps(payload,ensure_ascii=False,separators=(',',':'),allow_nan=False).replace('<','\\u003c')).replace('__INITIAL_MAP__',str(a.map_index))
     dest=Path(a.out);dest.parent.mkdir(parents=True,exist_ok=True)
     with dest.open('x') as f:f.write(body)
-    print(json.dumps(dict(mode='saved-experiment-replay',map_id=row['id'],K=32,models=output),indent=2))
+    output=[dict(model=name,map_id=payload['maps'][a.map_index]['id'],**panels[a.map_index]['metrics'][-1]) for name,panels in payload['models'].items()]
+    print(json.dumps(dict(mode='interactive-saved-experiment-replay',maps=len(payload['maps']),K=32,models=output),indent=2))
 if __name__=='__main__':main()

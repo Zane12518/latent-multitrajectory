@@ -44,8 +44,8 @@ python -m pytest -q
 python examples/replay.py --out outputs/replay.html
 ```
 
-打开`outputs/replay.html`即可离线查看同图、同K32的全部12个端点。页面明确标为**实验结果回放，不是实时模型推理**。
-默认地图6800上，1511 Multi/Set均有U=2，合法候选分别15/32和17/32；没有挑选一个“Set必胜”的样例。可用`--map-index 1/2/3`查看其余固定地图。
+打开`outputs/replay.html`即可离线动态回放全部12个端点。可切换4张地图、6组配对与K=1/4/8/16/32，播放／暂停、逐条推进或拖动进度，指标随已完成候选累积。页面明确标为**实验结果回放，不是实时模型推理**；动画不是递归状态或实际计算时间线。
+默认地图6800上，1511 Multi/Set均有U=2，合法候选分别15/32和17/32；没有挑选一个“Set必胜”的样例。可在页面切换地图，或用`--map-index 1/2/3`设置初始地图。
 所有路径/合法性标识来自离线评价checker；不是部署时验证器选答。
 
 ## 真实小规模训练、推理与恢复
@@ -104,6 +104,6 @@ third_party/      上游版权与修改说明
 
 ## 演示与下载
 
-[静态实验回放](https://zane12518.github.io/latent-multitrajectory/demo/)；也可下载 [离线 Demo](https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.1.0/demo-replay.html)。这是保存结果的交互展示，不是在线实时推理。
+[动态实验回放](https://zane12518.github.io/latent-multitrajectory/demo/)提供地图切换与逐候选动画，无需后端或模型下载。当前源码可生成相同的离线交互页面；[v0.1.0 离线 Demo](https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.1.0/demo-replay.html)保留原静态版，不覆盖历史发布资产。两者都是保存结果展示，不是在线实时推理。
 
 [Release 文件与 SHA256 校验](https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.1.0)。
