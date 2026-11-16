@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="GRAM Maze10 多轨迹实验的动态回放：比较强 Multi 与 Set 的已保存候选路径。不是实时模型推理。">
-<title>多轨迹实验室 · 动态实验回放</title>
+<meta name="description" content="GRAM Maze10 多轨迹实验：比较 Multi 与 Set 的候选路径、有效解覆盖与完整实验结果。">
+<title>多轨迹实验室 · 实验轨迹</title>
 <style>
 :root{color-scheme:light;--ink:#182d35;--muted:#60717a;--line:#dbe3e5;--paper:#f3f6f5;--multi:#087e8b;--set:#ad592c;--bad:#ba4455}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}button,select,input{font:inherit}button,select{border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);padding:9px 12px}button{cursor:pointer}button:hover{background:#eaf2f0}button:disabled{opacity:.45;cursor:default}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #e4a94a;outline-offset:3px}a{color:var(--multi);text-underline-offset:3px}.wrap{max-width:1240px;margin:auto;padding:26px 30px 36px}
@@ -21,14 +21,14 @@ html{scroll-behavior:smooth}.section-heading{display:flex;justify-content:space-
 </head>
 <body>
 <div class="wrap">
-<header><div><div class="eyebrow">LATENT MULTI-TRAJECTORY <span class="badge">已保存结果 · 动态回放</span></div><h1>同一迷宫，不同的有效尝试。</h1><p>用同样的 32 次尝试，能否找到更多不同的正确路径？先看完整实验，再逐条回放训练期集合分配带来的变化。<strong>已保存实验结果回放，非实时模型推理。</strong></p></div><nav class="top-links"><a href="https://github.com/Zane12518/latent-multitrajectory">源码 ↗</a><a href="https://github.com/Zane12518/latent-multitrajectory/blob/main/docs/results.md">完整结果 ↗</a></nav></header>
+<header><div><div class="eyebrow">LATENT MULTI-TRAJECTORY <span class="badge">实验轨迹</span></div><h1>同一迷宫，不同的有效尝试。</h1><p>用同样的 32 次尝试，能否找到更多不同的正确路径？先看完整实验，再逐条观察训练期集合分配带来的变化。</p></div><nav class="top-links"><a href="https://github.com/Zane12518/latent-multitrajectory">源码 ↗</a><a href="https://github.com/Zane12518/latent-multitrajectory/blob/main/docs/results.md">完整结果 ↗</a></nav></header>
 <section class="overview" id="overview" aria-labelledby="overview-title">
 <div class="section-heading"><div><div class="kicker">01 / 完整实验</div><h2 id="overview-title">覆盖收益，放在完整对照中看。</h2><p>项目 Maze10 · 1,200 张测试地图 · K32 · 3 组评价随机流</p></div><a href="#replay">直接探索路径 ↓</a></div>
 <div class="summary-grid"><div class="summary-card feature"><strong id="positive-count">—</strong><span>覆盖同时区间为正的配对</span></div><div class="summary-card"><strong id="protected-count">—</strong><span>正覆盖且三项质量保护通过</span></div><div class="summary-card"><strong>2 × 3</strong><span>质量起点 × 续训随机流</span></div></div>
 <div class="method-note"><p><b>Multi · 每条轨迹学习多个参考</b>独立、均匀地拟合同一参考池，是共同质量训练上的强对照。</p><p><b>Set · 学习轨迹与参考的分工</b>在训练期组织整组轨迹与完整参考的对应关系；推理接口保持一致。</p></div>
 <details open><summary>全部 6 组结果与质量保护</summary><div class="result-scroll"><table><caption>完整测试均值与同时区间。点击配对可切换下方样例；样例不是该均值。</caption><thead><tr><th>起点 / 续训流</th><th>Multi U32</th><th>Set U32</th><th>ΔU [同时95%区间]</th><th>三项质量保护</th></tr></thead><tbody id="full-results"></tbody></table></div><p class="caption">保护界为 −1 个百分点，检查合法率、首条最短率与路径选答。区间条件于固定模型；续训流与评价随机流不等于独立质量初始化。测试参与方法开发。</p></details>
 </section>
-<section id="replay" aria-labelledby="replay-title"><div class="section-heading"><div><div class="kicker">02 / 保存样例</div><h2 id="replay-title">让每一次尝试都看得见。</h2><p>固定前 4 张地图、第一评价流。保留相同、增益与取舍，不挑选必胜样例。</p></div><div class="section-actions"><button id="complete">查看全部 32 条</button><button id="share">复制当前视图链接</button></div></div><div id="share-status" class="note-message" role="status"></div></section>
+<section id="replay" aria-labelledby="replay-title"><div class="section-heading"><div><div class="kicker">02 / 轨迹探索</div><h2 id="replay-title">让每一次尝试都看得见。</h2><p>展示固定前 4 张地图与第一评价流，可切换全部 6 组实验配对。</p></div><div class="section-actions"><button id="complete">查看全部 32 条</button><button id="share">复制当前视图链接</button></div></div><div id="share-status" class="note-message" role="status"></div></section>
 <section class="controls" aria-label="回放控制">
 <div class="selectors">
 <div class="field"><label for="map">地图 / MAP</label><select id="map"></select></div>
