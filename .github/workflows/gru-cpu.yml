@@ -6,6 +6,8 @@ on:
       - 'src/latent_multi/gru/**'
       - 'configs/gru/**'
       - 'tests/test_gru_portable.py'
+      - 'tests/test_gru_statistics.py'
+      - 'pyproject.toml'
       - 'examples/gru_smoke.py'
       - '.github/workflows/gru-cpu.yml'
 permissions:
@@ -24,7 +26,7 @@ jobs:
           python -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -e '.[test]'
       - name: New GRU tests only
-        run: python -m pytest -q tests/test_gru_portable.py
+        run: python -m pytest -q tests/test_gru_portable.py tests/test_gru_statistics.py
       - name: Synthetic untrained interface
         run: python examples/gru_smoke.py --out outputs/gru_smoke
       - uses: actions/upload-artifact@v4

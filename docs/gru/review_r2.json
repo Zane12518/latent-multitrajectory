@@ -1,0 +1,2845 @@
+{
+  "status": "candidate_only_not_pushed_or_released",
+  "base_candidate_commit": "c9a788cd61a471c1643b79e7f41c82adb9ed21da",
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.5.5",
+    "clean_venv": true,
+    "editable_install": false,
+    "module_loaded_from_venv": true,
+    "pip_check": "PASS"
+  },
+  "tests": {
+    "existing_gru_tests_passed": 14,
+    "existing_gru_tests_total": 14,
+    "new_saved_statistics_tests_passed": 3,
+    "new_saved_statistics_tests_total": 3,
+    "v0_2_suite_rerun": false
+  },
+  "source_chain": {
+    "sat": {
+      "original_build_AST_matches_archived_copy": true,
+      "source_file": "sat_transfer.py"
+    },
+    "maze": {
+      "original_build_AST_matches_archived_copy": true,
+      "source_file": "foundation_scale.py"
+    }
+  },
+  "weights": [
+    {
+      "file": "weights/main_maze1117_a_multi.pt",
+      "bytes": 490867,
+      "crc32": "ab5b654f",
+      "model": "main_maze1117_a_multi",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze1117_a_set.pt",
+      "bytes": 490829,
+      "crc32": "8477dc98",
+      "model": "main_maze1117_a_set",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze1117_b_multi.pt",
+      "bytes": 490867,
+      "crc32": "d1f6be22",
+      "model": "main_maze1117_b_multi",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze1117_b_set.pt",
+      "bytes": 490829,
+      "crc32": "d8256ab9",
+      "model": "main_maze1117_b_set",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze77_a_multi.pt",
+      "bytes": 490829,
+      "crc32": "e0fc1446",
+      "model": "main_maze77_a_multi",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze77_a_set.pt",
+      "bytes": 490791,
+      "crc32": "7869da86",
+      "model": "main_maze77_a_set",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze77_b_multi.pt",
+      "bytes": 490829,
+      "crc32": "ee4cc751",
+      "model": "main_maze77_b_multi",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze77_b_set.pt",
+      "bytes": 490791,
+      "crc32": "6953b574",
+      "model": "main_maze77_b_set",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze96_a_multi.pt",
+      "bytes": 490829,
+      "crc32": "9ae00eb7",
+      "model": "main_maze96_a_multi",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze96_a_set.pt",
+      "bytes": 490791,
+      "crc32": "640a30d2",
+      "model": "main_maze96_a_set",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze96_b_multi.pt",
+      "bytes": 490829,
+      "crc32": "aac751bb",
+      "model": "main_maze96_b_multi",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_maze96_b_set.pt",
+      "bytes": 490791,
+      "crc32": "ea7e7ed5",
+      "model": "main_maze96_b_set",
+      "task": "maze",
+      "strict_load": true,
+      "tensor_fields": 15,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat74_a_multi.pt",
+      "bytes": 15937042,
+      "crc32": "65a99f84",
+      "model": "main_sat74_a_multi",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat74_a_set.pt",
+      "bytes": 15936998,
+      "crc32": "8b86f286",
+      "model": "main_sat74_a_set",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat74_b_multi.pt",
+      "bytes": 15937042,
+      "crc32": "7b0277c9",
+      "model": "main_sat74_b_multi",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat74_b_set.pt",
+      "bytes": 15936998,
+      "crc32": "b5b95bbd",
+      "model": "main_sat74_b_set",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat912_a_multi.pt",
+      "bytes": 15937064,
+      "crc32": "92cfec3c",
+      "model": "main_sat912_a_multi",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat912_a_set.pt",
+      "bytes": 15937020,
+      "crc32": "418a2318",
+      "model": "main_sat912_a_set",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat912_b_multi.pt",
+      "bytes": 15937064,
+      "crc32": "e1a8a77e",
+      "model": "main_sat912_b_multi",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat912_b_set.pt",
+      "bytes": 15937020,
+      "crc32": "aa65b973",
+      "model": "main_sat912_b_set",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat98_a_multi.pt",
+      "bytes": 15937042,
+      "crc32": "c5572cc3",
+      "model": "main_sat98_a_multi",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat98_a_set.pt",
+      "bytes": 15936998,
+      "crc32": "36c50d4a",
+      "model": "main_sat98_a_set",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat98_b_multi.pt",
+      "bytes": 15937042,
+      "crc32": "7d2b0e66",
+      "model": "main_sat98_b_multi",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    },
+    {
+      "file": "weights/main_sat98_b_set.pt",
+      "bytes": 15936998,
+      "crc32": "5c596b2c",
+      "model": "main_sat98_b_set",
+      "task": "sat",
+      "strict_load": true,
+      "tensor_fields": 18,
+      "optimizer_rng_or_job_metadata": false,
+      "metadata_summary": "state_dict tensor names and module versions only",
+      "sensitive_findings": [],
+      "historical_binding_receipts": 3,
+      "live_original_checkpoint": false,
+      "origin": "project-trained custom GRU; archived checkpoint-to-state_dict export",
+      "license": "non-code terms unchanged; no downstream license inferred",
+      "publication_status": "pending exact scope and asset rights confirmation; keep private"
+    }
+  ],
+  "parity_cases": [
+    {
+      "model": "main_maze1117_a_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze1117_a_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze1117_a_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze1117_a_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze1117_b_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze1117_b_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze1117_b_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze1117_b_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze77_a_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze77_a_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze77_a_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze77_a_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze77_b_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze77_b_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze77_b_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze77_b_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze96_a_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze96_a_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze96_a_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze96_a_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze96_b_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze96_b_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze96_b_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_maze96_b_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat74_a_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat74_a_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat74_a_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat74_a_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat74_b_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat74_b_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat74_b_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat74_b_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat912_a_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat912_a_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat912_a_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat912_a_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat912_b_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat912_b_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat912_b_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat912_b_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat98_a_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat98_a_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat98_a_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat98_a_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat98_b_multi",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat98_b_multi",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat98_b_set",
+      "depth": 8,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    },
+    {
+      "model": "main_sat98_b_set",
+      "depth": 16,
+      "questions": 2,
+      "candidates_per_question": 2,
+      "max_absolute_error": 0.0,
+      "argmax_equal": true,
+      "rng_after_equal": true,
+      "comparison": "archived original function vs separately installed portable adapter; not an independently invented model"
+    }
+  ],
+  "statistics": [
+    {
+      "file": "statistics/sat/per_rng_metrics.npz",
+      "bytes": 1638817,
+      "crc32": "09300fa1",
+      "origin": "project evaluator numeric per-question arrays for registered GRU contract",
+      "license": "non-code terms unchanged; no separate downstream license",
+      "publication_status": "private; exact file scope pending",
+      "sensitive_findings": [],
+      "contains_raw_formula_or_grid": false,
+      "contains_object_pickle": false,
+      "arrays": [
+        {
+          "name": "ids",
+          "dtype": "int64",
+          "shape": [
+            1000
+          ]
+        },
+        {
+          "name": "K",
+          "dtype": "int64",
+          "shape": [
+            6
+          ]
+        },
+        {
+          "name": "fields",
+          "dtype": "<U17",
+          "shape": [
+            14
+          ]
+        },
+        {
+          "name": "rng",
+          "dtype": "int64",
+          "shape": [
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_a_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat74_a_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat74_a_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat74_b_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat74_b_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat74_b_native",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat74_b_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat912_a_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat912_a_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat912_a_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat912_b_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat912_b_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat912_b_native",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat912_b_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat98_a_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat98_a_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat98_a_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat98_b_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat98_b_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat98_b_native",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_sat98_b_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "dev_sat74_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "dev_sat74_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "dev_sat74_native",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "dev_sat74_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "source_sat74",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "source_sat98",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "source_sat912",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1000,
+            6,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "file": "statistics/sat/per_rng_solution_changes.npz",
+      "bytes": 769965,
+      "crc32": "4c0cd9ed",
+      "origin": "project evaluator numeric per-question arrays for registered GRU contract",
+      "license": "non-code terms unchanged; no separate downstream license",
+      "publication_status": "private; exact file scope pending",
+      "sensitive_findings": [],
+      "contains_raw_formula_or_grid": false,
+      "contains_object_pickle": false,
+      "arrays": [
+        {
+          "name": "ids",
+          "dtype": "int64",
+          "shape": [
+            1000
+          ]
+        },
+        {
+          "name": "K",
+          "dtype": "int64",
+          "shape": [
+            6
+          ]
+        },
+        {
+          "name": "rng",
+          "dtype": "int64",
+          "shape": [
+            3
+          ]
+        },
+        {
+          "name": "kinds",
+          "dtype": "<U9",
+          "shape": [
+            2
+          ]
+        },
+        {
+          "name": "fields",
+          "dtype": "<U8",
+          "shape": [
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_a_set__minus__main_sat74_a_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_a_set__minus__main_sat74_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_a_multi__minus__main_sat74_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_b_set__minus__main_sat74_b_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_b_set__minus__main_sat74_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_b_set__minus__main_sat74_b_native",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_b_multi__minus__main_sat74_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_a_set__minus__main_sat912_a_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_a_set__minus__main_sat912_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_a_multi__minus__main_sat912_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_b_set__minus__main_sat912_b_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_b_set__minus__main_sat912_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_b_set__minus__main_sat912_b_native",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_b_multi__minus__main_sat912_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_a_set__minus__main_sat98_a_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_a_set__minus__main_sat98_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_a_multi__minus__main_sat98_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_b_set__minus__main_sat98_b_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_b_set__minus__main_sat98_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_b_set__minus__main_sat98_b_native",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_b_multi__minus__main_sat98_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_sat74_set__minus__dev_sat74_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_sat74_set__minus__dev_sat74_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_sat74_set__minus__dev_sat74_native",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_sat74_multi__minus__dev_sat74_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_a_mass__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_a_multi__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_a_set__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_b_mass__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_b_multi__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_b_native__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat74_b_set__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_a_mass__minus__source_sat912",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_a_multi__minus__source_sat912",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_a_set__minus__source_sat912",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_b_mass__minus__source_sat912",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_b_multi__minus__source_sat912",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_b_native__minus__source_sat912",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat912_b_set__minus__source_sat912",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_a_mass__minus__source_sat98",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_a_multi__minus__source_sat98",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_a_set__minus__source_sat98",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_b_mass__minus__source_sat98",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_b_multi__minus__source_sat98",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_b_native__minus__source_sat98",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_sat98_b_set__minus__source_sat98",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_sat74_mass__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_sat74_multi__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_sat74_native__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_sat74_set__minus__source_sat74",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1000,
+            6,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "file": "statistics/maze/per_rng_metrics.npz",
+      "bytes": 1367393,
+      "crc32": "85dd599b",
+      "origin": "project evaluator numeric per-question arrays for registered GRU contract",
+      "license": "non-code terms unchanged; no separate downstream license",
+      "publication_status": "private; exact file scope pending",
+      "sensitive_findings": [],
+      "contains_raw_formula_or_grid": false,
+      "contains_object_pickle": false,
+      "arrays": [
+        {
+          "name": "ids",
+          "dtype": "int64",
+          "shape": [
+            1200
+          ]
+        },
+        {
+          "name": "K",
+          "dtype": "int64",
+          "shape": [
+            6
+          ]
+        },
+        {
+          "name": "fields",
+          "dtype": "<U17",
+          "shape": [
+            14
+          ]
+        },
+        {
+          "name": "rng",
+          "dtype": "int64",
+          "shape": [
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_a_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze1117_a_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze1117_a_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze1117_b_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze1117_b_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze1117_b_native",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze1117_b_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze77_a_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze77_a_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze77_a_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze77_b_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze77_b_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze77_b_native",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze77_b_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze96_a_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze96_a_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze96_a_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze96_b_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze96_b_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze96_b_native",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "main_maze96_b_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "dev_maze77_mass",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "dev_maze77_multi",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "dev_maze77_native",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "dev_maze77_set",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "source_maze77",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "source_maze96",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        },
+        {
+          "name": "source_maze1117",
+          "dtype": "float64",
+          "shape": [
+            3,
+            1200,
+            6,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "file": "statistics/maze/per_rng_solution_changes.npz",
+      "bytes": 1551875,
+      "crc32": "aa5ee680",
+      "origin": "project evaluator numeric per-question arrays for registered GRU contract",
+      "license": "non-code terms unchanged; no separate downstream license",
+      "publication_status": "private; exact file scope pending",
+      "sensitive_findings": [],
+      "contains_raw_formula_or_grid": false,
+      "contains_object_pickle": false,
+      "arrays": [
+        {
+          "name": "ids",
+          "dtype": "int64",
+          "shape": [
+            1200
+          ]
+        },
+        {
+          "name": "K",
+          "dtype": "int64",
+          "shape": [
+            6
+          ]
+        },
+        {
+          "name": "rng",
+          "dtype": "int64",
+          "shape": [
+            3
+          ]
+        },
+        {
+          "name": "kinds",
+          "dtype": "<U9",
+          "shape": [
+            2
+          ]
+        },
+        {
+          "name": "fields",
+          "dtype": "<U8",
+          "shape": [
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_a_set__minus__main_maze1117_a_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_a_set__minus__main_maze1117_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_a_multi__minus__main_maze1117_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_b_set__minus__main_maze1117_b_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_b_set__minus__main_maze1117_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_b_set__minus__main_maze1117_b_native",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_b_multi__minus__main_maze1117_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_a_set__minus__main_maze77_a_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_a_set__minus__main_maze77_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_a_multi__minus__main_maze77_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_b_set__minus__main_maze77_b_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_b_set__minus__main_maze77_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_b_set__minus__main_maze77_b_native",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_b_multi__minus__main_maze77_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_a_set__minus__main_maze96_a_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_a_set__minus__main_maze96_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_a_multi__minus__main_maze96_a_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_b_set__minus__main_maze96_b_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_b_set__minus__main_maze96_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_b_set__minus__main_maze96_b_native",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_b_multi__minus__main_maze96_b_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_maze77_set__minus__dev_maze77_multi",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_maze77_set__minus__dev_maze77_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_maze77_set__minus__dev_maze77_native",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_maze77_multi__minus__dev_maze77_mass",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_a_mass__minus__source_maze1117",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_a_multi__minus__source_maze1117",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_a_set__minus__source_maze1117",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_b_mass__minus__source_maze1117",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_b_multi__minus__source_maze1117",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_b_native__minus__source_maze1117",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze1117_b_set__minus__source_maze1117",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_a_mass__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_a_multi__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_a_set__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_b_mass__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_b_multi__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_b_native__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze77_b_set__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_a_mass__minus__source_maze96",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_a_multi__minus__source_maze96",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_a_set__minus__source_maze96",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_b_mass__minus__source_maze96",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_b_multi__minus__source_maze96",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_b_native__minus__source_maze96",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "main_maze96_b_set__minus__source_maze96",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_maze77_mass__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_maze77_multi__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_maze77_native__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "dev_maze77_set__minus__source_maze77",
+          "dtype": "int16",
+          "shape": [
+            3,
+            1200,
+            6,
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "recomputed": [
+    {
+      "task": "sat",
+      "scope": "saved numeric arrays only; no raw identities, generation or interval recomputation",
+      "questions": 1000,
+      "models": 28,
+      "evaluation_rng": [
+        2026101201,
+        2026101202,
+        2026101203
+      ],
+      "K": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "K_curve_rows": 672,
+      "set_change_rows": 600,
+      "maximum_absolute_difference": 0.0,
+      "count_identities": "PASS",
+      "table_values": "PASS"
+    },
+    {
+      "task": "maze",
+      "scope": "saved numeric arrays only; no raw identities, generation or interval recomputation",
+      "questions": 1200,
+      "models": 28,
+      "evaluation_rng": [
+        2026101201,
+        2026101202,
+        2026101203
+      ],
+      "K": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "K_curve_rows": 672,
+      "set_change_rows": 600,
+      "maximum_absolute_difference": 0.0,
+      "count_identities": "PASS",
+      "table_values": "PASS"
+    }
+  ],
+  "saved_candidates": {
+    "models": 4,
+    "questions_each": 2,
+    "K": 32,
+    "prediction_origin": "previous candidate audit, reused unchanged",
+    "new_generation_calls": 0
+  },
+  "cuda_resume": {
+    "status": "NOT_SUBMITTED_NOT_VERIFIED",
+    "full_checkpoint_paths_tested_on_qz": 24,
+    "accessible_full_checkpoints": 0,
+    "current_running_notebooks": 5,
+    "current_running_gpu_notebooks": 0,
+    "nvidia_smi": "Exec format error in current CPU container",
+    "gpu_jobs_started": 0
+  },
+  "failures_preserved": [
+    "inherited extra package source DNS retries; install ultimately passed",
+    "first bounded audit failed after all parity checks at device query; original log retained; one bounded retry"
+  ],
+  "publication": {
+    "new_code": "project interfaces MIT; extracted historical source-tree MIT notice retained",
+    "weights_and_statistics": "no new downstream license; exact scope and rights confirmation pending",
+    "raw_satlib_included": false,
+    "raw_project_datasets_included": false,
+    "full_training_state_included": false,
+    "internal_index_included": false
+  },
+  "github_ci": "configuration inspected only; not pushed; no new Actions run",
+  "scientific_training_updates": 0,
+  "full_population_regeneration": false,
+  "new_confidence_intervals": false,
+  "billing": "unknown"
+}

@@ -17,6 +17,8 @@ GRU 的六组描述性平均增量为 SATLIB **+0.394944** 个满足赋值／题
 
 **本候选分支新增**：[独立 GRU 推理／目标／逐题评测模块](docs/gru/README.md)、[24 个权重身份清单](docs/gru/assets.json)、[数据准备](docs/gru/data.md)与[历史资产清点](docs/gru/history_inventory.md)。代码和新资产尚未公开发布，权重不在 Git 中；v0.1/v0.2、在线 Demo 和六组 GRAM 结果保持不变。[验证与未完成项](docs/gru/validation.md) · [拟发布范围](docs/gru/publication.md)。
 
+本候选的[第二轮审查](docs/gru/review_r2.md)补齐全部 24 个权重的 CPU 原函数对照、四个统计文件的内容检查，以及可运行的保存统计复算入口。干净安装后原 14 项测试和新增 3 项统计测试通过；没有重新训练或重新生成完整测试，也未发布新历史资产。
+
 ## 方法与证据边界
 
 ```text

@@ -53,6 +53,20 @@ SAT 用 `configs/gru/satlib20.json`、对应 `main_sat*_*.pt` 和[自行转换�
 
 每个评价 RNG 独立生成并评分；`summarize --metrics` 可接三份文件，先按题平均随机流。匹配控制用相同三份 RNG 的 `--baseline`，保存新增／丢失／保留的有限候选池集合差。汇总器输出描述均值，不新计算同时区间或把评价流当训练重复。已有正式区间保留在[原始逐组表](../evidence/gru/paired_results.md)。
 
+## 保存数字数组复算
+
+四个逐题 NPZ 仍在私有候选区，尚无公开下载链接。获得允许使用的副本后，按 `candidate_statistics/sat/` 和 `candidate_statistics/maze/` 放置每任务的 `per_rng_metrics.npz`、`per_rng_solution_changes.npz`：
+
+```bash
+python -m latent_multi.gru.reproduce_statistics --task sat --statistics candidate_statistics/sat --tables docs/evidence/gru --output outputs/sat_statistics.json
+python -m latent_multi.gru.reproduce_statistics --task maze --statistics candidate_statistics/maze --tables docs/evidence/gru --output outputs/maze_statistics.json
+python -m pytest -q tests/test_gru_statistics.py
+```
+
+每任务实际通过 672 行 K 曲线、600 行集合变化，最大数值差为 0。命令核对题目／随机流／K、供给—重复恒等式、集合计数和公开 CSV；损坏计数与非有限表格会报错。它不读取原始预测 identity、不重新生成候选、不重抽区间，也不把汇总 CSV 的完整性检查解释为全量历史预测复现。
+
+本候选代码仍为未发布内容，包元数据沿用 `0.2.0`，**不能仅凭安装版本号识别此候选**。应记录本分支 commit 及安装包来源；正式 v0.2.0 tag 并不包含此 GRU 接入。第二轮实际使用新建 venv、构建 wheel 后非 editable 安装，见[复核记录](review_r2.md)。
+
 ## 验证层级与恢复
 
 [本次验证](validation.md)区分：新 CPU 推理、与原函数的逐值比较、保存数字数组重算，以及复用的旧验收。每次前向一题；原历史评分微批和 CUDA 随机流并未重放，所以不要求 CPU 输出逐候选等于历史预测。
