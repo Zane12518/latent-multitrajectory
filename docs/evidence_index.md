@@ -28,3 +28,8 @@
 - [严格恢复／分叉](resume.md)，[完整复现命令](reproduce.md)，[v0.1 与 v0.2](versions.md)。
 - [本次验证范围](validation_v0.2.md)；[历史包装回执](validation.json)原样保留，不当作本次新跑结果。
 - [权利清单](rights.md)、[发布范围](release_scope.md)。当前只新增代码与报告统计，未重新分发 GRU／历史权重或 SATLIB 原始数据。
+
+## 待发布 GRU 接入
+
+候选分支新增 [GRU 模块与命令](gru/README.md)、[逐模型绑定](gru/assets.json)、[验证层级](gru/validation.md)和[历史资产缺口](gru/history_inventory.md)。公开状态仍按上表；候选分支的代码接入、私有权重小批运行不自动变成已公开资产。
+本次读取两任务各 28 个模型的逐题数字数组，重算 1,344 行 K 曲线及 1,200 行集合变化聚合，与现有公开表逐值相同。它不是原始 logits/解 identity 全量重验，也未重抽原同时区间。完整原预测暂不可访问，保留此前已通过的验收，不补造本次通过状态。

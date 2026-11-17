@@ -15,6 +15,8 @@
 
 GRU 的六组描述性平均增量为 SATLIB **+0.394944** 个满足赋值／题、Maze10 **+1.380972** 条最短路径／题。它们与本仓库可运行的 GRAM 适配是不同宿主，不能互相替代证据。公开报告、公开源码、公开权重与独立重训复现的状态分别列于[证据索引](docs/evidence_index.md)。
 
+**本候选分支新增**：[独立 GRU 推理／目标／逐题评测模块](docs/gru/README.md)、[24 个权重身份清单](docs/gru/assets.json)、[数据准备](docs/gru/data.md)与[历史资产清点](docs/gru/history_inventory.md)。代码和新资产尚未公开发布，权重不在 Git 中；v0.1/v0.2、在线 Demo 和六组 GRAM 结果保持不变。[验证与未完成项](docs/gru/validation.md) · [拟发布范围](docs/gru/publication.md)。
+
 ## 方法与证据边界
 
 ```text

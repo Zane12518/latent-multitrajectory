@@ -1,0 +1,10 @@
+{
+  "host": "maze10_shared_gru",
+  "task": "maze",
+  "K": 32,
+  "depth": 16,
+  "parameters": 121412,
+  "training": {"source_step": 6000, "additional_updates": 1000, "logical_questions": 8, "micro_questions": 2, "microbatches": 4, "depth_alternation": [8, 16], "optimizer": "AdamW", "learning_rate": 0.0001, "weight_decay": 0.01, "clip_norm": 1, "quality": "cell optimal-action loss plus exact shortest-path DAG soft logmass", "auxiliary_coefficient": 0.1, "temperature": 0.5, "sinkhorn_iterations": 12, "allocation_gradient": false, "reference_cap": 32, "reference_rotation": "per-question visit"},
+  "evaluation_rng": [2026101201, 2026101202, 2026101203],
+  "status": "inference/objective adapter; not a full training-resume runner"
+}

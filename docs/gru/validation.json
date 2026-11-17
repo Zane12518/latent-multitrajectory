@@ -1,0 +1,222 @@
+{
+  "scope": "new GRU integration only; no v0.2 retest, no scientific training",
+  "torch": "2.7.1+cpu",
+  "device": "cpu",
+  "weights": [
+    {
+      "model_id": "main_maze1117_a_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze1117_a_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze1117_b_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze1117_b_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze77_a_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze77_a_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze77_b_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze77_b_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze96_a_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze96_a_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze96_b_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_maze96_b_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 121412
+    },
+    {
+      "model_id": "main_sat74_a_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat74_a_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat74_b_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat74_b_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat912_a_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat912_a_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat912_b_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat912_b_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat98_a_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat98_a_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat98_b_multi",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    },
+    {
+      "model_id": "main_sat98_b_set",
+      "strict_load": true,
+      "finite": true,
+      "parameters": 3982786
+    }
+  ],
+  "parity": [
+    {
+      "model_id": "main_maze77_a_multi",
+      "candidates": 2,
+      "depth": 16,
+      "max_absolute_error": 0.0,
+      "reference": "archived original build, only constructor CUDA changed to CPU"
+    },
+    {
+      "model_id": "main_maze77_a_set",
+      "candidates": 2,
+      "depth": 16,
+      "max_absolute_error": 0.0,
+      "reference": "archived original build, only constructor CUDA changed to CPU"
+    },
+    {
+      "model_id": "main_sat74_a_multi",
+      "candidates": 2,
+      "depth": 16,
+      "max_absolute_error": 0.0,
+      "reference": "archived original build, only constructor CUDA changed to CPU"
+    },
+    {
+      "model_id": "main_sat74_a_set",
+      "candidates": 2,
+      "depth": 16,
+      "max_absolute_error": 0.0,
+      "reference": "archived original build, only constructor CUDA changed to CPU"
+    }
+  ],
+  "statistics": [
+    {
+      "task": "sat",
+      "questions": 1000,
+      "models": 28,
+      "evaluation_rng": [
+        2026101201,
+        2026101202,
+        2026101203
+      ],
+      "curve_rows_recomputed": 672,
+      "set_change_rows_recomputed": 600,
+      "max_mean_difference": 0.0,
+      "scope": "saved per-question numeric arrays and churn counts; not raw-logit or identity revalidation",
+      "original_candidate_regeneration": false,
+      "intervals_recomputed": false
+    },
+    {
+      "task": "maze",
+      "questions": 1200,
+      "models": 28,
+      "evaluation_rng": [
+        2026101201,
+        2026101202,
+        2026101203
+      ],
+      "curve_rows_recomputed": 672,
+      "set_change_rows_recomputed": 600,
+      "max_mean_difference": 0.0,
+      "scope": "saved per-question numeric arrays and churn counts; not raw-logit or identity revalidation",
+      "original_candidate_regeneration": false,
+      "intervals_recomputed": false
+    }
+  ],
+  "core_equations_unchanged": true,
+  "historical_checkpoint_presence": {
+    "declared": 127,
+    "present": 127,
+    "matching_recorded_sizes": 127,
+    "content_or_training_restore_reverified": false
+  }
+}

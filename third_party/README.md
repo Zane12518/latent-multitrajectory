@@ -12,3 +12,7 @@ Dependencies: PyTorch (BSD-style), NumPy (BSD-3-Clause), einops (MIT), Pydantic 
 
 Repository organization reference only: [ADIOCLASSMATE/cq-pretrain](https://github.com/ADIOCLASSMATE/cq-pretrain).
 No code, architecture, checkpoint or production training infrastructure from that repository is included.
+
+## GRU 候选模块的历史许可
+
+`src/latent_multi/gru/` 的模型、目标与原指标提取自项目留存历史源树，该源树附带 MIT 与版权 2026 Aleksey Komissarov。完整声明保留在 [HISTORICAL-GRAM-LICENSE.txt](HISTORICAL-GRAM-LICENSE.txt)，不替代官方 GRAM 核心的许可。新接口按项目 MIT；数据和权重不由这份代码许可授权。
