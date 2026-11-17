@@ -6,7 +6,7 @@
 |---|---|---|
 | 项目新增接口、配置、测试 | 独立 `src/latent_multi/gru/`、配置、评测与smoke | 项目代码MIT；与官方GRAM分开 |
 | 历史提取模型、目标、指标 | 已审阅portable_v4及原函数归档 | 原MIT、版权和NOTICE保留；不冒称官方GRAM |
-| [24个推理权重](assets.json) | 项目自建GRU，SAT12/Maze12，源合同和端点逐项列明 | 已确认公开权限；tensor-only，24加载和48小批对照通过；无Adam/RNG/题序 |
+| [24个推理权重](assets.json) | 项目自建GRU：SATLIB UF20-91与Maze10各12个权重，源合同和端点逐项列明 | 已确认公开权限；tensor-only，24加载和48小批对照通过；无Adam/RNG/题序 |
 | [4个逐题文件](release_assets.json) | 两任务各metrics与solution_changes；数值与计数，不含原题面 | 已确认公开权限；1344行K曲线及1200行集合变化复算一致 |
 | SATLIB原始数据、项目训练／selection人口 | 不附入本包 | [官方获取与转换](data.md)；3072训练和128selection为项目生成 |
 | 原完整GRU断点、原始全量logits | 不发布 | 当前完整原件访问和CUDA恢复仍未验证 |
