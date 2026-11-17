@@ -6,5 +6,6 @@ and not the project's task-specific GRU solver.
 
 The dataset dispatch is restricted to Maze and N-Queens; the model, decoder and
 Mixer algorithms are copied unchanged from the recorded project snapshot.
-Weights, data and experiment records require separate publication approval and
-are not automatically licensed by this code license. SATLIB raw data is absent.
+The five listed inference files, two samples and three sanitized reports have
+separate public-distribution approval. No additional downstream non-code license
+is granted by the code MIT license. SATLIB raw data is absent.

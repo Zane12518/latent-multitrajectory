@@ -7,7 +7,7 @@
 | GRAM 核心项目 Maze10 | 有 | [六组结果](results.md)、[数字](results.json) | 本仓库 | [v0.1.0](https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.1.0) | CPU 安装、测试、短训练恢复、权重小批、保存统计回读；非完整重训 |
 | GRU SATLIB／Maze10 | 有，终审已定位 | [12 配对](evidence/gru/paired_results.md)、全部控制与 K 曲线如下 | [独立GRU模块](gru/README.md) | [v0.3的24权重与4逐题文件](gru/publication.md)；不附原始数据 | 17测试、24加载、48小批对照、保存数组复算；非完整重训 |
 | GRU 有限参考 | 有 | [报告](limited_references.md)、[全条件数字](evidence/gru/limited_reference.json) | 未发布 | 未发布 | 报告字段回读；没有新增模型调用 |
-| Maze12／NQ8／query-only | 有记录与资产线索 | [历史索引](history.md)，非完整公开实证包 | 待核验 | 待核验 | 尚无本次干净环境复现 |
+| Maze12／NQ8／query-only | 有，原记录保留 | [3份完整报告](history_candidate/README.md) | [独立社区适配](../legacy/community_mixer/README.md) | v0.4：5权重、2一题样例；非全量历史包 | 4个真实CPU接口；完整历史实验未重跑 |
 
 ## 可直接读取的 GRU 证据
 
@@ -36,8 +36,8 @@
 
 第二轮核验及逐项状态见 [GRU 审查 r2](gru/review_r2.md)／[机器回执](gru/review_r2.json)。原 14 项测试已在新建、非 editable 安装环境复核；24 个权重各两图／两候选、深度 8 与 16 的 48 个原函数对照均一致。四个数字数组已通过复算命令，本版将其作为独立附件提供。历史审查记录不回写为新的验证；CUDA恢复、完整历史候选重新生成和从头重训仍未完成。发布提交的CI以GitHub Actions实际记录为准。
 
-## 历史资产与恢复后续候选
+## v0.4 历史资产与恢复
 
-- [127项审阅范围、5项精简候选及历史正负结果](history_candidate/README.md)：公开审批尚未完成。
+- [127项审阅范围、5项精简导出及历史正负结果](history_candidate/README.md)：本版仅公开已批准的代表性范围。
 - [GRU续训与H200两步恢复对照](gru/continuation_candidate.md)：模型/Adam/RNG/题序/后续logits一致；不是完整历史重训。
-- 历史v0.3审阅中“未恢复”的记录保持其当时范围；上述新证据独立列示。新候选未推送，所以没有新GitHub CI或匿名资产下载通过回执。
+- 历史v0.3审阅中“未恢复”的记录保持其当时范围；上述新证据独立列示。版本CI以[Actions](https://github.com/Zane12518/latent-multitrajectory/actions/workflows/cpu.yml)实际记录为准；本版公开下载与校验入口见[版本说明](versions.md#v04-历史接口与恢复)。

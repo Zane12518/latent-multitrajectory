@@ -7,10 +7,11 @@
       "sha256": "69a939b88958877a067f8e4aa2dbf1afab960415c73b0e880a91fe2f624d3008",
       "source_sha256": "b5d17138ca57ea399034d8054c610ee4bb93cf8993a75ec75d610c092679adbd",
       "inference_only": true,
-      "public": false,
+      "public": true,
       "license": "not separately granted",
       "load_and_retained_tensor_comparison": "PASS",
-      "origin_id": "maze_12x12_base_e80"
+      "origin_id": "maze_12x12_base_e80",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.4.0/latent-multitrajectory-history-v0.4.0.tar.gz"
     },
     {
       "id": "nq8_base",
@@ -19,10 +20,11 @@
       "sha256": "2b129133f758a9247bfa9f8ae401c5f1d2f9fa651e8a32a533777ada3fe110c1",
       "source_sha256": "53563b84154e039d6539721007128f64cc6a5a7aab5d3b9335d373d4b133a957",
       "inference_only": true,
-      "public": false,
+      "public": true,
       "license": "not separately granted",
       "load_and_retained_tensor_comparison": "PASS",
-      "origin_id": "v7_b768_fp32_4gpu"
+      "origin_id": "v7_b768_fp32_4gpu",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.4.0/latent-multitrajectory-history-v0.4.0.tar.gz"
     },
     {
       "id": "maze12_mixer_s35",
@@ -31,10 +33,11 @@
       "sha256": "97fdf407064fca6eaecb45745c8b72d36d220bfeeabf85da53467226b9044fbe",
       "source_sha256": "405a60558cc08e8fe00e17dc34f11526149aeb17e7dabcf5ff08b3c3359ce9db",
       "inference_only": true,
-      "public": false,
+      "public": true,
       "license": "not separately granted",
       "load_and_retained_tensor_comparison": "PASS",
-      "origin_id": "maze12_objective_ablation_v2_20260716/conf022_cov040/trainseed35/train"
+      "origin_id": "maze12_objective_ablation_v2_20260716/conf022_cov040/trainseed35/train",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.4.0/latent-multitrajectory-history-v0.4.0.tar.gz"
     },
     {
       "id": "maze12_quality_s35",
@@ -43,10 +46,11 @@
       "sha256": "cb2e0abe89f5634fc9e05dc4cb54dd619d322317d0bf12efa97bd78f8ebf010e",
       "source_sha256": "3ab4063bf08d0dae17ab787a3ec397413c89a92b6c49af0ee24c0172e494bfa8",
       "inference_only": true,
-      "public": false,
+      "public": true,
       "license": "not separately granted",
       "load_and_retained_tensor_comparison": "PASS",
-      "origin_id": "maze12_objective_ablation_v2_20260716/conf022/trainseed35/train"
+      "origin_id": "maze12_objective_ablation_v2_20260716/conf022/trainseed35/train",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.4.0/latent-multitrajectory-history-v0.4.0.tar.gz"
     },
     {
       "id": "nq8_mixer_s2",
@@ -55,12 +59,15 @@
       "sha256": "40aa702cfe4ce4766d910de16f62a641e52ef661f157737d73a90b60d05c01c9",
       "source_sha256": "1a5b15168987c9cecc822bc2754d8e57d3e740ae8d2ed97004e5f6337c66cfd9",
       "inference_only": true,
-      "public": false,
+      "public": true,
       "license": "not separately granted",
       "load_and_retained_tensor_comparison": "PASS",
-      "origin_id": "trajectory_mixer_v3_every1_trainseed_e10/seed2/train"
+      "origin_id": "trajectory_mixer_v3_every1_trainseed_e10/seed2/train",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.4.0/latent-multitrajectory-history-v0.4.0.tar.gz"
     }
   ],
-  "published": false,
-  "selection": "two task bases, Maze quality/mixer same seed35, NQ mixer seed2 reused by query-only; interface coverage, not score selection"
+  "published": true,
+  "selection": "two task bases, Maze quality/mixer same seed35, NQ mixer seed2 reused by query-only; interface coverage, not score selection",
+  "status": "approved_for_v0.4.0_public_distribution",
+  "release_url": "https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.4.0"
 }

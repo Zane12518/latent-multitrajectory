@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.4.0 — Historical interfaces and bounded GRU continuation
+
+- Publish the approved isolated community-GRAM Mixer/query-only adapter, three sanitized reports, five inference files and two one-question samples. Retain community MIT/NOTICE; non-code terms are unchanged.
+- Distinguish historical inference-time Mixer feedback from the train-only Set mainline. Preserve every reported negative condition, including the query-only 16-cell NO_GO.
+- Add the GRU continuation entry and two-task H200 continuous-versus-restart evidence. Original full GRU states and full training populations remain private; no full experiment was rerun.
+- Reuse four real CPU interface runs and four new recovery tests. Actual release-commit CI is available in Actions; CPU CI does not establish CUDA recovery.
+- Preserve v0.1/v0.2/v0.3 and the saved-results Demo byte-for-byte. No SATLIB raw data or remaining 122 historical weights are included.
+
 ## v0.3.0 — GRU inference and saved-statistics reproduction
 
 - Published the separately identified custom GRU SATLIB/Maze inference, objective, evaluation modules and configurations; no GRU result is relabeled as official GRAM.
@@ -23,9 +31,3 @@ GRAM-core project Maze10 adapter, 12 inference endpoints, 6 continuation sources
 ## Between v0.1.0 and v0.2.0
 
 Main added GitHub Pages and interactive playback, project-overview sections and CRC32/byte-size asset checking. The latest pre-v0.2 Demo edit is retained. The v0.1 Release archives remain historical snapshots, not mirrors of current main.
-
-## Unreleased — historical asset / GRU recovery candidate
-
-- Add an isolated community-GRAM Mixer/query-only inference adapter and retained third-party notice. New historical weights/data/reports await explicit publication approval.
-- Add bounded GRU full-state continuation and record two-task H200 save/restart checks; no complete scientific retraining.
-- Preserve v0.1/v0.2/v0.3 assets and existing result-replay Demo. No new release or GitHub CI claim before approval and push.

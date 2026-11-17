@@ -11,13 +11,13 @@
 | **GRAM 核心 · 项目 Maze10** | 六组固定终点 Multi／Set；4/6 覆盖同时区间为正，2/6 通过全部三项质量保护 | [完整结果](docs/results.md)、代码、配置、12 个推理权重、6 个续训起点、数据、保存统计和 Demo |
 | **自建 GRU · SATLIB / Maze10** | 各 3 个质量起点 × 2 条续训流；Set−Q-multi 的六组覆盖区间均为正，三项质量保护通过 | [报告及12组对照](docs/gru_results.md)、[独立GRU代码与复现](docs/gru/README.md)、[24个推理权重及4个逐题文件](docs/gru/publication.md)；无完整GRU训练恢复包 |
 | **有限参考 · 自建 GRU** | 完整质量监督下，最多 8 个分配参考仍有增量；有限总监督起点能力不足 | [正例、负例及监督成本](docs/limited_references.md)；不是“整个训练只见 8 个解” |
-| **历史覆盖与计算复用** | Maze12、N-Queens8、Frozen Base＋Mixer、incremental query-only | [成果索引与缺口](docs/history.md)；未作为当前可运行复现包发布 |
+| **历史覆盖与计算复用** | Maze12、N-Queens8、Frozen Base＋Mixer、incremental query-only | [历史完整报告与接口](docs/history_candidate/README.md)、5个推理文件和2个样例；query-only总门NO_GO保留 |
 
 GRU 的六组描述性平均增量为 SATLIB **+0.394944** 个满足赋值／题、Maze10 **+1.380972** 条最短路径／题。它们与本仓库可运行的 GRAM 适配是不同宿主，不能互相替代证据。公开报告、公开源码、公开权重与独立重训复现的状态分别列于[证据索引](docs/evidence_index.md)。
 
-**v0.3 GRU 扩展**：[推理／目标／逐题评测](docs/gru/README.md)、[权重身份](docs/gru/assets.json)、[数据准备](docs/gru/data.md)与[发布范围](docs/gru/publication.md)。权重和逐题数组通过独立 Release 附件下载，不进入 Git。v0.1/v0.2、在线 Demo 和六组 GRAM 结果保持不变；[历史 Mixer／query-only 资产](docs/gru/history_inventory.md)未随本版发布。
+**v0.3 GRU 扩展**：[推理／目标／逐题评测](docs/gru/README.md)、[权重身份](docs/gru/assets.json)、[数据准备](docs/gru/data.md)与[发布范围](docs/gru/publication.md)。权重和逐题数组通过独立 Release 附件下载，不进入 Git。v0.1/v0.2、在线 Demo 和六组 GRAM 结果保持不变；v0.3未包含的[历史 Mixer／query-only 资产](docs/history_candidate/README.md)现以v0.4代表性包单独提供。
 
-发布复用[既有审查](docs/gru/review_r2.md)：17项测试、24个权重加载、48组小批原函数对照，以及保存数组统计复算。审查文件保留其当时的“未发布”状态；当前范围以[发布清单](docs/gru/publication.md)为准。没有为打包重训或重新生成完整测试，v0.3发布时未验证CUDA完整恢复。本地后续候选已完成两任务短程CUDA恢复对照，见[范围和回执](docs/gru/continuation_candidate.md)；候选源码与历史资产尚未发布。
+发布复用[既有审查](docs/gru/review_r2.md)：17项测试、24个权重加载、48组小批原函数对照，以及保存数组统计复算。审查文件保留其当时的“未发布”状态；当前范围以[发布清单](docs/gru/publication.md)为准。没有为打包重训或重新生成完整测试，v0.3发布时未验证CUDA完整恢复。v0.4新增两任务短程CUDA恢复对照及续训入口，见[范围和回执](docs/gru/continuation_candidate.md)；原完整训练状态和完整训练数据不随包公开。
 
 ## 方法与证据边界
 
@@ -34,12 +34,12 @@ Multi 对相同完整参考均匀独立监督；Set 用轨迹—参考分数、�
 
 ## 快速运行
 
-以下为 **v0.3.0** 的 CPU 安装与既有 GRAM 回放路径；[GRU 权重推理与统计复算](docs/gru/README.md)使用独立模块。历史固定结果使用 `v0.1.0`／`v0.2.0`，见[版本说明](docs/versions.md)。
+以下为 **v0.4.0** 的 CPU 安装与既有 GRAM 回放路径；[GRU 权重推理与统计复算](docs/gru/README.md)使用独立模块。历史固定结果使用 `v0.1.0`／`v0.2.0`，见[版本说明](docs/versions.md)。
 
 ```bash
 git clone https://github.com/Zane12518/latent-multitrajectory.git
 cd latent-multitrajectory
-git switch --detach v0.3.0
+git switch --detach v0.4.0
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
@@ -97,6 +97,6 @@ third_party/      上游许可与修改说明
 
 目录组织参考 [cq-pretrain](https://github.com/ADIOCLASSMATE/cq-pretrain)，未复制其代码、模型架构或生产训练结构。反馈请使用仓库 Issues。
 
-## 后续候选（尚未发布）
+## v0.4 历史接口与 GRU 恢复
 
-[历史社区 Mixer/query-only 整理](docs/history_candidate/README.md)与[GRU 完整状态续训](docs/gru/continuation_candidate.md)分别记录来源、许可、实测范围和待审批资产。公开 v0.3 不含这些新历史权重；Demo 仍为已保存实验结果回放。
+[历史社区 Mixer/query-only](docs/history_candidate/README.md)提供3份脱敏完整报告、独立代码、5个代表性推理权重和2个一题样例。[GRU续训入口](docs/gru/continuation_candidate.md)记录SAT/Maze两步CUDA保存／重启一致性，但原完整断点与训练数据仍不公开。[v0.4下载与校验](docs/versions.md#v04-历史接口与恢复)；Demo仍为保存实验结果回放。
