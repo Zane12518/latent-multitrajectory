@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.3.0 — GRU inference and saved-statistics reproduction
+
+- Published the separately identified custom GRU SATLIB/Maze inference, objective, evaluation modules and configurations; no GRU result is relabeled as official GRAM.
+- Added 24 tensor-only inference weights and four per-question numeric statistics files as separate Release assets, with package SHA-256. Raw SATLIB instances, full GRU training states and 127 historical Mixer/query-only weights remain excluded.
+- Reused 17 accepted tests, 24 strict weight loads, 48 small original-function comparisons and saved-array aggregate reproduction; no full scientific experiment was rerun for packaging.
+- The rights holder approved these exact files for public distribution. Project new code remains MIT; third-party notices remain intact; no new downstream license is granted for non-code assets.
+- Preserved v0.1/v0.2, all positive/negative scientific evidence and the existing saved-results Demo. Full GRU CUDA resume and from-scratch reproduction remain unverified.
+
 ## v0.2.0 — evidence and recovery reliability
 
 - Added sanitized GRU SATLIB/Maze reports, all primary pairs and controls, K curves, finite-reference negative results, and explicit public-asset status.

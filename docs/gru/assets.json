@@ -1,5 +1,5 @@
 {
-  "status": "unpublished_candidate",
+  "status": "approved_for_v0.3.0_release",
   "models": [
     {
       "model_id": "main_maze1117_a_multi",
@@ -21,9 +21,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze1117_a_set",
@@ -45,9 +45,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze1117_b_multi",
@@ -69,9 +69,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze1117_b_set",
@@ -93,9 +93,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze77_a_multi",
@@ -117,9 +117,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze77_a_set",
@@ -141,9 +141,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze77_b_multi",
@@ -165,9 +165,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze77_b_set",
@@ -189,9 +189,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze96_a_multi",
@@ -213,9 +213,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze96_a_set",
@@ -237,9 +237,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze96_b_multi",
@@ -261,9 +261,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_maze96_b_set",
@@ -285,9 +285,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat74_a_multi",
@@ -309,9 +309,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat74_a_set",
@@ -333,9 +333,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat74_b_multi",
@@ -357,9 +357,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat74_b_set",
@@ -381,9 +381,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat912_a_multi",
@@ -405,9 +405,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat912_a_set",
@@ -429,9 +429,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat912_b_multi",
@@ -453,9 +453,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat912_b_set",
@@ -477,9 +477,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat98_a_multi",
@@ -501,9 +501,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat98_a_set",
@@ -525,9 +525,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat98_b_multi",
@@ -549,9 +549,9 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     },
     {
       "model_id": "main_sat98_b_set",
@@ -573,9 +573,10 @@
       "source_contract": "GRAM-ASSIGN-VALUE-20261111-r1",
       "source_binding": "72 archived readbacks; prior CPU export-to-original equality; current package CRC matched",
       "live_full_checkpoint_available": false,
-      "publication": "candidate_not_uploaded",
-      "download_url": null,
-      "rights": "historical export not independently approved for this release; non-code license unchanged"
+      "publication": "v0.3.0_release_asset",
+      "download_url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "rights": "rights holder confirmed exact public distribution; existing non-code terms unchanged; no separate downstream license"
     }
-  ]
+  ],
+  "release_url": "https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.3.0"
 }

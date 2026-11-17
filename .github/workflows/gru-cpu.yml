@@ -1,4 +1,4 @@
-name: GRU candidate CPU
+name: GRU CPU
 on:
   workflow_dispatch:
   pull_request:

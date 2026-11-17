@@ -5,7 +5,7 @@
 | 研究线 | 内部报告 | 公开报告／统计 | 公开运行代码 | 公开权重／数据 | 本次独立验证 |
 |---|---|---|---|---|---|
 | GRAM 核心项目 Maze10 | 有 | [六组结果](results.md)、[数字](results.json) | 本仓库 | [v0.1.0](https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.1.0) | CPU 安装、测试、短训练恢复、权重小批、保存统计回读；非完整重训 |
-| GRU SATLIB／Maze10 | 有，终审已定位 | [12 配对](evidence/gru/paired_results.md)、全部控制与 K 曲线如下 | 未发布此宿主 | 未发布此宿主 | 汇总导出／表间一致性；未重新生成逐题输出 |
+| GRU SATLIB／Maze10 | 有，终审已定位 | [12 配对](evidence/gru/paired_results.md)、全部控制与 K 曲线如下 | [独立GRU模块](gru/README.md) | [v0.3的24权重与4逐题文件](gru/publication.md)；不附原始数据 | 17测试、24加载、48小批对照、保存数组复算；非完整重训 |
 | GRU 有限参考 | 有 | [报告](limited_references.md)、[全条件数字](evidence/gru/limited_reference.json) | 未发布 | 未发布 | 报告字段回读；没有新增模型调用 |
 | Maze12／NQ8／query-only | 有记录与资产线索 | [历史索引](history.md)，非完整公开实证包 | 待核验 | 待核验 | 尚无本次干净环境复现 |
 
@@ -25,13 +25,13 @@
 
 ## 运行与验证入口
 
-- [严格恢复／分叉](resume.md)，[完整复现命令](reproduce.md)，[v0.1 与 v0.2](versions.md)。
+- [严格恢复／分叉](resume.md)，[完整复现命令](reproduce.md)，[版本区别](versions.md)。
 - [本次验证范围](validation_v0.2.md)；[历史包装回执](validation.json)原样保留，不当作本次新跑结果。
-- [权利清单](rights.md)、[发布范围](release_scope.md)。当前只新增代码与报告统计，未重新分发 GRU／历史权重或 SATLIB 原始数据。
+- [权利清单](rights.md)、[发布范围](release_scope.md)。v0.3新增已批准的GRU代码、24推理权重和4逐题数值文件；不分发SATLIB原始数据或历史Mixer权重。
 
-## 待发布 GRU 接入
+## v0.3 GRU 接入与历史验证
 
-候选分支新增 [GRU 模块与命令](gru/README.md)、[逐模型绑定](gru/assets.json)、[验证层级](gru/validation.md)和[历史资产缺口](gru/history_inventory.md)。公开状态仍按上表；候选分支的代码接入、私有权重小批运行不自动变成已公开资产。
+本版本提供 [GRU 模块与命令](gru/README.md)、[逐模型绑定](gru/assets.json)、[资产下载清单](gru/release_assets.json)和[历史资产缺口](gru/history_inventory.md)。仅公开逐项获批的24个推理文件和4个数字文件；完整训练状态和其他历史权重不在其中。
 本次读取两任务各 28 个模型的逐题数字数组，重算 1,344 行 K 曲线及 1,200 行集合变化聚合，与现有公开表逐值相同。它不是原始 logits/解 identity 全量重验，也未重抽原同时区间。完整原预测暂不可访问，保留此前已通过的验收，不补造本次通过状态。
 
-第二轮核验及逐项状态见 [GRU 审查 r2](gru/review_r2.md)／[机器回执](gru/review_r2.json)。原 14 项测试已在新建、非 editable 安装环境复核；24 个权重各两图／两候选、深度 8 与 16 的 48 个原函数对照均一致。四个私有数字数组已通过新复算命令；公开统计与候选私有文件分开。CUDA 恢复、完整历史候选重新生成、从头重训与新 GitHub CI 均未完成。
+第二轮核验及逐项状态见 [GRU 审查 r2](gru/review_r2.md)／[机器回执](gru/review_r2.json)。原 14 项测试已在新建、非 editable 安装环境复核；24 个权重各两图／两候选、深度 8 与 16 的 48 个原函数对照均一致。四个数字数组已通过复算命令，本版将其作为独立附件提供。历史审查记录不回写为新的验证；CUDA恢复、完整历史候选重新生成和从头重训仍未完成。发布提交的CI以GitHub Actions实际记录为准。

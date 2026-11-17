@@ -6,6 +6,7 @@
 |---|---|
 | `v0.1.0` → `904f54b707d9bc16677bb2bc0eb5d7b02083e33a` | 原始公开包装，静态离线 Demo，历史训练／评测源码 |
 | `v0.2.0` | 严格恢复、公开 GRU 报告和 CPU CI；科研六组结果与旧权重未替换 |
+| `v0.3.0` | 独立GRU推理／目标／评测、24个推理权重和4个逐题数字文件；不含完整GRU恢复包 |
 | `main` / Pages | 当前文档与动态保存结果回放；以后可能继续更新 |
 
 ```bash
@@ -35,3 +36,14 @@ sha256sum -c SHA256SUMS
 SHA-256 仅用于这两份新归档的完整性检查，不是来源认证或权利证明。本轮不为旧大文件重做 SHA 扫描。下载地址以 [v0.2.0 Release](https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.2.0) 为准。
 
 原 v0.1 静态 HTML 与 Pages 当前动画都只是实验回放。历史静态文件不会被当前动画覆盖。
+
+## v0.3 固定版本
+
+```bash
+git switch --detach v0.3.0
+python -m pip install -e '.[test]'
+```
+
+该版本将包元数据升级到0.3.0，避免与早期候选沿用0.2.0混淆。下载[源码ZIP](https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-v0.3.0.zip)、[24权重包](https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz)、[4统计文件包](https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-statistics-v0.3.0.tar.gz)和[SHA256SUMS](https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/SHA256SUMS)，使用`sha256sum -c SHA256SUMS`或macOS的`shasum -a 256 -c SHA256SUMS`核对。
+
+新包的SHA-256仅用于完整性；旧包、旧标签和Demo文件不改。GRU完整恢复未验证，推理权重不能作为GRAM Session或完整训练恢复输入。完整下载与运行步骤见[GRU复现](gru/README.md)。

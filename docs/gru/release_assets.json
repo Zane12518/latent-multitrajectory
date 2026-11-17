@@ -1,0 +1,65 @@
+{
+  "version": "0.3.0",
+  "release_url": "https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.3.0",
+  "scope_authorized": true,
+  "terms": "Exact public distribution approved by rights holder; non-code existing terms unchanged; no new downstream license",
+  "host": "project custom GRU, not official GRAM",
+  "packages": [
+    {
+      "file": "latent-multitrajectory-gru-inference-v0.3.0.tar.gz",
+      "bytes": 182667402,
+      "sha256": "0bb87da1345cc888873702ce8677e8d7fcb873ea8f173f937a89f47f2601678a",
+      "payload_files": 24,
+      "metadata_files": 2,
+      "url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-inference-v0.3.0.tar.gz"
+    },
+    {
+      "file": "latent-multitrajectory-gru-statistics-v0.3.0.tar.gz",
+      "bytes": 4642293,
+      "sha256": "e679709987c95b17b495920dbcb394fb9defd89f63dfc5b4450f7707107ee5ed",
+      "payload_files": 4,
+      "metadata_files": 2,
+      "url": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-gru-statistics-v0.3.0.tar.gz"
+    }
+  ],
+  "weights_index": "assets.json",
+  "statistics": [
+    {
+      "file": "statistics/sat/per_rng_metrics.npz",
+      "bytes": 1638817,
+      "crc32": "09300fa1",
+      "origin": "project evaluator numeric per-question arrays for registered GRU contract",
+      "license": "non-code terms unchanged; no separate downstream license"
+    },
+    {
+      "file": "statistics/sat/per_rng_solution_changes.npz",
+      "bytes": 769965,
+      "crc32": "4c0cd9ed",
+      "origin": "project evaluator numeric per-question arrays for registered GRU contract",
+      "license": "non-code terms unchanged; no separate downstream license"
+    },
+    {
+      "file": "statistics/maze/per_rng_metrics.npz",
+      "bytes": 1367393,
+      "crc32": "85dd599b",
+      "origin": "project evaluator numeric per-question arrays for registered GRU contract",
+      "license": "non-code terms unchanged; no separate downstream license"
+    },
+    {
+      "file": "statistics/maze/per_rng_solution_changes.npz",
+      "bytes": 1551875,
+      "crc32": "aa5ee680",
+      "origin": "project evaluator numeric per-question arrays for registered GRU contract",
+      "license": "non-code terms unchanged; no separate downstream license"
+    }
+  ],
+  "source_zip": "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/latent-multitrajectory-v0.3.0.zip",
+  "source_sha256": "See SHA256SUMS in the Release; the source archive cannot contain its own checksum",
+  "excluded": [
+    "raw SATLIB",
+    "project full train/selection datasets and reference pools",
+    "original full GRU training checkpoints",
+    "127 historical Mixer/query-only weights"
+  ],
+  "complete_gru_training_restore_verified": false
+}

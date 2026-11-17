@@ -1,6 +1,6 @@
-# 自建 GRU：候选复现模块
+# 自建 GRU：推理与保存统计复现
 
-状态：**已在独立候选分支接入并完成 CPU 验证，尚未公开发布。** v0.1 / v0.2 的代码、资产和结果保持原样。发布范围见[候选清单](publication.md)，逐模型身份见[24 个权重清单](assets.json)。
+v0.3提供独立GRU推理、目标函数和评测代码，以及24个推理权重和4个逐题统计文件。v0.1/v0.2和现有Demo保持原样。[发布范围与许可](publication.md) · [24个模型身份](assets.json) · [下载包与校验](release_assets.json)。
 
 ## 模型与方法
 
@@ -24,9 +24,12 @@ SAT 共同质量项访问已完整枚举的训练合法解池；Maze 使用原 c
 
 ## 安装与无权重 smoke
 
-在候选源码根目录执行（发布前不要误用仅含 v0.2 的 main）：
+先获取固定版本，再在源码根目录执行：
 
 ```bash
+git clone https://github.com/Zane12518/latent-multitrajectory.git
+cd latent-multitrajectory
+git switch --detach v0.3.0
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
@@ -37,9 +40,20 @@ python examples/gru_smoke.py --out outputs/gru_smoke
 
 CPU 安装源适用于 Linux；macOS 用普通 PyPI 的 `torch==2.7.1`。示例使用随机未训练模型与两个人工题，各生成 32 个候选；结果只说明接口可运行，不是 benchmark 成绩。输出中有输入、候选和评分。输出路径已存在时拒绝覆盖。
 
-## 使用候选权重
+## 下载资产与真实推理
 
-24 个文件仍在私有候选区，**没有公开下载链接**。确认发布范围后再加入 Release；不要把本说明当作它们已经公开。获得合规副本后，将文件放入 `candidate_weights/`，例如：
+[v0.3 Release](https://github.com/Zane12518/latent-multitrajectory/releases/tag/v0.3.0)提供源码、推理权重和逐题统计三个包。下面下载全部三包并校验；macOS将`sha256sum`替换为`shasum -a 256`。校验用于传输完整性，不是来源认证或下游许可。
+
+```bash
+for file in latent-multitrajectory-v0.3.0.zip latent-multitrajectory-gru-inference-v0.3.0.tar.gz latent-multitrajectory-gru-statistics-v0.3.0.tar.gz SHA256SUMS; do
+  curl --fail --location "https://github.com/Zane12518/latent-multitrajectory/releases/download/v0.3.0/$file" -o "$file"
+done
+sha256sum -c SHA256SUMS
+tar -xzf latent-multitrajectory-gru-inference-v0.3.0.tar.gz
+tar -xzf latent-multitrajectory-gru-statistics-v0.3.0.tar.gz
+```
+
+解压得到`candidate_weights/`和`candidate_statistics/`。不要在已有未备份目录上重复解压。24个权重均为模型张量，**不是完整续训状态**。两图小批真实推理：
 
 ```bash
 python -m latent_multi.gru.predict --config configs/gru/maze10.json --manifest docs/gru/assets.json --weights candidate_weights/main_maze77_a_multi.pt --rows data/demo_inputs.json --limit 2 --output outputs/gru_multi.json
@@ -55,7 +69,7 @@ SAT 用 `configs/gru/satlib20.json`、对应 `main_sat*_*.pt` 和[自行转换�
 
 ## 保存数字数组复算
 
-四个逐题 NPZ 仍在私有候选区，尚无公开下载链接。获得允许使用的副本后，按 `candidate_statistics/sat/` 和 `candidate_statistics/maze/` 放置每任务的 `per_rng_metrics.npz`、`per_rng_solution_changes.npz`：
+上面的统计包解压后，每任务的 `per_rng_metrics.npz`、`per_rng_solution_changes.npz` 分别位于 `candidate_statistics/sat/` 和 `candidate_statistics/maze/`：
 
 ```bash
 python -m latent_multi.gru.reproduce_statistics --task sat --statistics candidate_statistics/sat --tables docs/evidence/gru --output outputs/sat_statistics.json
@@ -65,7 +79,7 @@ python -m pytest -q tests/test_gru_statistics.py
 
 每任务实际通过 672 行 K 曲线、600 行集合变化，最大数值差为 0。命令核对题目／随机流／K、供给—重复恒等式、集合计数和公开 CSV；损坏计数与非有限表格会报错。它不读取原始预测 identity、不重新生成候选、不重抽区间，也不把汇总 CSV 的完整性检查解释为全量历史预测复现。
 
-本候选代码仍为未发布内容，包元数据沿用 `0.2.0`，**不能仅凭安装版本号识别此候选**。应记录本分支 commit 及安装包来源；正式 v0.2.0 tag 并不包含此 GRU 接入。第二轮实际使用新建 venv、构建 wheel 后非 editable 安装，见[复核记录](review_r2.md)。
+本版包版本为 `0.3.0`；正式 `v0.2.0` tag 不包含GRU模块。应记录tag/commit和包来源。发布复用的第二轮验证使用新建venv、构建wheel后非editable安装，见[历史复核记录](review_r2.md)；该记录中的未发布状态对应审查当时，不是本版资产状态。
 
 ## 验证层级与恢复
 
@@ -73,4 +87,4 @@ python -m pytest -q tests/test_gru_statistics.py
 
 本模块提供推理、训练目标和评测，**未提供完整 GRU 续训 runner**。24 个 `.pt` 仅有模型张量，没有 Adam、RNG、题序、访问游标。不要把它们传给 GRAM 的 `Session.restore()`。原完整 checkpoint 与 CUDA 连续／恢复对照仍待可访问挂载及独立验收；CPU 参数读回不是 CUDA 续训证明。
 
-项目新增接口代码沿用项目 MIT；历史代码的原 MIT 版权单独保留于 [NOTICE](../../NOTICE)。权重、数据、统计和旧源码发布范围见[权利与待确认清单](publication.md)，不自动套用代码许可证。
+项目新增接口代码沿用项目 MIT；历史代码的原 MIT 版权单独保留于 [NOTICE](../../NOTICE)。权重、数据、统计和旧源码发布范围见[发布范围与权利清单](publication.md)，不自动套用代码许可证。

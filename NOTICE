@@ -1,7 +1,7 @@
 Project-owned source code: MIT; see LICENSE.
 Vendored GRAM core copyright 2025 Samsung Electronics Co., Ltd., MIT.
 See third_party/GRAM-LICENSE.txt and third_party/README.md.
-The separate project GRU candidate was extracted from a historical code tree
+The separate project GRU module was extracted from a historical code tree
 carrying copyright 2026 Aleksey Komissarov, MIT. That notice is preserved in
 third_party/HISTORICAL-GRAM-LICENSE.txt; it grants no data or weight license.
 Data and checkpoints: see ASSET_TERMS.md.
