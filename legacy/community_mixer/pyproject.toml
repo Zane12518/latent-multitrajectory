@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "latent-multitrajectory-community-history"
+version = "0.0.1"
+description = "Private candidate: archived community GRAM Mixer interfaces"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["torch>=2.4,<2.10"]
+
+[tool.setuptools.packages.find]
+include = ["gram*", "scripts*"]

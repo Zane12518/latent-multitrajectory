@@ -13,7 +13,7 @@ def check():
     patterns = [r'/(?:Users|inspire)/', r'https?://[^\s]*feishu\.cn/',
                 r'gh[pousr]_[A-Za-z0-9]{25,}', r'github_pat_[A-Za-z0-9_]{30,}',
                 r'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----']
-    files = [p for folder in ('docs','src','training','evaluation','scripts','tests','configs','.github')
+    files = [p for folder in ('docs','src','training','evaluation','scripts','tests','configs','.github','legacy')
              for p in (ROOT/folder).rglob('*') if p.is_file() and p.suffix in ('.md','.py','.json','.csv','.yml')]
     files += list(ROOT.glob('*.md'))
     for p in files:

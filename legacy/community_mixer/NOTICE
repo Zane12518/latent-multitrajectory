@@ -1,0 +1,10 @@
+This isolated historical adapter includes community GRAM code from
+https://github.com/ad3002/gram and project trajectory-Mixer/query-only extensions.
+The original MIT notice, Copyright (c) 2026 Aleksey Komissarov, is retained
+verbatim in LICENSE. This is not the official ahn-ml/gram-release implementation,
+and not the project's task-specific GRU solver.
+
+The dataset dispatch is restricted to Maze and N-Queens; the model, decoder and
+Mixer algorithms are copied unchanged from the recorded project snapshot.
+Weights, data and experiment records require separate publication approval and
+are not automatically licensed by this code license. SATLIB raw data is absent.

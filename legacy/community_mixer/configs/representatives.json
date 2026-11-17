@@ -1,0 +1,318 @@
+{
+  "status": "private candidate",
+  "models": [
+    {
+      "id": "maze12_base",
+      "weight": "maze12_base.pt",
+      "task": {
+        "name": "maze",
+        "grid_size": 12,
+        "seq_len": 144,
+        "vocab_size": 6,
+        "train_test_split": 0.85,
+        "dataset_seed": 42
+      },
+      "architecture": {
+        "d_model": 512,
+        "n_heads": 8,
+        "ff_hidden": 512,
+        "pos_encoding": "rope",
+        "fL_block": "attn_swiglu",
+        "fH_block": "attn_swiglu",
+        "fL_layers": 2,
+        "fH_layers": 2,
+        "K_inner": 4,
+        "T_outer": 3,
+        "nsup": 16,
+        "z0_init": "gaussian_frozen",
+        "guidance_head": "swiglu_mlp",
+        "posterior_head": "swiglu_mlp"
+      },
+      "base_weight": "maze12_base.pt",
+      "component": "base",
+      "source_seed": 42,
+      "source_global_step": 1360,
+      "training": {},
+      "parameters": "load exact tensor shapes from reviewed inference file; no new architecture",
+      "archived_evaluation": {
+        "decoder": "shortest_path",
+        "decoder_budget": 64,
+        "headline_candidates": 64,
+        "precision": "bf16",
+        "prior_noise_scale": 1.0,
+        "mixer_every": 1,
+        "use_ema": false
+      },
+      "smoke": {
+        "questions": 1,
+        "candidates": 2,
+        "precision": "cpu-fp32",
+        "seed": 0
+      },
+      "report": "maze12_report.json",
+      "sha256": "69a939b88958877a067f8e4aa2dbf1afab960415c73b0e880a91fe2f624d3008",
+      "bytes": 44708971,
+      "public": false
+    },
+    {
+      "id": "nq8_base",
+      "weight": "nq8_base.pt",
+      "task": {
+        "name": "nqueens",
+        "board_size": 8,
+        "seq_len": 64,
+        "vocab_size": 3,
+        "remove_k": [
+          5,
+          6,
+          7
+        ],
+        "train_test_split": 0.85,
+        "dataset_seed": 42
+      },
+      "architecture": {
+        "d_model": 512,
+        "n_heads": 8,
+        "ff_hidden": 512,
+        "pos_encoding": "rope",
+        "fL_block": "attn_swiglu",
+        "fH_block": "attn_swiglu",
+        "fL_layers": 2,
+        "fH_layers": 2,
+        "K_inner": 4,
+        "T_outer": 3,
+        "nsup": 16,
+        "z0_init": "gaussian_frozen",
+        "guidance_head": "swiglu_mlp",
+        "posterior_head": "swiglu_mlp"
+      },
+      "base_weight": "nq8_base.pt",
+      "component": "base",
+      "source_seed": 42,
+      "source_global_step": 1500,
+      "training": {},
+      "parameters": "load exact tensor shapes from reviewed inference file; no new architecture",
+      "archived_evaluation": {
+        "decoder": "beam",
+        "decoder_budget": 64,
+        "headline_candidates": 64,
+        "precision": "bf16",
+        "prior_noise_scale": 1.0,
+        "mixer_every": 1,
+        "use_ema": false
+      },
+      "smoke": {
+        "questions": 1,
+        "candidates": 2,
+        "precision": "cpu-fp32",
+        "seed": 0
+      },
+      "report": "nq8_report.json",
+      "sha256": "2b129133f758a9247bfa9f8ae401c5f1d2f9fa651e8a32a533777ada3fe110c1",
+      "bytes": 44368841,
+      "public": false
+    },
+    {
+      "id": "maze12_mixer_s35",
+      "weight": "maze12_mixer_s35.pt",
+      "task": {
+        "name": "maze",
+        "grid_size": 12,
+        "seq_len": 144,
+        "vocab_size": 6,
+        "train_test_split": 0.85,
+        "dataset_seed": 42
+      },
+      "architecture": {
+        "d_model": 512,
+        "n_heads": 8,
+        "ff_hidden": 512,
+        "pos_encoding": "rope",
+        "fL_block": "attn_swiglu",
+        "fH_block": "attn_swiglu",
+        "fL_layers": 2,
+        "fH_layers": 2,
+        "K_inner": 4,
+        "T_outer": 3,
+        "nsup": 16,
+        "z0_init": "gaussian_frozen",
+        "guidance_head": "swiglu_mlp",
+        "posterior_head": "swiglu_mlp"
+      },
+      "base_weight": "maze12_base.pt",
+      "component": "mixer",
+      "source_seed": 35,
+      "source_global_step": 670,
+      "training": {
+        "epochs": 10,
+        "n_particles": 32,
+        "batch_puzzles": 32,
+        "lr": 0.0003,
+        "w_maze_candidate_conf": 0.22,
+        "w_maze_candidate_coverage": 0.4,
+        "w_coverage": 0.0,
+        "w_mi": 0.0,
+        "mixer_every": 1,
+        "amp_dtype": "bf16",
+        "use_ema": false,
+        "teacher_policy": "none"
+      },
+      "parameters": "load exact tensor shapes from reviewed inference file; no new architecture",
+      "archived_evaluation": {
+        "decoder": "shortest_path",
+        "decoder_budget": 64,
+        "headline_candidates": 64,
+        "precision": "bf16",
+        "prior_noise_scale": 1.0,
+        "mixer_every": 1,
+        "use_ema": false
+      },
+      "smoke": {
+        "questions": 1,
+        "candidates": 2,
+        "precision": "cpu-fp32",
+        "seed": 0
+      },
+      "report": "maze12_report.json",
+      "sha256": "97fdf407064fca6eaecb45745c8b72d36d220bfeeabf85da53467226b9044fbe",
+      "bytes": 8416359,
+      "public": false
+    },
+    {
+      "id": "maze12_quality_s35",
+      "weight": "maze12_quality_s35.pt",
+      "task": {
+        "name": "maze",
+        "grid_size": 12,
+        "seq_len": 144,
+        "vocab_size": 6,
+        "train_test_split": 0.85,
+        "dataset_seed": 42
+      },
+      "architecture": {
+        "d_model": 512,
+        "n_heads": 8,
+        "ff_hidden": 512,
+        "pos_encoding": "rope",
+        "fL_block": "attn_swiglu",
+        "fH_block": "attn_swiglu",
+        "fL_layers": 2,
+        "fH_layers": 2,
+        "K_inner": 4,
+        "T_outer": 3,
+        "nsup": 16,
+        "z0_init": "gaussian_frozen",
+        "guidance_head": "swiglu_mlp",
+        "posterior_head": "swiglu_mlp"
+      },
+      "base_weight": "maze12_base.pt",
+      "component": "mixer",
+      "source_seed": 35,
+      "source_global_step": 670,
+      "training": {
+        "epochs": 10,
+        "n_particles": 32,
+        "batch_puzzles": 32,
+        "lr": 0.0003,
+        "w_maze_candidate_conf": 0.22,
+        "w_maze_candidate_coverage": 0.0,
+        "w_coverage": 0.0,
+        "w_mi": 0.0,
+        "mixer_every": 1,
+        "amp_dtype": "bf16",
+        "use_ema": false,
+        "teacher_policy": "none"
+      },
+      "parameters": "load exact tensor shapes from reviewed inference file; no new architecture",
+      "archived_evaluation": {
+        "decoder": "shortest_path",
+        "decoder_budget": 64,
+        "headline_candidates": 64,
+        "precision": "bf16",
+        "prior_noise_scale": 1.0,
+        "mixer_every": 1,
+        "use_ema": false
+      },
+      "smoke": {
+        "questions": 1,
+        "candidates": 2,
+        "precision": "cpu-fp32",
+        "seed": 0
+      },
+      "report": "maze12_report.json",
+      "sha256": "cb2e0abe89f5634fc9e05dc4cb54dd619d322317d0bf12efa97bd78f8ebf010e",
+      "bytes": 8416397,
+      "public": false
+    },
+    {
+      "id": "nq8_mixer_s2",
+      "weight": "nq8_mixer_s2.pt",
+      "task": {
+        "name": "nqueens",
+        "board_size": 8,
+        "seq_len": 64,
+        "vocab_size": 3,
+        "remove_k": [
+          5,
+          6,
+          7
+        ],
+        "train_test_split": 0.85,
+        "dataset_seed": 42
+      },
+      "architecture": {
+        "d_model": 512,
+        "n_heads": 8,
+        "ff_hidden": 512,
+        "pos_encoding": "rope",
+        "fL_block": "attn_swiglu",
+        "fH_block": "attn_swiglu",
+        "fL_layers": 2,
+        "fH_layers": 2,
+        "K_inner": 4,
+        "T_outer": 3,
+        "nsup": 16,
+        "z0_init": "gaussian_frozen",
+        "guidance_head": "swiglu_mlp",
+        "posterior_head": "swiglu_mlp"
+      },
+      "base_weight": "nq8_base.pt",
+      "component": "mixer",
+      "source_seed": 2,
+      "source_global_step": 180,
+      "training": {
+        "epochs": 10,
+        "n_particles": 32,
+        "batch_puzzles": 64,
+        "lr": 0.0003,
+        "w_coverage": 0.05,
+        "w_mi": 0.2,
+        "mixer_every": 1,
+        "amp_dtype": "bf16",
+        "use_ema": false,
+        "teacher_policy": "unique_output"
+      },
+      "parameters": "load exact tensor shapes from reviewed inference file; no new architecture",
+      "archived_evaluation": {
+        "decoder": "beam",
+        "decoder_budget": 64,
+        "headline_candidates": 64,
+        "precision": "bf16",
+        "prior_noise_scale": 1.0,
+        "mixer_every": 1,
+        "use_ema": false
+      },
+      "smoke": {
+        "questions": 1,
+        "candidates": 2,
+        "precision": "cpu-fp32",
+        "seed": 0
+      },
+      "report": "nq8_report.json",
+      "sha256": "40aa702cfe4ce4766d910de16f62a641e52ef661f157737d73a90b60d05c01c9",
+      "bytes": 8416283,
+      "public": false
+    }
+  ],
+  "query_only": "seed2 is interface-only; frozen E2E evidence uses different listed weights and retains NO_GO"
+}

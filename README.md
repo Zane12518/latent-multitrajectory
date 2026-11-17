@@ -17,7 +17,7 @@ GRU 的六组描述性平均增量为 SATLIB **+0.394944** 个满足赋值／题
 
 **v0.3 GRU 扩展**：[推理／目标／逐题评测](docs/gru/README.md)、[权重身份](docs/gru/assets.json)、[数据准备](docs/gru/data.md)与[发布范围](docs/gru/publication.md)。权重和逐题数组通过独立 Release 附件下载，不进入 Git。v0.1/v0.2、在线 Demo 和六组 GRAM 结果保持不变；[历史 Mixer／query-only 资产](docs/gru/history_inventory.md)未随本版发布。
 
-发布复用[既有审查](docs/gru/review_r2.md)：17项测试、24个权重加载、48组小批原函数对照，以及保存数组统计复算。审查文件保留其当时的“未发布”状态；当前范围以[发布清单](docs/gru/publication.md)为准。没有为打包重训或重新生成完整测试，CUDA完整恢复仍未验证。
+发布复用[既有审查](docs/gru/review_r2.md)：17项测试、24个权重加载、48组小批原函数对照，以及保存数组统计复算。审查文件保留其当时的“未发布”状态；当前范围以[发布清单](docs/gru/publication.md)为准。没有为打包重训或重新生成完整测试，v0.3发布时未验证CUDA完整恢复。本地后续候选已完成两任务短程CUDA恢复对照，见[范围和回执](docs/gru/continuation_candidate.md)；候选源码与历史资产尚未发布。
 
 ## 方法与证据边界
 
@@ -96,3 +96,7 @@ third_party/      上游许可与修改说明
 项目新增代码：[MIT](LICENSE)。GRAM 第三方代码保留原始 [LICENSE / NOTICE](third_party/README.md)。**数据、报告／统计、推理权重和续训状态仅维持现有许可状态，不自动适用代码 MIT，也未另授下游修改／再分发许可。** 详见[资产条款](ASSET_TERMS.md)和[权利清单](docs/rights.md)。SATLIB 原始数据不随本次发布。
 
 目录组织参考 [cq-pretrain](https://github.com/ADIOCLASSMATE/cq-pretrain)，未复制其代码、模型架构或生产训练结构。反馈请使用仓库 Issues。
+
+## 后续候选（尚未发布）
+
+[历史社区 Mixer/query-only 整理](docs/history_candidate/README.md)与[GRU 完整状态续训](docs/gru/continuation_candidate.md)分别记录来源、许可、实测范围和待审批资产。公开 v0.3 不含这些新历史权重；Demo 仍为已保存实验结果回放。

@@ -1,0 +1,1021 @@
+{
+  "status": "private candidate; publication approval required",
+  "source_report_sha256": "c8398badada89a15db834b9e1dbd44109e40a3048962e5466c32663cad55ae0c",
+  "validation": "saved report readback, not regenerated predictions or remeasured throughput",
+  "report": {
+    "boundary": "Graph8 was not launched because its frozen prior-transfer eligibility gate failed.",
+    "cells": 16,
+    "decision": "QUERY_ONLY_E2E_NO_GO",
+    "experiment": "query_only_end_to_end_matched_profile",
+    "groups": {
+      "maze": {
+        "hostile": {
+          "all_cells_pass": false,
+          "cells": 4,
+          "max_p95_ratio": 1.0840856773377674,
+          "mean_coverage_retention": 0.9950415925367455,
+          "mean_particle_forward_reduction_pct": 48.38709677419355,
+          "mean_unique_valid_per_s_gain_pct": 2.107922573897353,
+          "mean_wall_reduction_pct": 2.5256305564976738,
+          "min_validity_delta_pp": 0.0
+        },
+        "test": {
+          "all_cells_pass": false,
+          "cells": 4,
+          "max_p95_ratio": 1.0960749835117094,
+          "mean_coverage_retention": 0.9942805051160061,
+          "mean_particle_forward_reduction_pct": 48.38709677419355,
+          "mean_unique_valid_per_s_gain_pct": 2.4117120703079724,
+          "mean_wall_reduction_pct": 2.859471090619703,
+          "min_validity_delta_pp": 0.0
+        }
+      },
+      "nqueens": {
+        "hostile": {
+          "all_cells_pass": false,
+          "cells": 4,
+          "max_p95_ratio": 1.0072911399772484,
+          "mean_coverage_retention": 0.9991057832386172,
+          "mean_particle_forward_reduction_pct": 48.38709677419355,
+          "mean_unique_valid_per_s_gain_pct": 11.928057797939307,
+          "mean_wall_reduction_pct": 10.71000747107469,
+          "min_validity_delta_pp": -0.006032818532819562
+        },
+        "test": {
+          "all_cells_pass": false,
+          "cells": 4,
+          "max_p95_ratio": 0.9293114592846909,
+          "mean_coverage_retention": 0.9905211045529385,
+          "mean_particle_forward_reduction_pct": 48.38709677419355,
+          "mean_unique_valid_per_s_gain_pct": 11.696024905103958,
+          "mean_wall_reduction_pct": 11.319070035510057,
+          "min_validity_delta_pp": -0.048512289780078266
+        }
+      }
+    },
+    "overall": false,
+    "rows": [
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 100,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": false,
+          "p95": false,
+          "throughput": false,
+          "validity": true,
+          "wall_time": false
+        },
+        "incremental_particle_forwards": 96000,
+        "model_decode_latency_ms_p95": {
+          "incremental": 2673.8080573268235,
+          "ratio": 1.076428441469805,
+          "staged": 2483.9626623725053
+        },
+        "n64": {
+          "coverage_retention": 0.9932947165174654,
+          "incremental_coverage": 0.38482934027895843,
+          "incremental_validity": 1.0,
+          "staged_coverage": 0.3874271491427911,
+          "staged_validity": 1.0,
+          "validity_delta_pp": 0.0
+        },
+        "n_examples": 1500,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "incremental",
+          "staged"
+        ],
+        "schema": 1,
+        "split": "test",
+        "staged_particle_forwards": 186000,
+        "task": "maze",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 0.5295964616994775,
+          "incremental": 20.59616122545188,
+          "staged": 20.487659306678665
+        },
+        "wall_s": {
+          "incremental": 2747.5022835843265,
+          "reduction_pct": 1.1938024742894293,
+          "staged": 2780.698329038918
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 101,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": false,
+          "p95": true,
+          "throughput": false,
+          "validity": true,
+          "wall_time": false
+        },
+        "incremental_particle_forwards": 96000,
+        "model_decode_latency_ms_p95": {
+          "incremental": 2157.2610368020833,
+          "ratio": 1.045195956532978,
+          "staged": 2063.9775951276533
+        },
+        "n64": {
+          "coverage_retention": 0.9946781417405813,
+          "incremental_coverage": 0.38512856433657267,
+          "incremental_validity": 1.0,
+          "staged_coverage": 0.3871891300060525,
+          "staged_validity": 1.0,
+          "validity_delta_pp": 0.0
+        },
+        "n_examples": 1500,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "staged",
+          "incremental"
+        ],
+        "schema": 1,
+        "split": "test",
+        "staged_particle_forwards": 186000,
+        "task": "maze",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 5.126354808156819,
+          "incremental": 25.46599671783621,
+          "staged": 24.22417933572285
+        },
+        "wall_s": {
+          "incremental": 2223.828135512769,
+          "reduction_pct": 5.3826089988803005,
+          "staged": 2350.3376197367907
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 102,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": false,
+          "p95": false,
+          "throughput": false,
+          "validity": true,
+          "wall_time": false
+        },
+        "incremental_particle_forwards": 96000,
+        "model_decode_latency_ms_p95": {
+          "incremental": 2731.441234704107,
+          "ratio": 1.0960749835117094,
+          "staged": 2492.0204144727904
+        },
+        "n64": {
+          "coverage_retention": 0.9951475087028376,
+          "incremental_coverage": 0.3849245479336539,
+          "incremental_validity": 1.0,
+          "staged_coverage": 0.3868014988405068,
+          "staged_validity": 1.0,
+          "validity_delta_pp": 0.0
+        },
+        "n_examples": 1500,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "incremental",
+          "staged"
+        ],
+        "schema": 1,
+        "split": "test",
+        "staged_particle_forwards": 186000,
+        "task": "maze",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": -0.45357070030226376,
+          "incremental": 20.221590491386216,
+          "staged": 20.313727607955112
+        },
+        "wall_s": {
+          "incremental": 2799.087441915646,
+          "reduction_pct": 0.03182276816641183,
+          "staged": 2799.9784725736827
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 103,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": false,
+          "p95": false,
+          "throughput": false,
+          "validity": true,
+          "wall_time": false
+        },
+        "incremental_particle_forwards": 96000,
+        "model_decode_latency_ms_p95": {
+          "incremental": 2233.840054832399,
+          "ratio": 1.0689334180108478,
+          "staged": 2089.784094307106
+        },
+        "n64": {
+          "coverage_retention": 0.99400165350314,
+          "incremental_coverage": 0.38428529653784166,
+          "incremental_validity": 1.0,
+          "staged_coverage": 0.38660428298435195,
+          "staged_validity": 1.0,
+          "validity_delta_pp": 0.0
+        },
+        "n_examples": 1500,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "staged",
+          "incremental"
+        ],
+        "schema": 1,
+        "split": "test",
+        "staged_particle_forwards": 186000,
+        "task": "maze",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 4.4444677116778575,
+          "incremental": 24.701753786834868,
+          "staged": 23.65061005914149
+        },
+        "wall_s": {
+          "incremental": 2287.610850939527,
+          "reduction_pct": 4.82965012114267,
+          "staged": 2403.701209306717
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 100,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": false,
+          "p95": false,
+          "throughput": false,
+          "validity": true,
+          "wall_time": false
+        },
+        "incremental_particle_forwards": 74624,
+        "model_decode_latency_ms_p95": {
+          "incremental": 2851.8045460805297,
+          "ratio": 1.0840856773377674,
+          "staged": 2630.608083563857
+        },
+        "n64": {
+          "coverage_retention": 0.9969275929549902,
+          "incremental_coverage": 0.36164669468423444,
+          "incremental_validity": 1.0,
+          "staged_coverage": 0.36276124488868694,
+          "staged_validity": 1.0,
+          "validity_delta_pp": 0.0
+        },
+        "n_examples": 1166,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "incremental",
+          "staged"
+        ],
+        "schema": 1,
+        "split": "hostile",
+        "staged_particle_forwards": 144584,
+        "task": "maze",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 1.2882498604368964,
+          "incremental": 21.92180013310776,
+          "staged": 21.642984416566954
+        },
+        "wall_s": {
+          "incremental": 2323.8511295001954,
+          "reduction_pct": 1.5751980778977548,
+          "staged": 2361.0422211866826
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 101,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": false,
+          "p95": false,
+          "throughput": false,
+          "validity": true,
+          "wall_time": false
+        },
+        "incremental_particle_forwards": 74624,
+        "model_decode_latency_ms_p95": {
+          "incremental": 2690.3841248713434,
+          "ratio": 1.0725357723892093,
+          "staged": 2508.432999748038
+        },
+        "n64": {
+          "coverage_retention": 0.9964352867439673,
+          "incremental_coverage": 0.3611568605179464,
+          "incremental_validity": 1.0,
+          "staged_coverage": 0.36244888686960475,
+          "staged_validity": 1.0,
+          "validity_delta_pp": 0.0
+        },
+        "n_examples": 1166,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "staged",
+          "incremental"
+        ],
+        "schema": 1,
+        "split": "hostile",
+        "staged_particle_forwards": 144584,
+        "task": "maze",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 1.9132485849033154,
+          "incremental": 23.1675053039772,
+          "staged": 22.73257464133968
+        },
+        "wall_s": {
+          "incremental": 2195.920507300645,
+          "reduction_pct": 2.227109764453905,
+          "staged": 2245.9400576278567
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 102,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": false,
+          "p95": false,
+          "throughput": false,
+          "validity": true,
+          "wall_time": false
+        },
+        "incremental_particle_forwards": 74624,
+        "model_decode_latency_ms_p95": {
+          "incremental": 2878.9507574401796,
+          "ratio": 1.0823154266945463,
+          "staged": 2659.9923519825097
+        },
+        "n64": {
+          "coverage_retention": 0.9922103783530515,
+          "incremental_coverage": 0.3607948091776465,
+          "incremental_validity": 1.0,
+          "staged_coverage": 0.3636273284870513,
+          "staged_validity": 1.0,
+          "validity_delta_pp": 0.0
+        },
+        "n_examples": 1166,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "incremental",
+          "staged"
+        ],
+        "schema": 1,
+        "split": "hostile",
+        "staged_particle_forwards": 144584,
+        "task": "maze",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 0.4322743262487494,
+          "incremental": 21.660517000985426,
+          "staged": 21.567287155742807
+        },
+        "wall_s": {
+          "incremental": 2346.3428872767836,
+          "reduction_pct": 1.2060231624437368,
+          "staged": 2374.985765716061
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 103,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": false,
+          "p95": true,
+          "throughput": false,
+          "validity": true,
+          "wall_time": false
+        },
+        "incremental_particle_forwards": 74624,
+        "model_decode_latency_ms_p95": {
+          "incremental": 2316.7704069055617,
+          "ratio": 1.0496422215227064,
+          "staged": 2207.200091041159
+        },
+        "n64": {
+          "coverage_retention": 0.9945931120949733,
+          "incremental_coverage": 0.3604185597455702,
+          "incremental_validity": 1.0,
+          "staged_coverage": 0.3623778964107224,
+          "staged_validity": 1.0,
+          "validity_delta_pp": 0.0
+        },
+        "n_examples": 1166,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "staged",
+          "incremental"
+        ],
+        "schema": 1,
+        "split": "hostile",
+        "staged_particle_forwards": 144584,
+        "task": "maze",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 4.79791752400045,
+          "incremental": 26.771663204599335,
+          "staged": 25.545987780213462
+        },
+        "wall_s": {
+          "incremental": 1896.4081391580403,
+          "reduction_pct": 5.094191221195299,
+          "staged": 1998.2002825327218
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 100,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": false,
+          "overall": false,
+          "p95": true,
+          "throughput": true,
+          "validity": true,
+          "wall_time": true
+        },
+        "incremental_particle_forwards": 49472,
+        "model_decode_latency_ms_p95": {
+          "incremental": 895.1840884401463,
+          "ratio": 0.9215166151072095,
+          "staged": 971.4247944796962
+        },
+        "n64": {
+          "coverage_retention": 0.9835430784123911,
+          "incremental_coverage": 0.8445552784704904,
+          "incremental_validity": 0.995007276843467,
+          "staged_coverage": 0.8586866167913549,
+          "staged_validity": 0.995027490297542,
+          "validity_delta_pp": -0.0020213454074990977
+        },
+        "n_examples": 773,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "incremental",
+          "staged"
+        ],
+        "schema": 1,
+        "split": "test",
+        "staged_particle_forwards": 95852,
+        "task": "nqueens",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 10.662750457212367,
+          "incremental": 2.0009432059221677,
+          "staged": 1.8081451957909092
+        },
+        "wall_s": {
+          "incremental": 507.7605386264622,
+          "reduction_pct": 11.1224802972273,
+          "staged": 571.303677605465
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 101,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": true,
+          "p95": true,
+          "throughput": true,
+          "validity": true,
+          "wall_time": true
+        },
+        "incremental_particle_forwards": 49472,
+        "model_decode_latency_ms_p95": {
+          "incremental": 862.046055321116,
+          "ratio": 0.9155084797132158,
+          "staged": 941.6035726847151
+        },
+        "n64": {
+          "coverage_retention": 0.9951267056530214,
+          "incremental_coverage": 0.8487115544472152,
+          "incremental_validity": 0.9954115459249676,
+          "staged_coverage": 0.8528678304239401,
+          "staged_validity": 0.9951285575679172,
+          "validity_delta_pp": 0.02829883570504288
+        },
+        "n_examples": 773,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "staged",
+          "incremental"
+        ],
+        "schema": 1,
+        "split": "test",
+        "staged_particle_forwards": 95852,
+        "task": "nqueens",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 12.806162371643403,
+          "incremental": 2.088776831431092,
+          "staged": 1.8516513526535474
+        },
+        "wall_s": {
+          "incremental": 488.80281734094024,
+          "reduction_pct": 11.784366675417457,
+          "staged": 554.0999921662733
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 102,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": true,
+          "p95": true,
+          "throughput": true,
+          "validity": true,
+          "wall_time": true
+        },
+        "incremental_particle_forwards": 49472,
+        "model_decode_latency_ms_p95": {
+          "incremental": 926.0239822324365,
+          "ratio": 0.9293114592846909,
+          "staged": 996.4624593623489
+        },
+        "n64": {
+          "coverage_retention": 1.0,
+          "incremental_coverage": 0.8445552784704904,
+          "incremental_validity": 0.9952498382923674,
+          "staged_coverage": 0.8445552784704904,
+          "staged_validity": 0.9951891979301423,
+          "validity_delta_pp": 0.0060640362225083955
+        },
+        "n_examples": 773,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "incremental",
+          "staged"
+        ],
+        "schema": 1,
+        "split": "test",
+        "staged_particle_forwards": 95852,
+        "task": "nqueens",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 12.159798797643617,
+          "incremental": 1.9489347336502623,
+          "staged": 1.7376410750936617
+        },
+        "wall_s": {
+          "incremental": 521.3104279264808,
+          "reduction_pct": 10.841494838611531,
+          "staged": 584.7007270734757
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 103,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": false,
+          "overall": false,
+          "p95": true,
+          "throughput": true,
+          "validity": true,
+          "wall_time": true
+        },
+        "incremental_particle_forwards": 49472,
+        "model_decode_latency_ms_p95": {
+          "incremental": 860.9571004635654,
+          "ratio": 0.9233113861753925,
+          "staged": 932.466677390262
+        },
+        "n64": {
+          "coverage_retention": 0.9834146341463414,
+          "incremental_coverage": 0.8379052369077307,
+          "incremental_validity": 0.9946434346701164,
+          "staged_coverage": 0.8520365752285952,
+          "staged_validity": 0.9951285575679172,
+          "validity_delta_pp": -0.048512289780078266
+        },
+        "n_examples": 773,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "staged",
+          "incremental"
+        ],
+        "schema": 1,
+        "split": "test",
+        "staged_particle_forwards": 95852,
+        "task": "nqueens",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 11.155387993916444,
+          "incremental": 2.078108072257802,
+          "staged": 1.8695522635137911
+        },
+        "wall_s": {
+          "incremental": 485.0565826948732,
+          "reduction_pct": 11.527938330783938,
+          "staged": 548.2596127446741
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 100,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": false,
+          "p95": true,
+          "throughput": true,
+          "validity": true,
+          "wall_time": false
+        },
+        "incremental_particle_forwards": 16576,
+        "model_decode_latency_ms_p95": {
+          "incremental": 974.015976767987,
+          "ratio": 1.0072911399772484,
+          "staged": 966.9656945359284
+        },
+        "n64": {
+          "coverage_retention": 1.0139442231075697,
+          "incremental_coverage": 0.7387518142235123,
+          "incremental_validity": 0.9999396718146718,
+          "staged_coverage": 0.7285921625544267,
+          "staged_validity": 0.9999396718146718,
+          "validity_delta_pp": 0.0
+        },
+        "n_examples": 259,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "incremental",
+          "staged"
+        ],
+        "schema": 1,
+        "split": "hostile",
+        "staged_particle_forwards": 32116,
+        "task": "nqueens",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 11.169321887769378,
+          "incremental": 2.54471367211193,
+          "staged": 2.289043082120207
+        },
+        "wall_s": {
+          "incremental": 200.02250374108553,
+          "reduction_pct": 8.792803096236046,
+          "staged": 219.30561461299658
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 101,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": true,
+          "p95": true,
+          "throughput": true,
+          "validity": true,
+          "wall_time": true
+        },
+        "incremental_particle_forwards": 16576,
+        "model_decode_latency_ms_p95": {
+          "incremental": 872.7157647663262,
+          "ratio": 0.9446277513918473,
+          "staged": 923.872672045085
+        },
+        "n64": {
+          "coverage_retention": 0.990272373540856,
+          "incremental_coverage": 0.7387518142235123,
+          "incremental_validity": 0.9998793436293436,
+          "staged_coverage": 0.7460087082728593,
+          "staged_validity": 0.9999396718146718,
+          "validity_delta_pp": -0.006032818532819562
+        },
+        "n_examples": 259,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "staged",
+          "incremental"
+        ],
+        "schema": 1,
+        "split": "hostile",
+        "staged_particle_forwards": 32116,
+        "task": "nqueens",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 14.881110913010055,
+          "incremental": 2.8223387251554533,
+          "staged": 2.4567474171559645
+        },
+        "wall_s": {
+          "incremental": 180.34688588697463,
+          "reduction_pct": 13.800243950399537,
+          "staged": 209.21971726138145
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 102,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": true,
+          "p95": true,
+          "throughput": true,
+          "validity": true,
+          "wall_time": true
+        },
+        "incremental_particle_forwards": 16576,
+        "model_decode_latency_ms_p95": {
+          "incremental": 898.9785387529992,
+          "ratio": 0.9782970357982038,
+          "staged": 918.9218671397815
+        },
+        "n64": {
+          "coverage_retention": 0.9902534113060429,
+          "incremental_coverage": 0.737300435413643,
+          "incremental_validity": 0.9998190154440154,
+          "staged_coverage": 0.7445573294629898,
+          "staged_validity": 0.9998793436293436,
+          "validity_delta_pp": -0.006032818532819562
+        },
+        "n_examples": 259,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "incremental",
+          "staged"
+        ],
+        "schema": 1,
+        "split": "hostile",
+        "staged_particle_forwards": 32116,
+        "task": "nqueens",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 10.07902332149191,
+          "incremental": 2.71324093068748,
+          "staged": 2.4648119585539097
+        },
+        "wall_s": {
+          "incremental": 187.22996334545314,
+          "reduction_pct": 10.041588176708949,
+          "staged": 208.12946732901037
+        }
+      },
+      {
+        "budgets": [
+          4,
+          8,
+          16,
+          32,
+          64
+        ],
+        "eval_seed": 103,
+        "experiment": "query_only_end_to_end_matched_profile_cell",
+        "gate": {
+          "coverage": true,
+          "overall": true,
+          "p95": true,
+          "throughput": true,
+          "validity": true,
+          "wall_time": true
+        },
+        "incremental_particle_forwards": 16576,
+        "model_decode_latency_ms_p95": {
+          "incremental": 878.9362883253489,
+          "ratio": 0.9799571185675019,
+          "staged": 896.9130094285912
+        },
+        "n64": {
+          "coverage_retention": 1.001953125,
+          "incremental_coverage": 0.7445573294629898,
+          "incremental_validity": 0.9998793436293436,
+          "staged_coverage": 0.7431059506531205,
+          "staged_validity": 0.9998190154440154,
+          "validity_delta_pp": 0.006032818532819562
+        },
+        "n_examples": 259,
+        "particle_forward_reduction_pct": 48.38709677419355,
+        "profile_order": [
+          "staged",
+          "incremental"
+        ],
+        "schema": 1,
+        "split": "hostile",
+        "staged_particle_forwards": 32116,
+        "task": "nqueens",
+        "thresholds": {
+          "coverage_retention_min": 0.99,
+          "p95_ratio_max": 1.05,
+          "unique_valid_per_s_gain_pct_min": 10.0,
+          "validity_delta_pp_min": -0.5,
+          "wall_reduction_pct_min": 10.0
+        },
+        "unique_valid_per_s": {
+          "gain_pct": 11.582775069485884,
+          "incremental": 2.8139770424917474,
+          "staged": 2.52187404439386
+        },
+        "wall_s": {
+          "incremental": 182.30425915122032,
+          "reduction_pct": 10.205394660954227,
+          "staged": 203.0236209211871
+        }
+      }
+    ],
+    "schema": 4
+  }
+}

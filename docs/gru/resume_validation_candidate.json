@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "tasks": [
+    {
+      "task": "maze",
+      "status": "PASS",
+      "original_step": 7000,
+      "end_step": 7002,
+      "actual_updates": 4,
+      "logical_updates": 2,
+      "changed_tensors": 15,
+      "all_state_bitwise_equal": true,
+      "logs_equal": true,
+      "next_prior_logits_bitwise_equal": true,
+      "rejected": [
+        "missing_optimizer",
+        "data_content",
+        "config_change",
+        "implicit_fork"
+      ],
+      "explicit_multi_set_fork": "PASS",
+      "carry": "not applicable: per-forward GRU initialization"
+    },
+    {
+      "task": "sat",
+      "status": "PASS",
+      "original_step": 5000,
+      "end_step": 5002,
+      "actual_updates": 4,
+      "logical_updates": 2,
+      "changed_tensors": 18,
+      "all_state_bitwise_equal": true,
+      "logs_equal": true,
+      "next_prior_logits_bitwise_equal": true,
+      "rejected": [
+        "missing_optimizer",
+        "data_content",
+        "config_change",
+        "implicit_fork"
+      ],
+      "explicit_multi_set_fork": "PASS",
+      "carry": "not applicable: per-forward GRU initialization"
+    }
+  ],
+  "seconds": 41.267001908272505,
+  "gpu": "NVIDIA H200",
+  "torch": "2.7.0a0+ecf3bae40a.nv25.02",
+  "cuda": "12.8",
+  "cudnn": 90701,
+  "python": "3.12.3",
+  "precision": "fp32",
+  "full_historical_training_reproduction": false,
+  "original_historical_cuda_environment_reproduction": false,
+  "scope": "same-current-environment two-update restart reproducibility from recovered historical full states",
+  "optimizer_restored": true,
+  "original_checkpoints_modified": false,
+  "invoice": "unknown"
+}

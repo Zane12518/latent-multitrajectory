@@ -23,3 +23,9 @@ GRAM-core project Maze10 adapter, 12 inference endpoints, 6 continuation sources
 ## Between v0.1.0 and v0.2.0
 
 Main added GitHub Pages and interactive playback, project-overview sections and CRC32/byte-size asset checking. The latest pre-v0.2 Demo edit is retained. The v0.1 Release archives remain historical snapshots, not mirrors of current main.
+
+## Unreleased — historical asset / GRU recovery candidate
+
+- Add an isolated community-GRAM Mixer/query-only inference adapter and retained third-party notice. New historical weights/data/reports await explicit publication approval.
+- Add bounded GRU full-state continuation and record two-task H200 save/restart checks; no complete scientific retraining.
+- Preserve v0.1/v0.2/v0.3 assets and existing result-replay Demo. No new release or GitHub CI claim before approval and push.
