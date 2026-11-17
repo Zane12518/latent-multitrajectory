@@ -4,7 +4,11 @@
 
 模型核心、Mixer、query-only、decoder 保持快照算法；只把 dataset dispatch 限制到 Maze/N-Queens。该模块独立安装，避免与当前 GRAM 核心代码混淆。
 
+历史 `local_only` Mixer 在每个位置对同题粒子轴做注意力，并在登记的递归监督段后更新高层状态；query-only 复用旧粒子上下文。这是实际推理期信息通路，与当前 Set 的训练期参考分配不同。本次只验收接口，不把它当作新通信增益证据。
+
 ## 安装及一题两候选接口
+
+以下命令从候选仓库根目录执行。
 
 ```bash
 python3.12 -m venv .venv-history
